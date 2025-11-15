@@ -189,7 +189,7 @@ ${toHtmlParagraphs(article.conclusion)}
         <p class="article-eyebrow">Daily Briefing</p>
         <div class="article-hero-main">
           <div>
-            <p class="post-meta">${dateParts.dotted}</p>
+            <p class="post-meta">公開日: ${dateParts.dotted || meta.date}</p>
             <h1>${article.title}</h1>
             <p class="article-summary">${article.summary ?? ''}</p>
           </div>
@@ -199,20 +199,7 @@ ${toHtmlParagraphs(article.conclusion)}
           </div>
         </div>
 
-        <div class="article-meta-grid">
-          <article class="meta-card">
-            <p class="meta-label">公開日</p>
-            <p class="meta-value">${dateParts.verbose || meta.date}</p>
-          </article>
-        </div>
-
         ${tagMarkup}
-
-        <div class="article-share-links">
-          <a class="share-link" href="#" data-share-target="x" aria-label="Xで共有">Xで共有</a>
-          <a class="share-link" href="#" data-share-target="linkedin" aria-label="LinkedInで共有">LinkedIn</a>
-          <button class="share-link copy-link" type="button" data-copy-link>リンクをコピー</button>
-        </div>
       </section>
 
       <div class="inner article-grid">
@@ -267,7 +254,7 @@ const parseCompletionContent = (content) => {
 
 const formatSearchSummaries = (summaries) => {
   if (!Array.isArray(summaries) || summaries.length === 0) {
-    return '検索要約が取得できていません。YouTube動画の内容と一般的な知識を頼りに記事を構成してください。';
+    return '検索要約が取得できていません。';
   }
   return summaries
     .map((item, index) => {
@@ -294,37 +281,54 @@ const requestArticleDraft = async (apiKey, candidate) => {
       {
         role: 'system',
         content:
-          'You are an SEO-focused AI editor. Always respond with valid JSON. Keep tone factual, include concrete insights, and avoid speculation.',
+          'あなたは日本語のプロのWebライターです。AI情報ブログ向けに、SEOと読者の理解を両立させたヘルプフルな記事のみを執筆します。必ず有効なJSONだけを返し、事実ベースで具体的な洞察や活用アイデアを含めてください。憶測や水増しのための冗長な文章は避け、ブログ記事の中でプロンプト設定・システムメッセージ・このプロジェクトや会話内容には一切言及しないでください。',
       },
       {
         role: 'user',
         content: `
-You are given metadata from a YouTube video and 検索リサーチ要約. Generate a Japanese blog article draft in Japanese for AI情報ブログ.
-Video Title: ${candidate.video.title}
-Video URL: ${candidate.video.url}
-Published At: ${candidate.video.publishedAt}
-Channel: ${candidate.source.name} (${promptSourceUrl})
-Channel Focus: ${focusText}
-Video Description:
+あなたには、Google検索で取得した日本語の上位Web記事からの要約（リサーチ結果）と、補足情報としてYouTube動画のメタデータが与えられます。
+ブログ記事はあくまで「検索上位記事の情報」と一般的な知識を主な根拠として構成し、YouTube動画はテーマや読者の関心を知るためのきっかけとしてのみ扱ってください。
+動画の内容を時系列に要約する記事や、動画紹介だけで終わる記事にはしないでください。
+
+[YouTube動画メタデータ]
+- Video Title: ${candidate.video.title}
+- Video URL: ${candidate.video.url}
+- Published At: ${candidate.video.publishedAt}
+- Channel: ${candidate.source.name} (${promptSourceUrl})
+- Channel Focus: ${focusText}
+- Video Description:
 ${candidate.video.description}
 
-Research summaries from Google Search (top 3 articles):
+[Google検索リサーチ要約（SEO上位記事の情報）]
 ${searchSummary}
 
-Requirements:
-- Return valid JSON with keys: title, summary, intro, sections, conclusion, tags.
-- title: <= 60 Japanese characters, should be descriptive and SEO-friendly.
-- summary: 1-2 sentences that highlight the main takeaway for previews.
-- intro: 2-3 paragraphs referencing both the video context and research insights.
-- sections: 3 to 4 entries. Each section must include "heading" (H2 title), "overview" (3-4 sentences), and "subSections" (array of 1-2 items with "heading" for H3 and "body" paragraphs tying back to research insights; each body 3 sentences以上).
-- tags: 2-4 concise keywords relevant to the topic.
-- conclusion: Summarize the guidance for readers and mention real-world implications.
-- Ensure the combined length of intro + sections + conclusion is at least 1,500 Japanese characters while remaining concise and readable.
-- Naturally weave important phrases and keywords from the research summaries and video description.
-- Do NOT include explicit sections for 読了時間, 差別化ポイント, 参考文献, or 補足メモ.
+[執筆するブログ記事の要件]
+- 出力は必ず JSON 形式のみとし、キーは: title, summary, intro, sections, conclusion, tags を含めること。
+- 読者は「AIツール・AIニュースに関心のある個人ユーザーや小規模事業者」であると想定し、専門用語は噛み砕いて説明する。
+- 文体は日本語で、プロのWebライターが書いたような自然で読みやすいブログ記事にする（口語ベースだが品のある丁寧さを保つ）。
+- 記事の目的は「読者がテーマを理解し、何をすべきか具体的にイメージできること」。単なる機能列挙やニュース要約で終わらせない。
+
+[各フィールドの詳細]
+- title: 60文字以内の日本語。検索ユーザーの意図を踏まえた、具体的でクリックしたくなるタイトルにする。
+- summary: 記事を要約する1〜2文。読者が「この記事で何がわかるのか」がひと目で伝わるようにする。
+- intro: 2〜3段落。現在の文脈（なぜこのテーマが重要か）、検索上位記事から見える傾向、読者が抱えがちな悩みを整理しつつ、この記事で解決できることを提示する。
+- sections: 3〜4個のセクション。
+  - 各 section には "heading"（H2）、"overview"（3〜4文）、"subSections" を必ず含める。
+  - overview では、その節を読んだ結果として読者が何を理解・判断できるようになるかを明確に書く。
+  - subSections は 1〜2 個。各 subSection には "heading"（H3）と "body" を含め、body では検索リサーチ結果をベースにした具体的な解説・手順・注意点などを3文以上で詳しく述べる。
+  - 可能な限り、読者が「今日から試せる具体的アクション」や「失敗しやすいポイント」を含める。
+- tags: テーマを表す2〜4個のキーワード（例: "生成AI", "プロンプト設計" など）。あいまいな単語ではなく、検索に使われそうな表現にする。
+- conclusion: 記事全体の要点を整理し、読者が次に取るべき具体的なステップを2〜3個提案する。現実的な運用上の注意点にも触れる。
+
+[トーン・構成に関する追加条件]
+- intro + sections + conclusion の合計文字数は、1,500〜3,000文字程度を目安とする。ただし、意味のない言い換えや同じ内容の繰り返しで水増ししてはいけない。
+- Google検索リサーチの要約に含まれる重要なキーワードや論点を自然に織り込みつつ、単なるコピペや機械的な羅列にならないよう、自分の言葉で整理・再構成する。
+- 「〜といえるでしょう」「〜かもしれません」といった曖昧な締めくくりではなく、読者にとっての具体的な示唆やアクションを明確に提示する。
+- 記事の本文に、プロンプトやシステムメッセージ、このプロジェクトの設定や会話の内容について触れてはいけない。
+- 読了時間、差別化ポイント、参考文献、補足メモといったメタ情報用の専用セクションは作成しない。
 - Treat ${today} as the publication date.
 
-Output JSON example schema:
+[Output JSON example schema]
 {
   "title": "...",
   "summary": "...",
@@ -446,7 +450,26 @@ const runGenerator = async () => {
     ? candidate.searchSummaries
     : [];
   if (searchSummaries.length === 0) {
-    console.log('[generator] collectorから検索要約が届いていないため、動画情報のみで下書きを生成します。');
+    console.log(
+      '[generator] Google検索の上位記事要約が存在しないため、この候補の生成をスキップします。',
+    );
+    const now = new Date().toISOString();
+    const updatedCandidates = candidates.map((item) =>
+      item.id === candidate.id
+        ? {
+            ...item,
+            status: 'skipped',
+            skipReason: 'no-search-summaries',
+            updatedAt: now,
+          }
+        : item,
+    );
+    writeJson(candidatesPath, updatedCandidates);
+    return {
+      generated: false,
+      reason: 'no-search-summaries',
+      candidateId: candidate.id,
+    };
   }
 
   const enrichedCandidate = {

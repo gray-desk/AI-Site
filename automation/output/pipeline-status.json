@@ -1,9 +1,91 @@
 {
-  "lastRun": "2025-11-15T01:28:00.425Z",
-  "message": "MVP placeholder: 収集と生成処理は今後実装します。",
-  "sourceCount": 3,
+  "lastRun": "2025-11-15T03:42:00.824Z",
   "scheduleJST": [
     "09:00",
     "21:00"
-  ]
+  ],
+  "collector": {
+    "checkedSources": 17,
+    "fetchedEntries": 0,
+    "newCandidates": 0,
+    "totalCandidates": 0,
+    "errors": [
+      {
+        "source": "AI Insider JP",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "Prompt Engineers",
+        "message": "Failed to load channel page (404)"
+      },
+      {
+        "source": "Vision Tech Lab",
+        "message": "Failed to load channel page (404)"
+      },
+      {
+        "source": "aivtuber2866",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "ai-saborou",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "google-school",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "mikimikiweb",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "ai_masaou",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "keitoaiweb",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "chaen-ai-lab",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "ウェブマニア",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "kei31e",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "iketomo-ch",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "tomos_aiagent",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "AI-Hakase",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "technavi_tooru",
+        "message": "Could not locate channelId in channel page"
+      },
+      {
+        "source": "AIAIChatGPT-cj4sh",
+        "message": "Could not locate channelId in channel page"
+      }
+    ]
+  },
+  "generator": {
+    "generated": false,
+    "reason": "no-pending-candidates"
+  },
+  "publisher": {
+    "addedPost": false,
+    "totalPosts": 3
+  }
 }

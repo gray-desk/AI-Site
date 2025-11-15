@@ -7,32 +7,100 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
-    <img src="assets/img/logo.png" alt="AI情報ブログ ロゴ" class="logo">
-    <nav>
-      <a href="index.html">ホーム</a>
-      <a href="about.html">このサイトについて</a>
-    </nav>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.png" alt="AI情報ブログ ロゴ" class="logo">
+        <span>AI情報ブログ</span>
+      </a>
+      <nav aria-label="メインナビゲーション">
+        <a href="index.html" aria-current="page">ホーム</a>
+        <a href="about.html">このサイトについて</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="hero">
-      <h1>AI情報ブログ</h1>
-      <p>AI・機械学習の最新ニュースや実践ノウハウを発信します。</p>
+    <section id="hero" class="inner hero-panel">
+      <div>
+        <p class="eyebrow">Future of Intelligence</p>
+        <h1>AI情報ブログ</h1>
+        <p>注目しているYouTubeチャンネルのトピックを抽出し、キーワードを再調査してブログ記事を生成する自動化パイプラインの進捗を共有します。</p>
+      </div>
+      <ul class="hero-stats">
+        <li>
+          <span class="stat-label">自動更新</span>
+          <strong>1日2回</strong>
+          <small>朝と夜にGitHub Actionsを実行</small>
+        </li>
+        <li>
+          <span class="stat-label">連携チャンネル</span>
+          <strong id="source-count">-</strong>
+          <small>監視リストのYouTubeアカウント</small>
+        </li>
+      </ul>
     </section>
 
-    <section id="posts">
-      <h2>最新記事</h2>
-      <ul id="post-list">
-        <li>読み込み中...</li>
+    <section id="posts" class="inner">
+      <div class="section-header">
+        <h2>最新記事</h2>
+        <p>最新の投稿から順に表示します。</p>
+      </div>
+      <ul id="post-list" class="post-grid" aria-live="polite">
+        <li class="post-card skeleton">
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+        </li>
       </ul>
+      <p id="post-error" role="status" class="sr-only"></p>
+    </section>
+
+    <section id="workflow" class="inner info-panel">
+      <div class="section-header">
+        <h2>自動収集と生成フロー</h2>
+        <p>GitHub Actions が朝夜（JST 09:00 / 21:00 目安）に走り、以下の手順でドラフト記事を用意します。</p>
+      </div>
+      <div class="workflow-grid">
+        <article class="workflow-card">
+          <p class="workflow-step">STEP 01</p>
+          <h3>チャンネル監視</h3>
+          <p>指定したYouTubeアカウントの動画情報を取得し、タイトルや概要からキーワードを抽出します。</p>
+        </article>
+        <article class="workflow-card">
+          <p class="workflow-step">STEP 02</p>
+          <h3>キーワード再調査</h3>
+          <p>抽出したトピックを再度AIに投げ、ニュース・論文・公式発表をクロスチェックして追加情報を集めます。</p>
+        </article>
+        <article class="workflow-card">
+          <p class="workflow-step">STEP 03</p>
+          <h3>ドラフト生成</h3>
+          <p>テンプレートに沿ってドラフトを生成し、要約・タグ・参考リンクを付与した上で公開可否を判断します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources" class="inner info-panel">
+      <div class="section-header">
+        <h2>監視対象チャンネル</h2>
+        <p>このリストは <code>data/sources.json</code> から自動的に読み込みます。</p>
+      </div>
+      <ul id="source-list" class="source-grid" aria-live="polite">
+        <li class="source-card skeleton">
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+        </li>
+      </ul>
+      <p id="source-error" role="status" class="sr-only"></p>
     </section>
   </main>
 
-  <footer>
-    <small>&copy; 2025 AI情報ブログ</small>
+  <footer class="site-footer">
+    <div class="inner">
+      <small>&copy; 2025 AI情報ブログ</small>
+    </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <noscript>JavaScriptを有効にすると記事一覧が表示されます。</noscript>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

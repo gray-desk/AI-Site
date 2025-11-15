@@ -1,12 +1,23 @@
 [
   {
+    "title": "サンプル記事",
+    "date": "2025-11-20",
+    "summary": "生成AIの活用事例を整理し、社内導入の進め方を3ステップで紹介します。",
+    "tags": ["AI", "Use Case"],
+    "url": "posts/2025-11-20-sample-article.html"
+  },
+  {
     "title": "初めての投稿",
     "date": "2025-11-15",
+    "summary": "AI情報ブログ立ち上げの背景と、今後扱っていくテーマのロードマップです。",
+    "tags": ["Announcement"],
     "url": "posts/2025-11-15-first-post.html"
   },
   {
-    "title": "サンプル記事",
-    "date": "2025-11-20",
-    "url": "posts/2025-11-20-sample-article.html"
+    "title": "テンプレート記事（動作確認用）",
+    "date": "2025-11-10",
+    "summary": "このテンプレートを複製して新規記事を作成できます。ヘッダーや本文の構成例を掲載。",
+    "tags": ["Template", "Guide"],
+    "url": "posts/article-template.html"
   }
 ]

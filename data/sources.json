@@ -1,0 +1,104 @@
+[
+  {
+    "platform": "YouTube",
+    "name": "AI Insider JP",
+    "url": "https://www.youtube.com/@ai-insider",
+    "focus": ["生成AI", "MLOps", "プロダクト事例"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "Prompt Engineers",
+    "url": "https://www.youtube.com/@prompt-engineers",
+    "focus": ["プロンプト設計", "LLMアップデート"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "Vision Tech Lab",
+    "url": "https://www.youtube.com/@vision-tech-lab",
+    "focus": ["マルチモーダル", "コンピュータビジョン"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "aivtuber2866",
+    "url": "https://www.youtube.com/@aivtuber2866",
+    "focus": ["生成AI", "VTuber"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "ai-saborou",
+    "url": "https://www.youtube.com/@ai-saborou",
+    "focus": ["AIツール", "自動化"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "google-school",
+    "url": "https://www.youtube.com/@google-school",
+    "focus": ["Google", "AI教育"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "mikimikiweb",
+    "url": "https://www.youtube.com/@mikimikiweb",
+    "focus": ["Web制作", "AI活用"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "ai_masaou",
+    "url": "https://www.youtube.com/@ai_masaou",
+    "focus": ["生成AI", "Tips"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "keitoaiweb",
+    "url": "https://www.youtube.com/@keitoaiweb",
+    "focus": ["AIニュース", "Web活用"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "chaen-ai-lab",
+    "url": "https://www.youtube.com/@chaen-ai-lab",
+    "focus": ["AI解説", "LLM"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "ウェブマニア",
+    "url": "https://www.youtube.com/@%E3%82%A6%E3%82%A7%E3%83%96%E3%83%9E%E3%83%8B%E3%82%A2",
+    "focus": ["Webマーケ", "AI活用"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "kei31e",
+    "url": "https://www.youtube.com/@kei31e/videos",
+    "focus": ["エンジニアリング", "AI"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "iketomo-ch",
+    "url": "https://www.youtube.com/@iketomo-ch",
+    "focus": ["AIツール", "活用事例"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "tomos_aiagent",
+    "url": "https://www.youtube.com/@tomos_aiagent",
+    "focus": ["AIエージェント", "自動化"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "AI-Hakase",
+    "url": "https://www.youtube.com/@AI-Hakase",
+    "focus": ["AI解説", "研究トレンド"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "technavi_tooru",
+    "url": "https://www.youtube.com/@technavi_tooru",
+    "focus": ["テックニュース", "生成AI"]
+  },
+  {
+    "platform": "YouTube",
+    "name": "AIAIChatGPT-cj4sh",
+    "url": "https://www.youtube.com/@AIAIChatGPT-cj4sh",
+    "focus": ["ChatGPT", "生成AIノウハウ"]
+  }
+]

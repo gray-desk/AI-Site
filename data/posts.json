@@ -58,5 +58,38 @@
     ],
     "url": "posts/2025-11-15-chatgpt.html",
     "slug": "2025-11-15-chatgpt"
+  },
+  {
+    "title": "AIツール徹底比較：ChatGPT、Gemini、PixAIの選び方",
+    "date": "2025-11-15",
+    "summary": "AIツールのChatGPT、Gemini、PixAIを徹底比較し、あなたの創作活動に最適な選択肢を見つけるためのガイドです。",
+    "tags": [
+      {
+        "slug": "generative-ai",
+        "label": "生成AI",
+        "category": "技術トピック",
+        "style": "accent-pink"
+      },
+      {
+        "slug": "ai",
+        "label": "AIツール比較",
+        "category": "その他",
+        "style": "accent-neutral"
+      },
+      {
+        "slug": "pixai",
+        "label": "PixAI",
+        "category": "その他",
+        "style": "accent-neutral"
+      },
+      {
+        "slug": "chatgpt",
+        "label": "ChatGPT",
+        "category": "ツール",
+        "style": "accent-purple"
+      }
+    ],
+    "url": "posts/2025-11-15-aichatgptgeminipixai.html",
+    "slug": "2025-11-15-aichatgptgeminipixai"
   }
 ]

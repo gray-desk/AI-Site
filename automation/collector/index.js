@@ -8,6 +8,8 @@
 const path = require('path');
 const { readJson, writeJson, ensureDir } = require('../lib/io');
 const slugify = require('../lib/slugify');
+const { searchTopArticles } = require('../lib/googleSearch');
+const { decodeHtmlEntities } = require('../lib/text');
 
 const root = path.resolve(__dirname, '..', '..');
 const sourcesPath = path.join(root, 'data', 'sources.json');
@@ -17,6 +19,16 @@ const MAX_PER_CHANNEL = 2;
 const VIDEO_LOOKBACK_DAYS = 7;
 const SEARCH_PAGE_SIZE = 10;
 const YOUTUBE_API_BASE = 'https://www.googleapis.com/youtube/v3';
+const GOOGLE_TOP_LIMIT = 3;
+const ARTICLE_FETCH_TIMEOUT_MS = 8000;
+const ARTICLE_TEXT_MAX_LENGTH = 12000;
+const SUMMARY_MIN_LENGTH = 300;
+const SUMMARY_MAX_LENGTH = 500;
+
+const USER_AGENT =
+  'AIInfoBlogCollector/1.0 (+https://github.com/yamazaki/AI-information-blog)';
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const createChannelUrl = (channelId) =>
   channelId ? `https://www.youtube.com/channel/${channelId}` : null;
@@ -61,6 +73,146 @@ const mapSnippetToVideo = (item) => {
   };
 };
 
+const stripHtmlTags = (html) => {
+  if (!html) return '';
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<noscript[\s\S]*?<\/noscript>/gi, ' ')
+    .replace(/<svg[\s\S]*?<\/svg>/gi, ' ')
+    .replace(/<\/?head[\s\S]*?>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ');
+};
+
+const normalizePlainText = (html) => {
+  const stripped = stripHtmlTags(html);
+  return decodeHtmlEntities(stripped).replace(/\s+/g, ' ').trim();
+};
+
+const fetchArticleText = async (url) => {
+  if (!url) return '';
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), ARTICLE_FETCH_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': USER_AGENT,
+        Accept: 'text/html,application/xhtml+xml',
+      },
+      signal: controller.signal,
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const body = await response.text();
+    return normalizePlainText(body).slice(0, ARTICLE_TEXT_MAX_LENGTH);
+  } catch (error) {
+    console.warn(`[collector] ${url} の本文取得に失敗しました: ${error.message}`);
+    return '';
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
+const buildSummaryWithinRange = (text, fallback = '') => {
+  const normalize = (value) => (value || '').replace(/\s+/g, ' ').trim();
+  const baseText = normalize(text);
+  const fallbackText = normalize(fallback);
+  const source = baseText || fallbackText;
+  if (!source) return '';
+
+  const sentences = source
+    .split(/(?<=[。\.\!?？!])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  let summary = '';
+  for (const sentence of sentences) {
+    const next = summary ? `${summary}${sentence}` : sentence;
+    if (next.length > SUMMARY_MAX_LENGTH) {
+      if (summary.length < SUMMARY_MIN_LENGTH) {
+        summary = next.slice(0, SUMMARY_MAX_LENGTH);
+      }
+      break;
+    }
+    summary = next;
+    if (summary.length >= SUMMARY_MAX_LENGTH) break;
+  }
+
+  if (!summary) {
+    summary = source.slice(0, SUMMARY_MAX_LENGTH);
+  }
+
+  if (summary.length < SUMMARY_MIN_LENGTH && source.length > summary.length) {
+    summary = source.slice(0, Math.max(SUMMARY_MIN_LENGTH, Math.min(SUMMARY_MAX_LENGTH, source.length)));
+  }
+
+  if (summary.length < SUMMARY_MIN_LENGTH && fallbackText && source !== fallbackText) {
+    const combined = `${summary} ${fallbackText}`.trim();
+    summary = combined.slice(0, Math.max(SUMMARY_MIN_LENGTH, Math.min(SUMMARY_MAX_LENGTH, combined.length)));
+  }
+
+  if (summary.length > SUMMARY_MAX_LENGTH) {
+    summary = summary.slice(0, SUMMARY_MAX_LENGTH);
+  }
+
+  return summary.trim();
+};
+
+const summarizeSearchResult = async (item, index) => {
+  const title = item.title || `検索結果${index + 1}`;
+  const url = item.link;
+  const snippet = item.snippet || '';
+  let bodyText = '';
+
+  if (url) {
+    bodyText = await fetchArticleText(url);
+  }
+
+  const summary = buildSummaryWithinRange(bodyText, snippet);
+  return {
+    title,
+    url,
+    snippet,
+    summary,
+  };
+};
+
+const fetchSearchSummaries = async (query, apiKey, cx) => {
+  if (!query || !apiKey || !cx) return [];
+  try {
+    const res = await searchTopArticles({
+      apiKey,
+      cx,
+      query,
+      num: GOOGLE_TOP_LIMIT,
+    });
+    const items = Array.isArray(res.items) ? res.items.slice(0, GOOGLE_TOP_LIMIT) : [];
+    const summaries = [];
+    for (const [index, item] of items.entries()) {
+      try {
+        const summaryEntry = await summarizeSearchResult(item, index);
+        summaries.push(summaryEntry);
+      } catch (error) {
+        console.warn(
+          `[collector] Google検索結果の要約作成に失敗 (${item?.link || 'unknown'}): ${error.message}`,
+        );
+        summaries.push({
+          title: item.title || `検索結果${index + 1}`,
+          url: item.link,
+          snippet: item.snippet || '',
+          summary: item.snippet || '',
+        });
+      }
+      await sleep(150);
+    }
+    return summaries;
+  } catch (error) {
+    console.warn(`[collector] Google Search API 呼び出しに失敗: ${error.message}`);
+    return [];
+  }
+};
+
 const fetchChannelVideos = async (channelId, apiKey) => {
   const publishedAfter = new Date(Date.now() - VIDEO_LOOKBACK_DAYS * 24 * 60 * 60 * 1000)
     .toISOString()
@@ -93,6 +245,11 @@ const runCollector = async () => {
   const apiKey = process.env.YOUTUBE_API_KEY;
   if (!apiKey) {
     throw new Error('YOUTUBE_API_KEY が設定されていません。GitHub Secrets に登録してください。');
+  }
+  const googleApiKey = process.env.GOOGLE_SEARCH_API_KEY;
+  const googleCx = process.env.GOOGLE_SEARCH_CX;
+  if (!googleApiKey || !googleCx) {
+    console.log('[collector] Google検索キーが設定されていないため、リサーチ要約は空になります。');
   }
 
   const sources = readJson(sourcesPath, []);
@@ -143,6 +300,15 @@ const runCollector = async () => {
 
         const now = new Date().toISOString();
         const topicKey = slugify(video.title);
+        const searchQuery = video.title;
+        let searchSummaries = [];
+        if (googleApiKey && googleCx && searchQuery) {
+          console.log(
+            `[collector] Google検索で補足情報を収集します: "${searchQuery}" (最大${GOOGLE_TOP_LIMIT}件)`,
+          );
+          searchSummaries = await fetchSearchSummaries(searchQuery, googleApiKey, googleCx);
+        }
+
         updatedCandidates.push({
           id: candidateId,
           source: normalizedSource,
@@ -154,6 +320,8 @@ const runCollector = async () => {
             thumbnail: video.thumbnail,
             publishedAt: video.publishedAt,
           },
+          searchQuery,
+          searchSummaries,
           status: 'pending',
           createdAt: now,
           updatedAt: now,
@@ -167,6 +335,7 @@ const runCollector = async () => {
           url: video.url,
           thumbnail: video.thumbnail,
           publishedAt: video.publishedAt,
+          searchSummaries,
         });
 
         newCandidatesCount += 1;

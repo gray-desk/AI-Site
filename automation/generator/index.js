@@ -9,7 +9,6 @@
 const path = require('path');
 const { readJson, writeJson } = require('../lib/io');
 const slugify = require('../lib/slugify');
-const { searchTopArticles } = require('../lib/googleSearch');
 
 const root = path.resolve(__dirname, '..', '..');
 const candidatesPath = path.join(root, 'data', 'candidates.json');
@@ -66,17 +65,6 @@ const formatDateParts = (value) => {
   };
 };
 
-const computeReadingStats = (sections, summary) => {
-  const rawText = [summary, ...sections.map((section) => section.body ?? '')]
-    .join('\n')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&[a-z]+;/gi, ' ');
-  const characters = rawText.replace(/\s+/g, '').length;
-  const approxChars = Math.max(400, Math.round(((characters || 800) / 50)) * 50);
-  const minutes = Math.max(3, Math.round(characters / 400) || 3);
-  return { minutes, approxChars };
-};
-
 const slugifyHeading = (heading, index = 0) => {
   const base = heading || `section-${index + 1}`;
   const slug = base
@@ -99,85 +87,68 @@ const compileArticleHtml = (article, meta, options = {}) => {
   const homeHref = `${normalizedAssetBase}index.html`;
 
   const sections = Array.isArray(article.sections) ? article.sections : [];
-  const references = Array.isArray(article.references) ? article.references : [];
-  const seoInsights = Array.isArray(article.seoInsights) ? article.seoInsights : [];
   const tags = Array.isArray(article.tags) ? article.tags : [];
 
   const dateParts = formatDateParts(meta.date);
-  const reading = computeReadingStats(sections, article.summary ?? '');
-  const approxCharsLabel = reading.approxChars.toLocaleString('ja-JP');
-  const sourceName = meta.sourceName || '情報ソース';
-  const sourceLinkHref = meta.sourceUrl || meta.videoUrl || homeHref;
-  const sourceLinkLabel = meta.sourceUrl
-    ? 'チャンネルを見る'
-    : meta.videoUrl
-      ? '元動画を見る'
-      : '記事一覧へ戻る';
-
   const heroButtonHref = meta.videoUrl || meta.sourceUrl || homeHref;
   const heroButtonLabel = meta.videoUrl ? '元動画を見る' : '記事一覧へ戻る';
   const heroButtonAttrs = /^https?:/i.test(heroButtonHref)
     ? ' target="_blank" rel="noopener noreferrer"'
     : '';
-  const sourceLinkAttrs = /^https?:/i.test(sourceLinkHref)
-    ? ' target="_blank" rel="noopener noreferrer"'
-    : '';
-
-  const noteText = meta.sourceName
-    ? `${meta.sourceName}の最新コンテンツをもとに、${dateParts.verbose || meta.date}時点のインサイトを整理しました。`
-    : '自動収集した候補をもとにAIがまとめたドラフト記事です。';
-
-  const sectionMarkup = sections
-    .map((section, index) => {
-      const heading = section.heading ?? `セクション${index + 1}`;
-      const slug = slugifyHeading(heading, index);
-      const eyebrow = `Section ${String(index + 1).padStart(2, '0')}`;
-      const bulletList = Array.isArray(section.points)
-        ? section.points
-        : Array.isArray(section.bullets)
-          ? section.bullets
-          : [];
-      const bulletMarkup = bulletList.length
-        ? `
-              <ul>
-                ${bulletList.map((item) => `<li>${item}</li>`).join('\n                ')}
-              </ul>`
-        : '';
-
-      return `
-            <section class="article-section" id="${slug}">
-              <p class="section-eyebrow">${eyebrow}</p>
-              <h2>${heading}</h2>
-              ${toHtmlParagraphs(section.body)}
-              ${bulletMarkup}
-            </section>`;
-    })
-    .join('\n');
-
-  const referenceMarkup = references.length
-    ? references
-        .map((ref, index) => {
-          if (typeof ref === 'string') {
-            return `<li><a href="${ref}" target="_blank" rel="noopener noreferrer">${ref}</a></li>`;
-          }
-          if (ref && typeof ref === 'object') {
-            const label = ref.title || `参考リンク${index + 1}`;
-            return `<li><a href="${ref.url}" target="_blank" rel="noopener noreferrer">${label}</a></li>`;
-          }
-          return '';
-        })
-        .filter(Boolean)
-        .join('\n            ')
-    : '<li>参考リンクがありません</li>';
-
-  const seoMarkup = seoInsights.length
-    ? seoInsights.map((insight) => `<li>${insight}</li>`).join('\n            ')
-    : '<li>SEO観点のメモはありません</li>';
 
   const tagMarkup = tags.length
     ? `<ul class="article-tags">
           ${tags.map((tag) => `<li>${tag}</li>`).join('\n          ')}
         </ul>`
+    : '';
+
+  const renderSubSections = (subSections = [], parentIndex = 0) => {
+    if (!Array.isArray(subSections) || subSections.length === 0) {
+      return '';
+    }
+    return subSections
+      .map((subSection, childIndex) => {
+        const heading = subSection.heading || `ポイント${parentIndex + 1}-${childIndex + 1}`;
+        const body = toHtmlParagraphs(subSection.body || subSection.content || '');
+        if (!body) return '';
+        return `
+              <div class="article-subsection">
+                <h3>${heading}</h3>
+                ${body}
+              </div>`;
+      })
+      .filter(Boolean)
+      .join('\n');
+  };
+
+  const sectionMarkup = sections
+    .map((section, index) => {
+      const heading = section.heading ?? `セクション${index + 1}`;
+      const slug = slugifyHeading(heading, index);
+      const overview = toHtmlParagraphs(section.overview || section.body || '');
+      const subSections = renderSubSections(section.subSections, index);
+      return `
+            <section class="article-section" id="${slug}">
+              <h2>${heading}</h2>
+              ${overview}
+              ${subSections}
+            </section>`;
+    })
+    .join('\n');
+
+  const introMarkup = article.intro
+    ? `
+        <section class="article-intro-block">
+${toHtmlParagraphs(article.intro)}
+        </section>`
+    : '';
+
+  const conclusionMarkup = article.conclusion
+    ? `
+      <section class="article-conclusion inner">
+        <h2>まとめ</h2>
+${toHtmlParagraphs(article.conclusion)}
+      </section>`
     : '';
 
   return `<!DOCTYPE html>
@@ -196,7 +167,7 @@ const compileArticleHtml = (article, meta, options = {}) => {
   <meta property="og:type" content="article">
   <meta property="og:title" content="${article.title} | AI情報ブログ">
   <meta property="og:description" content="${article.summary ?? ''}">
-  <meta property="og:image" content="${normalizedAssetBase}assets/img/logo.svg">
+  <meta property="og:image" content="${normalizedAssetBase}assets/img/ogp-default.svg">
   <meta property="og:site_name" content="AI情報ブログ">
   <meta property="og:locale" content="ja_JP">
   <meta property="article:published_time" content="${dateParts.dotted}T00:00:00+09:00">
@@ -205,7 +176,7 @@ const compileArticleHtml = (article, meta, options = {}) => {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${article.title} | AI情報ブログ">
   <meta name="twitter:description" content="${article.summary ?? ''}">
-  <meta name="twitter:image" content="${normalizedAssetBase}assets/img/logo.svg">
+  <meta name="twitter:image" content="${normalizedAssetBase}assets/img/ogp-default.svg">
 
   <link rel="stylesheet" href="${cssHref}">
 </head>
@@ -232,17 +203,6 @@ const compileArticleHtml = (article, meta, options = {}) => {
           <article class="meta-card">
             <p class="meta-label">公開日</p>
             <p class="meta-value">${dateParts.verbose || meta.date}</p>
-            <small>最終更新: ${dateParts.dotted}</small>
-          </article>
-          <article class="meta-card">
-            <p class="meta-label">推定読了時間</p>
-            <p class="meta-value">${reading.minutes}分</p>
-            <small>約${approxCharsLabel}文字</small>
-          </article>
-          <article class="meta-card">
-            <p class="meta-label">リサーチソース</p>
-            <p class="meta-value">${sourceName}</p>
-            <a href="${sourceLinkHref}"${sourceLinkAttrs}>${sourceLinkLabel}</a>
           </article>
         </div>
 
@@ -258,6 +218,7 @@ const compileArticleHtml = (article, meta, options = {}) => {
       <div class="inner article-grid">
         <div class="article-main-column">
           <article class="post-article article-content">
+${introMarkup}
 ${sectionMarkup}
           </article>
         </div>
@@ -267,29 +228,10 @@ ${sectionMarkup}
             <p class="article-card-label">目次</p>
             <ol class="toc-list" data-toc-list aria-live="polite"></ol>
           </section>
-          <section class="article-card article-note">
-            <p class="article-card-label">補足メモ</p>
-            <p class="article-note-text">${noteText}</p>
-          </section>
         </aside>
       </div>
 
-      <section class="inner article-panels">
-        <article class="article-panel seo-panel">
-          <p class="panel-label">SEO観点</p>
-          <h2>検索上位との差別化ポイント</h2>
-          <ul class="insight-list">
-            ${seoMarkup}
-          </ul>
-        </article>
-
-        <article class="article-panel reference-panel">
-          <p class="panel-label">参考リンク</p>
-          <ul class="reference-list">
-            ${referenceMarkup}
-          </ul>
-        </article>
-      </section>
+      ${conclusionMarkup}
     </article>
   </main>
 
@@ -323,22 +265,25 @@ const parseCompletionContent = (content) => {
   throw new Error('contentの形式を解析できませんでした');
 };
 
-const formatSearchResults = (results) => {
-  if (!Array.isArray(results) || results.length === 0) {
-    return '（検索結果なし）';
+const formatSearchSummaries = (summaries) => {
+  if (!Array.isArray(summaries) || summaries.length === 0) {
+    return '検索要約が取得できていません。YouTube動画の内容と一般的な知識を頼りに記事を構成してください。';
   }
-  return results
-    .map(
-      (item, index) =>
-        `${index + 1}. ${item.title} (${item.link}) - ${item.snippet ?? 'No snippet'}`,
-    )
-    .join('\n');
+  return summaries
+    .map((item, index) => {
+      const title = item.title || `Source ${index + 1}`;
+      const url = item.url || 'URLなし';
+      const summary = item.summary || item.snippet || '要約なし';
+      const snippet = item.snippet ? `\nスニペット: ${item.snippet}` : '';
+      return `### ソース${index + 1}\nタイトル: ${title}\nURL: ${url}\n要約: ${summary}${snippet}`;
+    })
+    .join('\n\n');
 };
 
-const requestArticleDraft = async (apiKey, candidate, searchResults) => {
+const requestArticleDraft = async (apiKey, candidate) => {
   const today = new Date().toISOString().split('T')[0];
   const focusText = (candidate.source.focus || []).join(' / ');
-  const searchSummary = formatSearchResults(searchResults);
+  const searchSummary = formatSearchSummaries(candidate.searchSummaries);
   const sourceUrl = resolveSourceUrl(candidate.source);
   const promptSourceUrl = sourceUrl || 'URL不明';
   const payload = {
@@ -354,7 +299,7 @@ const requestArticleDraft = async (apiKey, candidate, searchResults) => {
       {
         role: 'user',
         content: `
-You are given metadata from a YouTube video. Generate a Japanese blog draft that balances summary and SEO insights.
+You are given metadata from a YouTube video and 検索リサーチ要約. Generate a Japanese blog article draft in Japanese for AI情報ブログ.
 Video Title: ${candidate.video.title}
 Video URL: ${candidate.video.url}
 Published At: ${candidate.video.publishedAt}
@@ -363,16 +308,39 @@ Channel Focus: ${focusText}
 Video Description:
 ${candidate.video.description}
 
-Top search results related to the topic:
+Research summaries from Google Search (top 3 articles):
 ${searchSummary}
 
 Requirements:
-- Provide title (<=30 characters), summary (<=2 sentences), tags (2-4 entries).
-- sections: 3 sections with heading/body paragraphs referencing the video.
-- references: 2-3 external links (URL strings or {title,url} objects) relevant to the topic.
-- seoInsights: 3 bullet points describing how top-ranking articles might structure the topic, differentiation ideas, or keywords worth covering.
-- Keep JSON keys: title, summary, tags, sections, references, seoInsights.
-- Consider current trends as of ${today} when suggesting SEO insights.
+- Return valid JSON with keys: title, summary, intro, sections, conclusion, tags.
+- title: <= 60 Japanese characters, should be descriptive and SEO-friendly.
+- summary: 1-2 sentences that highlight the main takeaway for previews.
+- intro: 2-3 paragraphs referencing both the video context and research insights.
+- sections: 3 to 4 entries. Each section must include "heading" (H2 title), "overview" (3-4 sentences), and "subSections" (array of 1-2 items with "heading" for H3 and "body" paragraphs tying back to research insights; each body 3 sentences以上).
+- tags: 2-4 concise keywords relevant to the topic.
+- conclusion: Summarize the guidance for readers and mention real-world implications.
+- Ensure the combined length of intro + sections + conclusion is at least 1,500 Japanese characters while remaining concise and readable.
+- Naturally weave important phrases and keywords from the research summaries and video description.
+- Do NOT include explicit sections for 読了時間, 差別化ポイント, 参考文献, or 補足メモ.
+- Treat ${today} as the publication date.
+
+Output JSON example schema:
+{
+  "title": "...",
+  "summary": "...",
+  "intro": "...",
+  "tags": ["..."],
+  "sections": [
+    {
+      "heading": "...",
+      "overview": "...",
+      "subSections": [
+        { "heading": "...", "body": "..." }
+      ]
+    }
+  ],
+  "conclusion": "..."
+}
 `,
       },
     ],
@@ -432,8 +400,6 @@ const runGenerator = async () => {
   if (!apiKey) {
     throw new Error('OPENAI_API_KEY が設定されていません。GitHub Secrets に登録してください。');
   }
-  const googleApiKey = process.env.GOOGLE_SEARCH_API_KEY;
-  const googleCx = process.env.GOOGLE_SEARCH_CX;
 
   const candidates = readJson(candidatesPath, []);
   const posts = readJson(postsJsonPath, []);
@@ -476,31 +442,24 @@ const runGenerator = async () => {
     };
   }
 
-  let searchResults = [];
-  if (googleApiKey && googleCx) {
-    try {
-      const query = `${candidate.video.title} ${candidate.source.focus?.[0] ?? ''}`.trim();
-      console.log(`[generator] Google検索を実行: "${query}"`);
-      const res = await searchTopArticles({
-        apiKey: googleApiKey,
-        cx: googleCx,
-        query,
-        num: 3,
-      });
-      searchResults = Array.isArray(res.items) ? res.items : [];
-      console.log(`[generator] Google検索結果: ${searchResults.length}件`);
-    } catch (error) {
-      console.warn('Google Search API 呼び出しでエラー:', error.message);
-    }
-  } else {
-    console.log('[generator] Google検索キーが設定されていないため検索ステップをスキップします。');
+  const searchSummaries = Array.isArray(candidate.searchSummaries)
+    ? candidate.searchSummaries
+    : [];
+  if (searchSummaries.length === 0) {
+    console.log('[generator] collectorから検索要約が届いていないため、動画情報のみで下書きを生成します。');
   }
 
-  const article = await requestArticleDraft(apiKey, candidate, searchResults);
+  const enrichedCandidate = {
+    ...candidate,
+    searchSummaries,
+  };
+
+  const article = await requestArticleDraft(apiKey, enrichedCandidate);
   console.log(`[generator] OpenAI応答を受信: "${article.title}"`);
 
   const today = new Date().toISOString().split('T')[0];
-  const slug = `${today}-${topicKey}`;
+  const slugifiedTitle = slugify(article.title, topicKey || 'ai-topic');
+  const slug = `${today}-${slugifiedTitle}`;
   const fileName = `${slug}.html`;
   const publishRelativePath = path.posix.join('posts', fileName);
 
@@ -552,10 +511,10 @@ const runGenerator = async () => {
   const articleData = {
     title: article.title,
     summary: article.summary ?? '',
+    intro: article.intro ?? '',
+    conclusion: article.conclusion ?? '',
     tags: Array.isArray(article.tags) ? article.tags : [],
     sections: Array.isArray(article.sections) ? article.sections : [],
-    references: Array.isArray(article.references) ? article.references : [],
-    seoInsights: Array.isArray(article.seoInsights) ? article.seoInsights : [],
     slug,
     date: today,
     htmlContent: publishHtml,
@@ -568,6 +527,7 @@ const runGenerator = async () => {
       title: candidate.video.title,
       url: candidate.video.url,
     },
+    searchSummaries,
   };
 
   console.log(

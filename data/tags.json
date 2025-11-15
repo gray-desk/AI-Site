@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "ai-news",
+    "label": "AIニュース",
+    "category": "ニュース",
+    "aliases": ["aiニュース", "ai news", "aiトレンド", "最新ai情報"],
+    "style": "accent-sky"
+  },
+  {
+    "slug": "generative-ai",
+    "label": "生成AI",
+    "category": "技術トピック",
+    "aliases": ["生成ai", "ジェネレーティブai", "generative ai", "生成系ai"],
+    "style": "accent-pink"
+  },
+  {
+    "slug": "chatgpt",
+    "label": "ChatGPT",
+    "category": "ツール",
+    "aliases": ["gpt-4o", "gpt4o", "chat gpt", "チャットgpt"],
+    "style": "accent-purple"
+  },
+  {
+    "slug": "ai-chat",
+    "label": "AIチャット",
+    "category": "ユースケース",
+    "aliases": ["aiチャット", "ai conversation", "aiメッセージ"],
+    "style": "accent-lime"
+  },
+  {
+    "slug": "prompt-design",
+    "label": "プロンプト設計",
+    "category": "スキル",
+    "aliases": ["プロンプト作成", "prompt engineering", "プロンプトエンジニアリング"],
+    "style": "accent-gold"
+  },
+  {
+    "slug": "llm",
+    "label": "LLM",
+    "category": "技術トピック",
+    "aliases": ["大規模言語モデル", "large language model", "llm"],
+    "style": "accent-sky"
+  },
+  {
+    "slug": "ai-tools",
+    "label": "AIツール",
+    "category": "ツール",
+    "aliases": ["ai tool", "aiサービス", "aiアプリ"],
+    "style": "accent-lavender"
+  },
+  {
+    "slug": "productivity",
+    "label": "業務効率化",
+    "category": "ユースケース",
+    "aliases": ["効率化", "workflow効率化", "productivity"],
+    "style": "accent-lime"
+  },
+  {
+    "slug": "automation",
+    "label": "業務自動化",
+    "category": "ユースケース",
+    "aliases": ["自動化", "automation", "workflow automation"],
+    "style": "accent-teal"
+  },
+  {
+    "slug": "image-generation",
+    "label": "画像生成AI",
+    "category": "技術トピック",
+    "aliases": ["image generation", "画像ai", "img2img"],
+    "style": "accent-pink"
+  },
+  {
+    "slug": "video-generation",
+    "label": "動画生成AI",
+    "category": "技術トピック",
+    "aliases": ["video generation", "動画ai"],
+    "style": "accent-purple"
+  },
+  {
+    "slug": "ai-security",
+    "label": "AIセキュリティ",
+    "category": "ガバナンス",
+    "aliases": ["ai security", "セキュリティ対策"],
+    "style": "accent-orange"
+  },
+  {
+    "slug": "ai-policy",
+    "label": "AI政策",
+    "category": "ガバナンス",
+    "aliases": ["ai regulation", "ai法規制", "aiガバナンス"],
+    "style": "accent-orange"
+  },
+  {
+    "slug": "ai-topic",
+    "label": "AIトピック",
+    "category": "その他",
+    "aliases": ["その他", "other", "aiトピック"],
+    "style": "accent-neutral"
+  }
+]

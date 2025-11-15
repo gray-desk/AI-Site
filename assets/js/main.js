@@ -92,6 +92,55 @@
     return `${y}.${m}.${d}`;
   };
 
+  const slugifyTag = (value, fallback = 'tag') => {
+    if (!value) return fallback;
+    const normalized = value
+      .toString()
+      .normalize('NFKC')
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+    return normalized || fallback;
+  };
+
+  const toTagObject = (tag, index = 0) => {
+    if (tag && typeof tag === 'object') {
+      return {
+        slug: tag.slug || slugifyTag(tag.label || `tag-${index + 1}`),
+        label: tag.label || tag.slug || `タグ${index + 1}`,
+        category: tag.category || 'その他',
+        style: tag.style || null,
+      };
+    }
+    const label = (tag ?? '').toString().trim();
+    return {
+      slug: slugifyTag(label || `tag-${index + 1}`),
+      label: label || `タグ${index + 1}`,
+      category: 'その他',
+      style: null,
+    };
+  };
+
+  const createTagMarkup = (tags) => {
+    if (!Array.isArray(tags) || tags.length === 0) return '';
+    const items = tags
+      .map((tag, index) => {
+        const normalized = toTagObject(tag, index);
+        const attrs = [
+          normalized.slug ? `data-tag-slug="${normalized.slug}"` : '',
+          normalized.category ? `data-tag-category="${normalized.category}"` : '',
+          normalized.style ? `data-tag-style="${normalized.style}"` : '',
+        ]
+          .filter(Boolean)
+          .join(' ');
+        return `<li class="tag"${attrs ? ` ${attrs}` : ''}>${normalized.label}</li>`;
+      })
+      .join('');
+    return items ? `<ul class="tag-list">${items}</ul>` : '';
+  };
+
   const renderPosts = (posts) => {
     list.innerHTML = '';
 
@@ -103,9 +152,7 @@
       item.style.animationDelay = `${index * 0.1}s`;
 
       const tags = Array.isArray(post.tags) ? post.tags : [];
-      const tagMarkup = tags.length
-        ? `<ul class="tag-list">${tags.map((tag) => `<li class="tag">${tag}</li>`).join('')}</ul>`
-        : '';
+      const tagMarkup = createTagMarkup(tags);
 
       item.innerHTML = `
         <div class="post-meta">${formatDate(post.date)}</div>

@@ -14,6 +14,7 @@ const root = path.resolve(__dirname, '..', '..');
 const candidatesPath = path.join(root, 'data', 'candidates.json');
 const postsJsonPath = path.join(root, 'data', 'posts.json');
 const topicHistoryPath = path.join(root, 'data', 'topic-history.json');
+const tagsConfigPath = path.join(root, 'data', 'tags.json');
 
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 const DEDUPE_WINDOW_DAYS = 5;
@@ -78,6 +79,87 @@ const slugifyHeading = (heading, index = 0) => {
   return slug || `section-${index + 1}`;
 };
 
+const normalizeTagToken = (value) => {
+  if (value === null || value === undefined) return '';
+  return value
+    .toString()
+    .normalize('NFKC')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ');
+};
+
+const buildTagDictionary = () => {
+  const raw = readJson(tagsConfigPath, []);
+  const entries = Array.isArray(raw) ? raw : [];
+  const index = new Map();
+
+  const registerToken = (token, entry) => {
+    if (!token || index.has(token)) return;
+    index.set(token, entry);
+  };
+
+  entries.forEach((item) => {
+    if (!item || !item.slug) return;
+    const normalizedEntry = {
+      slug: item.slug,
+      label: item.label || item.slug,
+      category: item.category || 'その他',
+      style: item.style || null,
+    };
+    registerToken(normalizeTagToken(item.slug), normalizedEntry);
+    registerToken(normalizeTagToken(item.label), normalizedEntry);
+    if (Array.isArray(item.aliases)) {
+      item.aliases.forEach((alias) => registerToken(normalizeTagToken(alias), normalizedEntry));
+    }
+  });
+
+  return { entries, index };
+};
+
+const tagDictionary = buildTagDictionary();
+
+const mapArticleTags = (rawTags) => {
+  if (!Array.isArray(rawTags) || rawTags.length === 0) return [];
+  const seen = new Set();
+  const tags = [];
+
+  rawTags.forEach((tag, idx) => {
+    const token = normalizeTagToken(tag);
+    if (!token) return;
+
+    const matched = tagDictionary.index.get(token);
+    if (matched) {
+      if (seen.has(matched.slug)) return;
+      seen.add(matched.slug);
+      tags.push({
+        slug: matched.slug,
+        label: matched.label || matched.slug,
+        category: matched.category || 'その他',
+        style: matched.style || null,
+      });
+      return;
+    }
+
+    const fallbackBase = slugify(tag, 'tag');
+    const fallbackSlug =
+      seen.has(fallbackBase) || fallbackBase === 'tag'
+        ? `${fallbackBase}-${idx + 1}`
+        : fallbackBase;
+    if (seen.has(fallbackSlug)) return;
+    seen.add(fallbackSlug);
+    const fallbackLabel = (tag ?? '').toString().trim() || `タグ${idx + 1}`;
+    tags.push({
+      slug: fallbackSlug,
+      label: fallbackLabel,
+      category: 'その他',
+      style: 'accent-neutral',
+    });
+  });
+
+  return tags;
+};
+
 const compileArticleHtml = (article, meta, options = {}) => {
   const assetBase = typeof options.assetBase === 'string' ? options.assetBase : '../';
   const normalizedAssetBase = assetBase.endsWith('/') ? assetBase : `${assetBase}/`;
@@ -96,11 +178,33 @@ const compileArticleHtml = (article, meta, options = {}) => {
     ? ' target="_blank" rel="noopener noreferrer"'
     : '';
 
-  const tagMarkup = tags.length
-    ? `<ul class="article-tags">
-          ${tags.map((tag) => `<li>${tag}</li>`).join('\n          ')}
-        </ul>`
-    : '';
+  const renderTagList = (items) => {
+    if (!Array.isArray(items) || items.length === 0) {
+      return '';
+    }
+    const tagItems = items
+      .map((tagItem) => {
+        if (!tagItem) return '';
+        if (typeof tagItem === 'string') {
+          const fallbackSlug = slugify(tagItem, 'tag');
+          return `<li class="tag" data-tag-slug="${fallbackSlug}">${tagItem}</li>`;
+        }
+        const label = tagItem.label || tagItem.slug || '';
+        if (!label) return '';
+        const slugAttr = tagItem.slug ? ` data-tag-slug="${tagItem.slug}"` : '';
+        const categoryAttr = tagItem.category ? ` data-tag-category="${tagItem.category}"` : '';
+        const styleAttr = tagItem.style ? ` data-tag-style="${tagItem.style}"` : '';
+        return `<li class="tag"${slugAttr}${categoryAttr}${styleAttr}>${label}</li>`;
+      })
+      .filter(Boolean)
+      .join('\n          ');
+    if (!tagItems) return '';
+    return `<ul class="article-tags">
+          ${tagItems}
+        </ul>`;
+  };
+
+  const tagMarkup = renderTagList(tags);
 
   const renderSubSections = (subSections = [], parentIndex = 0) => {
     if (!Array.isArray(subSections) || subSections.length === 0) {
@@ -479,6 +583,11 @@ const runGenerator = async () => {
 
   const article = await requestArticleDraft(apiKey, enrichedCandidate);
   console.log(`[generator] OpenAI応答を受信: "${article.title}"`);
+  const normalizedTags = mapArticleTags(article.tags);
+  const hydratedArticle = {
+    ...article,
+    tags: normalizedTags,
+  };
 
   const today = new Date().toISOString().split('T')[0];
   const slugifiedTitle = slugify(article.title, topicKey || 'ai-topic');
@@ -493,7 +602,7 @@ const runGenerator = async () => {
     videoUrl: candidate.video.url,
   };
 
-  const publishHtml = compileArticleHtml(article, meta, { assetBase: '../' });
+  const publishHtml = compileArticleHtml(hydratedArticle, meta, { assetBase: '../' });
 
   const now = new Date().toISOString();
 
@@ -523,21 +632,21 @@ const runGenerator = async () => {
   console.log('[generator] candidates と topic-history を更新しました。');
 
   const postEntry = {
-    title: article.title,
+    title: hydratedArticle.title,
     date: today,
-    summary: article.summary ?? '',
-    tags: Array.isArray(article.tags) ? article.tags : [],
+    summary: hydratedArticle.summary ?? '',
+    tags: normalizedTags,
     url: publishRelativePath,
     slug,
   };
 
   const articleData = {
-    title: article.title,
-    summary: article.summary ?? '',
-    intro: article.intro ?? '',
-    conclusion: article.conclusion ?? '',
-    tags: Array.isArray(article.tags) ? article.tags : [],
-    sections: Array.isArray(article.sections) ? article.sections : [],
+    title: hydratedArticle.title,
+    summary: hydratedArticle.summary ?? '',
+    intro: hydratedArticle.intro ?? '',
+    conclusion: hydratedArticle.conclusion ?? '',
+    tags: normalizedTags,
+    sections: Array.isArray(hydratedArticle.sections) ? hydratedArticle.sections : [],
     slug,
     date: today,
     htmlContent: publishHtml,

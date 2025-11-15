@@ -4,9 +4,24 @@
     "date": "2025-11-15",
     "summary": "ChatGPTにグループチャット機能が追加され、友人や同僚とAIを交えた会話が可能になりました。AIがもたらす新しいチャット体験を詳しく解説します。",
     "tags": [
-      "ChatGPT",
-      "AIチャット",
-      "グループチャット"
+      {
+        "slug": "chatgpt",
+        "label": "ChatGPT",
+        "category": "ツール",
+        "style": "accent-purple"
+      },
+      {
+        "slug": "ai-chat",
+        "label": "AIチャット",
+        "category": "ユースケース",
+        "style": "accent-lime"
+      },
+      {
+        "slug": "ai-tools",
+        "label": "AIツール",
+        "category": "ツール",
+        "style": "accent-lavender"
+      }
     ],
     "url": "posts/2025-11-15-linechatgptai.html",
     "slug": "2025-11-15-linechatgptai"

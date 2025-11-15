@@ -24,7 +24,7 @@
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="AI情報ブログ ロゴ" class="logo">
+        <img src="assets/img/logo.svg" alt="AI情報ブログ ロゴ" class="logo">
         <span>AI情報ブログ</span>
       </a>
       <nav aria-label="メインナビゲーション">
@@ -35,24 +35,27 @@
   </header>
 
   <main>
+    <!-- Google AdSense: ヘッダー広告（728x90 or レスポンシブ） -->
+    <!--
+    <div class="inner">
+      <div class="ad-container ad-header">
+        <span class="ad-label">広告</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+    -->
+
     <section id="hero" class="inner hero-panel">
-      <div>
+      <div style="grid-column: 1 / -1; text-align: center; max-width: 800px; margin: 0 auto;">
         <p class="eyebrow">Future of Intelligence</p>
         <h1>AI情報ブログ</h1>
-        <p>注目しているYouTubeチャンネルのトピックを抽出し、キーワードを再調査してブログ記事を生成する自動化パイプラインの進捗を共有します。</p>
+        <p>AI・機械学習の最新トレンドや注目技術を、わかりやすく解説。ChatGPT、Claude、LLMなど、話題のAI技術に関する情報をお届けします。</p>
       </div>
-      <ul class="hero-stats">
-        <li>
-          <span class="stat-label">自動更新</span>
-          <strong>1日2回</strong>
-          <small>朝と夜にGitHub Actionsを実行</small>
-        </li>
-        <li>
-          <span class="stat-label">連携チャンネル</span>
-          <strong id="source-count">-</strong>
-          <small>監視リストのYouTubeアカウント</small>
-        </li>
-      </ul>
     </section>
 
     <section id="posts" class="inner">
@@ -69,43 +72,44 @@
       <p id="post-error" role="status" aria-live="assertive"></p>
     </section>
 
-    <section id="workflow" class="inner info-panel">
+    <section id="features" class="inner info-panel">
       <div class="section-header">
-        <h2>自動収集と生成フロー</h2>
-        <p>GitHub Actions が朝夜（JST 09:00 / 21:00 目安）に走り、以下の手順でドラフト記事を用意します。</p>
+        <h2>このブログの特徴</h2>
       </div>
       <div class="workflow-grid">
         <article class="workflow-card">
-          <p class="workflow-step">STEP 01</p>
-          <h3>チャンネル監視</h3>
-          <p>指定したYouTubeアカウントの動画情報を取得し、タイトルや概要からキーワードを抽出します。</p>
+          <p class="workflow-step">Feature 01</p>
+          <h3>最新情報をキャッチアップ</h3>
+          <p>AI・機械学習の最新トレンドや技術動向を、いち早くわかりやすくお届けします。</p>
         </article>
         <article class="workflow-card">
-          <p class="workflow-step">STEP 02</p>
-          <h3>キーワード再調査</h3>
-          <p>抽出したトピックを再度AIに投げ、ニュース・論文・公式発表をクロスチェックして追加情報を集めます。</p>
+          <p class="workflow-step">Feature 02</p>
+          <h3>深掘り解説</h3>
+          <p>話題のトピックを多角的に調査し、関連する技術情報や背景まで詳しく解説します。</p>
         </article>
         <article class="workflow-card">
-          <p class="workflow-step">STEP 03</p>
-          <h3>ドラフト生成</h3>
-          <p>テンプレートに沿ってドラフトを生成し、要約・タグ・参考リンクを付与した上で公開可否を判断します。</p>
+          <p class="workflow-step">Feature 03</p>
+          <h3>実用的な情報</h3>
+          <p>理論だけでなく、実際の活用事例や参考リンクも合わせて紹介します。</p>
         </article>
       </div>
     </section>
 
-    <section id="sources" class="inner info-panel">
-      <div class="section-header">
-        <h2>監視対象チャンネル</h2>
-        <p>このリストは <code>data/sources.json</code> から自動的に読み込みます。</p>
+    <!-- Google AdSense: フッター上広告（レスポンシブ） -->
+    <!--
+    <div class="inner">
+      <div class="ad-container ad-article-bottom">
+        <span class="ad-label">広告</span>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
       </div>
-      <ul id="source-list" class="source-grid" aria-live="polite">
-        <li class="source-card skeleton">
-          <div class="skeleton-line"></div>
-          <div class="skeleton-line short"></div>
-        </li>
-      </ul>
-      <p id="source-error" role="status" class="sr-only"></p>
-    </section>
+    </div>
+    -->
+
   </main>
 
   <footer class="site-footer">

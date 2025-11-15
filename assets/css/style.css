@@ -9,43 +9,43 @@
                   system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: "SF Pro Display", "Hiragino Sans", "Noto Sans JP", sans-serif;
 
-  /* カラーパレット - ダークモード最適化 */
-  --color-bg-base: #0a0e1a;
-  --color-bg-elevated: #0f1629;
-  --color-bg-overlay: rgba(15, 22, 41, 0.95);
+  /* カラーパレット - 明るく活気のある配色 */
+  --color-bg-base: #f8f9ff;
+  --color-bg-elevated: #ffffff;
+  --color-bg-overlay: rgba(255, 255, 255, 0.98);
 
   /* サーフェス */
-  --surface-primary: rgba(20, 28, 50, 0.92);
-  --surface-secondary: rgba(30, 41, 69, 0.6);
-  --surface-tertiary: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
+  --surface-primary: rgba(255, 255, 255, 0.95);
+  --surface-secondary: rgba(248, 250, 255, 0.9);
+  --surface-tertiary: rgba(99, 102, 241, 0.04);
+  --surface-hover: rgba(99, 102, 241, 0.08);
 
   /* ボーダー */
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-medium: rgba(255, 255, 255, 0.1);
-  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-subtle: rgba(99, 102, 241, 0.08);
+  --border-medium: rgba(99, 102, 241, 0.15);
+  --border-strong: rgba(99, 102, 241, 0.25);
 
-  /* アクセントカラー */
-  --color-primary: #5b9eff;
-  --color-primary-bright: #7fb4ff;
-  --color-primary-dim: #4579d4;
-  --color-accent: #ff6b9d;
-  --color-accent-secondary: #a78bfa;
-  --color-success: #34d399;
-  --color-warning: #fbbf24;
+  /* アクセントカラー - 鮮やかで明るい */
+  --color-primary: #6366f1;
+  --color-primary-bright: #818cf8;
+  --color-primary-dim: #4f46e5;
+  --color-accent: #ec4899;
+  --color-accent-secondary: #8b5cf6;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
 
-  /* テキストカラー */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-tertiary: #94a3b8;
-  --text-muted: #64748b;
+  /* テキストカラー - ダークテキスト */
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
 
-  /* シャドウシステム */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.24);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.32);
-  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 32px rgba(91, 158, 255, 0.2);
+  /* シャドウシステム - 柔らかく明るい影 */
+  --shadow-sm: 0 2px 8px rgba(99, 102, 241, 0.08);
+  --shadow-md: 0 8px 24px rgba(99, 102, 241, 0.12);
+  --shadow-lg: 0 16px 48px rgba(99, 102, 241, 0.15);
+  --shadow-xl: 0 24px 64px rgba(99, 102, 241, 0.18);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.25);
 
   /* スペーシングシステム */
   --space-xs: 0.5rem;
@@ -95,11 +95,12 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  /* 高度なグラデーション背景 */
+  /* 明るく鮮やかなグラデーション背景 */
   background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(91, 158, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 107, 157, 0.12) 0%, transparent 40%),
-    radial-gradient(ellipse at 50% 100%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 50%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -172,8 +173,10 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-lg);
   padding-top: var(--space-md);
   padding-bottom: var(--space-md);
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -185,6 +188,8 @@ a:focus-visible {
   text-decoration: none;
   color: var(--text-primary);
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand:hover {
@@ -195,12 +200,13 @@ a:focus-visible {
   width: 48px;
   height: 48px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(91, 158, 255, 0.3));
-  transition: filter var(--transition-base);
+  filter: drop-shadow(0 2px 8px rgba(99, 102, 241, 0.2));
+  transition: all var(--transition-base);
 }
 
 .brand:hover .logo {
-  filter: drop-shadow(0 6px 16px rgba(91, 158, 255, 0.5));
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.35));
+  transform: scale(1.05);
 }
 
 nav {
@@ -277,11 +283,11 @@ main {
 .hero-panel::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(91, 158, 255, 0.08) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(236, 72, 153, 0.1) 50%, transparent 70%);
   pointer-events: none;
   animation: float 20s ease-in-out infinite;
 }
@@ -454,8 +460,8 @@ main {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-    rgba(91, 158, 255, 0.05) 0%,
-    rgba(255, 107, 157, 0.05) 100%);
+    rgba(99, 102, 241, 0.08) 0%,
+    rgba(236, 72, 153, 0.08) 100%);
   opacity: 0;
   transition: opacity var(--transition-base);
   pointer-events: none;
@@ -556,17 +562,18 @@ main {
   border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(91, 158, 255, 0.1);
-  color: var(--color-primary-bright);
-  border: 1px solid rgba(91, 158, 255, 0.2);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
+  color: var(--color-primary-dim);
+  border: 1px solid rgba(99, 102, 241, 0.25);
   transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
 .tag:hover {
-  background: rgba(91, 158, 255, 0.2);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
   border-color: var(--color-primary);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
 }
 
 /* === 情報パネル === */
@@ -586,9 +593,9 @@ main {
   position: absolute;
   bottom: -100px;
   left: -100px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.08) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
   pointer-events: none;
 }
 
@@ -848,9 +855,9 @@ main {
 .skeleton-line {
   height: 18px;
   background: linear-gradient(90deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.08) 50%,
-    rgba(255, 255, 255, 0.04) 100%);
+    rgba(99, 102, 241, 0.08) 0%,
+    rgba(99, 102, 241, 0.15) 50%,
+    rgba(99, 102, 241, 0.08) 100%);
   background-size: 200% 100%;
   border-radius: var(--radius-full);
   margin-bottom: var(--space-sm);
@@ -974,5 +981,120 @@ main {
   .logo {
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+  }
+}
+
+/* === Google AdSense 広告枠 === */
+.ad-container {
+  margin: var(--space-2xl) auto;
+  padding: var(--space-lg);
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-container.ad-header {
+  margin: var(--space-xl) 0;
+  min-height: 90px; /* レスポンシブ広告用 */
+}
+
+.ad-container.ad-sidebar {
+  position: sticky;
+  top: 100px;
+  min-height: 600px;
+  margin: 0;
+}
+
+.ad-container.ad-article-top {
+  margin: var(--space-xl) 0 var(--space-2xl);
+  min-height: 250px; /* レクタングル広告用 */
+}
+
+.ad-container.ad-article-middle {
+  margin: var(--space-2xl) 0;
+  min-height: 250px;
+}
+
+.ad-container.ad-article-bottom {
+  margin: var(--space-2xl) 0 var(--space-xl);
+  min-height: 250px;
+}
+
+.ad-container.ad-infeed {
+  margin: var(--space-lg) 0;
+  min-height: 150px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* 広告ラベル */
+.ad-label {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--surface-tertiary);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+/* 広告プレースホルダー（開発時用） */
+.ad-placeholder {
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* モバイルでの広告調整 */
+@media (max-width: 768px) {
+  .ad-container.ad-sidebar {
+    display: none; /* モバイルではサイドバー広告を非表示 */
+  }
+
+  .ad-container {
+    margin: var(--space-lg) auto;
+    padding: var(--space-md);
+  }
+
+  .ad-container.ad-article-top,
+  .ad-container.ad-article-middle,
+  .ad-container.ad-article-bottom {
+    min-height: 200px;
+  }
+}
+
+/* サイドバーレイアウト（広告用） */
+.content-with-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--space-2xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.sidebar {
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .content-with-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
   }
 }

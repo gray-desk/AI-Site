@@ -28,7 +28,7 @@ const CLEANUP_PROCESSED_DAYS = 14;
 const MAX_PENDING_CANDIDATES = 30;
 
 const USER_AGENT =
-  'AIInfoBlogCollector/1.0 (+https://github.com/yamazaki/AI-information-blog)';
+  'AIInfoBlogCollector/1.0 (+https://github.com/gray-desk/AI-information-blog)';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

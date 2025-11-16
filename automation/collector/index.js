@@ -265,7 +265,7 @@ const runCollector = async () => {
   const googleApiKey = process.env.GOOGLE_SEARCH_API_KEY;
   const googleCx = process.env.GOOGLE_SEARCH_CX;
   if (!googleApiKey || !googleCx) {
-    console.log('[collector] Google検索キーが設定されていないため、リサーチ要約は空になります。');
+    throw new Error('GOOGLE_SEARCH_API_KEY と GOOGLE_SEARCH_CX が設定されていません。GitHub Secrets に登録してください。');
   }
 
   const sources = readJson(sourcesPath, []);

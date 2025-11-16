@@ -57,8 +57,9 @@
 
   // === 目次の自動生成 ===
   const tocList = document.querySelector('[data-toc-list]');
-  if (tocList) {
-    const headings = document.querySelectorAll('.post-article h2, .post-article h3');
+  const headings = document.querySelectorAll('.post-article h2, .post-article h3, .article-content h2, .article-content h3');
+
+  if (tocList && headings.length > 0) {
     const slugify = (text) =>
       text
         .trim()
@@ -74,6 +75,7 @@
       heading.id = slug;
 
       const item = document.createElement('li');
+      item.dataset.sectionId = slug;
       if (heading.tagName === 'H3') {
         item.classList.add('is-depth');
       }
@@ -85,10 +87,97 @@
       tocList.appendChild(item);
     });
 
-    if (!tocList.children.length) {
-      const item = document.createElement('li');
-      item.textContent = '目次はありません';
-      tocList.appendChild(item);
-    }
+    // スムーズスクロール
+    tocList.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  } else if (tocList) {
+    const item = document.createElement('li');
+    item.textContent = '目次はありません';
+    tocList.appendChild(item);
   }
+
+  // === 読み進捗インジケーター ===
+  function initReadingProgress() {
+    const progressBar = document.createElement('div');
+    progressBar.className = 'reading-progress';
+    progressBar.innerHTML = '<div class="reading-progress-bar"></div>';
+    document.body.prepend(progressBar);
+
+    const bar = progressBar.querySelector('.reading-progress-bar');
+    const articleContent = document.querySelector('.article-content, .post-article');
+
+    if (!articleContent) return;
+
+    function updateProgress() {
+      const articleTop = articleContent.offsetTop;
+      const articleHeight = articleContent.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+
+      const scrollStart = articleTop;
+      const scrollEnd = articleTop + articleHeight - windowHeight;
+
+      if (scrollPosition < scrollStart) {
+        bar.style.width = '0%';
+      } else if (scrollPosition > scrollEnd) {
+        bar.style.width = '100%';
+      } else {
+        const progress = ((scrollPosition - scrollStart) / (scrollEnd - scrollStart)) * 100;
+        bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+      }
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  initReadingProgress();
+
+  // === 目次のアクティブ状態管理 ===
+  function initTocHighlight() {
+    if (!tocList || headings.length === 0) return;
+
+    const tocItems = Array.from(tocList.querySelectorAll('li[data-section-id]'));
+    const sections = Array.from(headings);
+
+    function updateActiveToc() {
+      const scrollPosition = window.pageYOffset + 120; // ヘッダーオフセット
+
+      let activeSection = null;
+      sections.forEach(section => {
+        if (section.offsetTop <= scrollPosition) {
+          activeSection = section;
+        }
+      });
+
+      tocItems.forEach(item => item.classList.remove('active'));
+
+      if (activeSection) {
+        const activeItem = tocItems.find(item => item.dataset.sectionId === activeSection.id);
+        if (activeItem) {
+          activeItem.classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', updateActiveToc, { passive: true });
+    updateActiveToc();
+  }
+
+  initTocHighlight();
 })();

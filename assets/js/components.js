@@ -24,8 +24,9 @@
   function getHeaderHTML(basePath) {
     const isHome = !window.location.pathname.includes('/posts/') &&
                    !window.location.pathname.includes('/about.html');
-    const homeLink = basePath + 'index.html';
-    const aboutLink = basePath + 'about.html';
+    // ルートからの相対パスを使用（ブラウザが自動的に解決）
+    const homeLink = basePath === '../' ? '../index.html' : 'index.html';
+    const aboutLink = basePath === '../' ? '../about.html' : 'about.html';
     const logoPath = basePath + 'assets/img/logo.svg';
 
     return `

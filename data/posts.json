@@ -27,6 +27,39 @@
     "slug": "2025-11-16-notebooklmai"
   },
   {
+    "title": "次世代AI「Gemini 3.0」と新モデルの動向を探る",
+    "date": "2025-11-16",
+    "summary": "この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。",
+    "tags": [
+      {
+        "slug": "generative-ai",
+        "label": "生成AI",
+        "category": "技術トピック",
+        "style": "accent-pink"
+      },
+      {
+        "slug": "ai",
+        "label": "AIモデル",
+        "category": "その他",
+        "style": "accent-neutral"
+      },
+      {
+        "slug": "google-ai",
+        "label": "Google AI",
+        "category": "その他",
+        "style": "accent-neutral"
+      },
+      {
+        "slug": "ai-4",
+        "label": "AI活用",
+        "category": "その他",
+        "style": "accent-neutral"
+      }
+    ],
+    "url": "posts/2025-11-16-aigemini-30.html",
+    "slug": "2025-11-16-aigemini-30"
+  },
+  {
     "title": "ChatGPTでLINE不要の新時代",
     "date": "2025-11-15",
     "summary": "ChatGPTにグループチャット機能が追加され、友人や同僚とAIを交えた会話が可能になりました。AIがもたらす新しいチャット体験を詳しく解説します。",

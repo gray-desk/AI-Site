@@ -1,470 +1,290 @@
 {
-  "status": "success",
-  "generatedFile": "posts/2025-11-16-aigemini-30.html",
-  "executedAt": "2025-11-16T12:02:27.415Z",
+  "status": "skipped",
+  "generatedFile": null,
+  "executedAt": "2025-11-17T00:13:31.835Z",
   "collector": {
     "source": "YouTube",
     "items": [
       {
-        "title": "【また進化！】NotebookLMの動画解説がまた進化！「Kawaii」が遂にリリースされました",
-        "description": "NotebookLMの動画解説がまた進化！日本が誇る「Kawaii」がスタイルに追加！また、あるスタイルも一昔前と比べて、 ...",
-        "url": "https://www.youtube.com/watch?v=K2M4PAOSfEE",
-        "thumbnail": "https://i.ytimg.com/vi/K2M4PAOSfEE/hqdefault.jpg",
-        "publishedAt": "2025-11-12T09:00:29Z",
+        "title": "【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴",
+        "description": "今回の動画では、OpenAIから新しいモデル「GPT-5.1」と「GPT-5.1 Thinking」という2モデルが登場したので、これについて ...",
+        "url": "https://www.youtube.com/watch?v=Z4C7yx3J8Mw",
+        "thumbnail": "https://i.ytimg.com/vi/Z4C7yx3J8Mw/hqdefault.jpg",
+        "publishedAt": "2025-11-13T02:30:30Z",
         "searchSummaries": [
           {
-            "title": "【動画あり】NotebookLM、動画生成が日本語対応！すごすぎて再び ...",
-            "url": "https://note.com/misaneko_desu/n/n601895589ff2",
-            "snippet": "Sep 6, 2025 ... 待つこと10分くらいで動画解説が生成されました！ 画像 「▷」を押すと ... NotebookLMの動画解説が進化！スライドがビジュアルリッチになった ...",
-            "summary": "【動画あり】NotebookLM、動画生成が日本語対応！すごすぎて再び語彙力を失う。｜みさねこ｜AI × ASDっ子 ログイン 会員登録 【動画あり】NotebookLM、動画生成が日本語対応！すごすぎて再び語彙力を失う。26 みさねこ｜AI × ASDっ子 2025年9月7日 08:11 こんにちは、みさねこです。私がこよなく愛する、 NotebookLM くん。シゴデキな彼 最近なんやかんやあり、 ぜんぜんNotebookLMの最新情報を追っていなかったのですが… 「 デザインがかわいくなってる～！🥰 UIがめっちゃ良くなってる～！✨ 」 「 ん？『 動画解説 』 ってのが出現してる！ なんじゃこりゃ～😳 」 とは思っていたんです。"
+            "title": "【待ってました】 新しく 『GPT-5.1』が公開されたので解説します ...",
+            "url": "https://x.com/telework_N/status/1988806921521119493",
+            "snippet": "4 days ago ... 【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴. 今回の動画では、OpenAIから ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 4 days ago ... 【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴. 今回の動画では、OpenAIから ..."
           },
           {
-            "title": "櫟木 宣男 / Nobuo Ichiki (@ni_ch) / Posts / X",
-            "url": "https://x.com/ni_ch?lang=ja",
-            "snippet": "Sep 2, 2025 ... AI Yuriに衝撃を受け、自分もMVを作ってみました。 習作という位置づけですが、ぜひ見ていただけると嬉しいです！ ... — Experimental AI-generated MV.",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. Sep 2, 2025 ... AI Yuriに衝撃を受け、自分もMVを作ってみました。 習作という位置づけですが、ぜひ見ていただけると嬉しいです！ ... — Experimental AI-generated MV."
+            "title": "[2025/11/13] 読みたい記事メモ｜クロネコ",
+            "url": "https://note.com/nekoyashiki96/n/n9c267878ff1c",
+            "snippet": "4 days ago ... 【生成AI】 【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴 ... Your browser can't ...",
+            "summary": "[2025/11/13] 読みたい記事メモ｜クロネコ ログイン 会員登録 [2025/11/13] 読みたい記事メモ クロネコ 2025年11月13日 13:15 【生成AI】&nbsp;OpenAI、「GPT-5.1」リリース 「よりスマートに、より楽しく」 OpenAI、「GPT-5.1」リリース 「よりスマートに、より楽しく」 OpenAIは「GPT-5.1」を発表し、有料ユーザー向けに展開を開始した。「Instant」と「Thinking」モード www.itmedia.co.jp 【生成AI】&nbsp;【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴 【生成AI】&nbsp;GitLab、世界中の企業のソフトウェア開発に関する調査結果をまとめた2025年版DevSecOps調査レポートを発表 GitLab、世界中の企業のソフトウェア開発に関する調査結果をまとめた2025年版DevSecOps調査レポートを発表 GitLab Inc.のプレスリリース（2025年11月13日 11時00分）GitLab、世界"
           },
           {
-            "title": "GPT-5の画像生成が変えた世界 - 「ポケットの中の博士」は本当に ...",
-            "url": "https://note.com/alvis8039/n/nd15655ec1f34",
-            "snippet": "Aug 16, 2025 ... ... ついに現実になりました ✨ 私も実際にGPT-5を触ってみて、その進歩に正直驚きました ... リリースされました。OpenAIのサ.",
-            "summary": "🎨 GPT-5の画像生成が変えた世界 - 「ポケットの中の博士」は本当にすごかった｜さやさや ログイン 会員登録 🎨 GPT-5の画像生成が変えた世界 - 「ポケットの中の博士」は本当にすごかった 25 さやさや 2025年8月17日 05:52 取りあえず簡単なプロンプトを私がGPT-5に投げてみて出力させた画像なんですけど、どうですか？案外、可愛くまとまっていませんか？想像してみてください。朝のコーヒーを片手に、ふと思いついたアイデアをスマホに話しかけるだけで、美しいイラストがあっという間に完成する世界を。そんな夢のような体験が、ついに現実になりました ✨ 私も実際にGPT-5を触ってみて、その進歩に正直驚きました。これまでAI画像生成といえば複雑な英語プロンプトを考えたり、何度も試行錯誤が必要でしたが、その常識が根底から覆された感じです。2025年8月8日、待望のGPT-5がリリースされました。OpenAIのサム・アルトマンCEOが「ポケットの中の博士号」と表現したこの革新的なAIは、私たちのクリエイティブワークを劇的に変えようとしています。"
+            "title": "まさお@AI駆動開発 (@AI_masaou) / Posts / X",
+            "url": "https://x.com/AI_masaou",
+            "snippet": "【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴. 今回の動画では、OpenAIから新しいモデル「GPT-5.1 ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 【待ってました】新しく『GPT-5.1』が公開されたので解説します！指示に忠実で人間らしく、クリエイティブな性能が特徴. 今回の動画では、OpenAIから新しいモデル「GPT-5.1 ..."
           }
         ]
       },
       {
-        "title": "【朗報】Gemini、音声データから会議の質をチェック！AIを使って議論を有意義なものにしよう！",
-        "description": "Gemini、音声データが取り扱えるようになったことで、議事録作成や、会議のデータから質をチェックすることができるように ...",
-        "url": "https://www.youtube.com/watch?v=lIA7T8b9Yuo",
-        "thumbnail": "https://i.ytimg.com/vi/lIA7T8b9Yuo/hqdefault.jpg",
-        "publishedAt": "2025-11-10T09:01:16Z",
+        "title": "【必見】CursorのCloud Agents APIを活用すれば更に開発自動化できるのでは？ということで解説します",
+        "description": "今回の動画ではCursorにはCloudAgentsという機能があり、この機能はAPIで自動化に加えることもできるという話をしました。",
+        "url": "https://www.youtube.com/watch?v=vUhUvEhKlGo",
+        "thumbnail": "https://i.ytimg.com/vi/vUhUvEhKlGo/hqdefault.jpg",
+        "publishedAt": "2025-11-12T10:20:03Z",
         "searchSummaries": [
           {
-            "title": "mirai on X",
-            "url": "https://x.com/mirai_koij1119/status/1987814390385738183",
-            "snippet": "6 days ago ... 【朗報】Gemini、音声データから会議の質をチェック！AIを使って議論を有意義なものにしよう！ Gemini、音声データが取り扱えるようになったことで ...",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 6 days ago ... 【朗報】Gemini、音声データから会議の質をチェック！AIを使って議論を有意義なものにしよう！ Gemini、音声データが取り扱えるようになったことで ..."
+            "title": "2025年最新！Cursor agent機能でコーディング効率を劇的に向上 ...",
+            "url": "https://note.com/mizupe/n/nbeb85e55284c",
+            "snippet": "Apr 3, 2025 ... ... では、Cursor Agentの基本から応用まで実践的な活用法を徹底解説します。 なおCursor ... Notepadsを使用すれば、AIへの情報提供とテスト自動化も可能.",
+            "summary": "2025年最新！Cursor agent機能でコーディング効率を劇的に向上させる方法｜ふみペン＠CursorAI研究所 | 思考型バイブワーキング ログイン 会員登録 2025年最新！Cursor agent機能でコーディング効率を劇的に向上させる方法 11 ふみペン＠CursorAI研究所 | 思考型バイブワーキング 2025年4月3日 18:32 AI補完とNotepadsを活用した次世代開発テクニック 「コードを書くのに時間がかかりすぎる」「エラーの原因がわからずに何時間も悩んでいる」「新しい技術の学習コストが高い」...こんな悩みを抱えていませんか？この記事を読むと、AIの力を活用してこれらの問題を解決し、プログラミング効率を飛躍的に向上させる方法がわかるはずです！ この記事では、Cursor Agentの基本から応用まで実践的な活用法を徹底解説します。"
           },
           {
-            "title": "ทำความรู้จัก GEMINI AI: แชทบอทสมองกลแข่ง Chat GPT",
-            "url": "https://www.lemon8-app.com/@nakdev_studio/7336198423399596546?region=jp",
-            "snippet": "Feb 16, 2024 ... 3.高レベルのコードを書き、複雑なデータをよく理解する。 Python、Java、C++、またはGoを使用できます。Geminiコマンドを入力するだけで、 ...",
-            "summary": "ทำความรู้จัก GEMINI AI: แชทบอทสมองกลแข่ง Chat GPT Lemon8 ライフスタイルコミュニティ 自動翻訳されています。元の投稿を表示する นักเดฟ - NakDev 3.9万人のフォロワー フォロー フォロー フォロー 1/2 こちらもおすすめ ✨ChatGPT VS Gemini✨ aiha@AIらぼ 1 AI Gemini Lp Nanja 1 ☀️🌏 #gemini #ai #chatgpt #sora #grok yokotake 🗾🐻💆 #gemini #ai #chatgpt #sora #grok yokotake AI Gemini Lp Nanja 1 アプリでもっと見る アプリでもっと見る アプリでもっと見る 56人が保存しました 64 12 GEMINI AIはChat GPTとどのように競合していますか?1.ItはGoogleによって開発されたAIで、オールラウンドな機能を持つチャットボットです。テキストやオーディオ形式の複数のコマンドにすばやく応答したり、画像/ビデオからデータを抽出したりできます。"
+            "title": "【Cursor 2.0リリース】圧倒的な処理速度を実現！大規模コード ...",
+            "url": "https://www.issoh.co.jp/tech/details/9603/",
+            "snippet": "Oct 31, 2025 ... インターフェイス面では、複数のAIエージェントを同時に動かせるマルチエージェント環境が導入され、タスクを並列で処理して効率よく開発できます。加えて ...",
+            "summary": "Oct 31, 2025 ... インターフェイス面では、複数のAIエージェントを同時に動かせるマルチエージェント環境が導入され、タスクを並列で処理して効率よく開発できます。加えて ..."
           },
           {
-            "title": "本当は教えたくない…生成AIで効率化できる仕事6選｜業務別 ...",
-            "url": "https://note.com/hiro_seki/n/n33bb2432019c",
-            "snippet": "Sep 21, 2025 ... NottaのようなAI文字起こしツールを使えば、会議音声をアップロードする ... Notionを普段から使っている → Notion AI. どちらのツールも ...",
-            "summary": "本当は教えたくない…生成AIで効率化できる仕事6選｜業務別おすすめツールと導入メリットを徹底解説｜ヒロ｜文筆家×生成AI研究家｜note2ヶ月で500記事 月間70,000PV ログイン 会員登録 本当は教えたくない…生成AIで効率化できる仕事6選｜業務別おすすめツールと導入メリットを徹底解説 13 ヒロ｜文筆家×生成AI研究家｜note2ヶ月で500記事 月間70,000PV 2025年9月22日 13:04 こんにちは！ヒロです！ ここ2〜3年特に、生成AIの進化は本当に目覚ましく、僕の周りでも業務の効率化や生産性向上に活用する人が増えてきている印象があります。実際、日経リサーチの調査によると「生成AIは仕事に役立つ」と回答した人は65％に達しており、多くのビジネスパーソンが期待を寄せていることがわかります。出典：日本経済新聞 AIで「業務効率向上」7割 体制整備は業種で差 しかし一方で、 「忙しい日常業務の中で、どこから導入すれば良いかわからない」 「メール対応や資料作成に追われて、AI活用の余裕がない」 という声も多く聞かれます。"
+            "title": "Google Developer Experts たちによる「2025年のデータ ...",
+            "url": "https://note.com/kazaneya/n/n3e84990fb3a7",
+            "snippet": "Sep 3, 2025 ... Conversational Analytics Agent は自然言語での依頼をもとに自動でデータ分析を行います。他システムからAPI経由で実行することも可能です。 BigQuery ...",
+            "summary": "Google Developer Experts たちによる「2025年のデータアナリティクス技術動向」ディスカッションを特別公開します（2.7万字超え）｜風音屋（かざねや） ログイン 会員登録 Google Developer Experts たちによる「2025年のデータアナリティクス技術動向」ディスカッションを特別公開します（2.7万字超え） 35 風音屋（かざねや） 2025年9月4日 09:59 2025年4月にラスベガスで開催された「Google Cloud Next 2025」を受けて、風音屋ではクライアント各社やMENTA受講生を招いて「プライベート Recap」勉強会を開催しました。勉強会の前半はGoogle Cloud Japanの nii_yan さんによるデータアナリティクス領域のアップデートの説明を、後半は Google Developer Experts 2名を交えた質疑応答やディスカッションを行いました。"
           }
         ]
       },
       {
-        "title": "【待望アプデ‼️】Google最強AI「NotebookLM」でスプシ&amp;データ分析機能が神！使えるワークフローも解説",
-        "description": "動画をご覧いただきありがとうございます。 今回はGoogle最強AI「NotebookLM」にデータ分析機能が爆誕！徹底解説していき ...",
-        "url": "https://www.youtube.com/watch?v=n6Z3hdLgWk0",
-        "thumbnail": "https://i.ytimg.com/vi/n6Z3hdLgWk0/hqdefault.jpg",
-        "publishedAt": "2025-11-13T10:21:40Z",
+        "title": "【無料AI】Google Mixboardが凄く良い！画像生成ツールの理想形！",
+        "description": "Googleの新しいデザイン特化のAI画像生成ツールの「Mixboard」が凄く良かったので実演しながら紹介！ ☆プロセボ｜AI ...",
+        "url": "https://www.youtube.com/watch?v=iEVEnnyOnOc",
+        "thumbnail": "https://i.ytimg.com/vi/iEVEnnyOnOc/hqdefault.jpg",
+        "publishedAt": "2025-11-13T11:01:34Z",
         "searchSummaries": [
           {
-            "title": "[Long-awaited update!!] Google's most powerful AI, \"NotebookLM ...",
-            "url": "https://www.youtube.com/watch?v=n6Z3hdLgWk0",
-            "snippet": "3 days ago ... 動画をご覧いただきありがとうございます。 今回はGoogle最強AI「NotebookLM」にデータ分析機能が爆誕！徹底解説していきます。 参考になったらいいね！",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 3 days ago ... 動画をご覧いただきありがとうございます。 今回はGoogle最強AI「NotebookLM」にデータ分析機能が爆誕！徹底解説していきます。 参考になったらいいね！"
+            "title": "「漫画 コミック」のYahoo!リアルタイム検索 - X（旧Twitter）を ...",
+            "url": "https://search.yahoo.co.jp/web/savepref?ei=UTF-8&pref_done=https%3A%2F%2Fsearch.yahoo.co.jp%2Frealtime%2Fsearch%2F%25E6%25BC%25AB%25E7%2594%25BB%2520%25E3%2582%25B3%25E3%2583%259F%25E3%2583%2583%25E3%2582%25AF%2F%3Ffr%3Drts_algo%26p%3D%25E6%25BC%25AB%25E7%2594%25BB%2B%25E3%2582%25B3%25E3%2583%259F%25E3%2583%2583%25E3%2582%25AF%26ei%3DUTF-8&rtsrch_img=1",
+            "snippet": "AIマンガ・コミック制作にものすごく使えそう!! >【無料AI】Google Mixboardが凄く良い！画像生成ツールの理想形！ youtu.be/iEVEnnyOnOc?si… @YouTubeより.",
+            "summary": "「漫画 コミック」のX（旧Twitter）検索結果 - Yahoo!リアルタイム検索 ウェブ 画像 動画 リアルタイム ニュース キーワードを消す 検索 ミュートしたアカウント すべて 画像・動画 自動更新 並べ替え： 新着順 ベストポスト メニューを開く 映画来場者特典で配布された「火喰鳥を、喰う」エピソード0のデジタル コミック 配信が本日までという噂です。(正確な情報は私はわからんのです💦) ご覧になっていない方は是非〜 実は 漫画 原作とは別に北斗の掌編小説も書いていたのですが、そっちもいつか日の目が見られたらいいなぁ…🐔 原浩（ハラコウ） @ akuro_haha 11 310 1,348 昨日 16:07 メニューを開く NARUTOのイルカ先生は心の器が広くて、本当の本当に優しい先生。最初の一話目だけでもそれがわかる。なので一話目だけでも読んでみてください。"
           },
           {
-            "title": "YouTube公開 【待望アプデ‼️】Google最強AI「NotebookLM」で ...",
-            "url": "https://x.com/Mikimiki10211/status/1988915581358338375",
-            "snippet": "3 days ago ... 468 views. YouTube公開 【待望アプデ‼️】Google最強AI「NotebookLM」でスプシ&データ分析機能が神！使えるワークフローも解説.",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 3 days ago ... 468 views. YouTube公開 【待望アプデ‼️】Google最強AI「NotebookLM」でスプシ&データ分析機能が神！使えるワークフローも解説."
+            "title": "Google Mixboardとは？AIが発想を“見える化”する次世代ムード ...",
+            "url": "https://ai.cbagames.jp/2025/10/15/google-mixboard-ai-idea-tool/",
+            "snippet": "Oct 15, 2025 ... Googleが発表した実験的AIツール「Mixboard」は、アイデアの可視化を支援する革新的なムードボード生成ツール。Gemini 2.5 FlashとNano Banana ...",
+            "summary": "Google Mixboardとは？AIが発想を“見える化”する次世代ムードボードツール | C-BA AI-memo AI初心者でも大丈夫！やさしく学べる活用ブログ お問い合わせ プライバシーポリシー スポンサーリンク Google Mixboardとは？AIが発想を“見える化”する次世代ムードボードツール AI×クリエイティブ 2025.10.15 目次 はじめに 1.Mixboardとは？AI×創造性の新しい関係 🔹なぜMixboardが注目されているの？🔹技術的な仕組み 🔹他ツールとの違い 2.Mixboardの基本的な使い方 🔹1.プロンプトからアイデアを生成する 🔹2.テンプレート（プリセットボード）を活用する 🔹3.自分の画像を取り込んでアイデアを広げる 🔹4.自然言語で編集・調整する 🔹5.「再生成」や「More Like This」でアイデアを深める 🔹6.テキスト要素を追加する 3.ビジネス・クリエイティブ現場での活用事例 🔹1.インテリアデザイン編：部屋の雰囲気を「言葉」から作る 🔹2."
           },
           {
-            "title": "Getting started with Google Cloud - YouTube",
-            "url": "https://www.youtube.com/watch?v=5GFRjAln_4o&authuser=7&hl=ja",
-            "snippet": "May 8, 2024 ... ... and use Google Cloud for your developer needs ... 【待望アプデ‼️】Google最強AI「NotebookLM」でスプシ&データ分析機能が神！使えるワークフローも解説.",
-            "summary": "- YouTube 概要 プレスルーム 著作権 お問い合わせ クリエイター向け 広告掲載 開発者向け 利用規約 プライバシー ポリシーとセキュリティ YouTube の仕組み 新機能を試してみる NFL サンデー チケット &copy; 2025 Google LLC May 8, 2024 ... ... and use Google Cloud for your developer needs ... 【待望アプデ‼️】Google最強AI「NotebookLM」でスプシ&データ分析機能が神！使えるワークフローも解説."
+            "title": "「#画像生成AIチャレンジ」の人気タグ記事一覧｜note ――つくる ...",
+            "url": "https://note.com/hashtag/%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90AI%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8?f=popular",
+            "snippet": "前回のコラムで、Googleの新しい画像生成・編集AIモデル、通称「Gemini 2.5 Flash Image」（コードネーム「nano banana」）の、その圧倒的な進化と、実際の編集技術の凄さ ...",
+            "summary": "「#画像生成AIチャレンジ」の人気タグ記事一覧｜note ――つくる、つながる、とどける。ログイン 会員登録 この募集は終了しました。お題 #画像生成AIチャレンジ with アドビ 人気 急上昇 新着 2,459件 人気の記事一覧 【AI画伯】コップのフチ子さん七変化：おかわり！【なんのはなしです珈】 #なんのはなしですか #なんのはなしです珈 こんにちは、きのころです。今日は、「コップのフチ子さん七変化」の続編、 「コップのフチ子さん七変化：おかわり！」をお届けします。前回の記事をお読みでない方は、こちらからお読みください。イントロダクションさぁ、皆さま。今回もお招きしました。拍手でお迎えください！ 「コップのフチ子」さんです！！私の「コップのフチ子」さん愛と「AI」によるコラボにより、 またまた、勝手に、新しいフチ子さんを作成していきます。共 スキ 164 きのころ 11日前 【推し活】フリーライターりこさんから、元「ウルトラ怪獣同好会」部長：Y子さんへ こんにちは、きのころです。"
           }
         ]
       },
       {
-        "title": "【2025最新】超時短‼️Canva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法",
-        "description": "動画をご覧いただきありがとうございます。 本日はCanva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法を ...",
-        "url": "https://www.youtube.com/watch?v=v0ugbT1wq78",
-        "thumbnail": "https://i.ytimg.com/vi/v0ugbT1wq78/hqdefault.jpg",
-        "publishedAt": "2025-11-11T10:34:22Z",
+        "title": "【AI活用】今、最もオススメな無料AIツール「NotebookLM」が進化してたので改めて解説【Geminiとの組み合わせ方も】",
+        "description": "リアルで会った人に間違いなくオススメする無料AIツール「NotebookLM」が最近進化してたので改めて解説。Geminiと合わせ ...",
+        "url": "https://www.youtube.com/watch?v=VFQFtTbQpgQ",
+        "thumbnail": "https://i.ytimg.com/vi/VFQFtTbQpgQ/hqdefault.jpg",
+        "publishedAt": "2025-11-11T11:01:03Z",
         "searchSummaries": [
           {
-            "title": "[2025 Latest] Super Time-Saving! How to Automatically Generate ...",
-            "url": "https://www.youtube.com/watch?v=v0ugbT1wq78",
-            "snippet": "5 days ago ... 動画をご覧いただきありがとうございます。 本日はCanva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法を徹底解説していきます参考 ...",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 5 days ago ... 動画をご覧いただきありがとうございます。 本日はCanva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法を徹底解説していきます参考 ..."
+            "title": "Gemini×NotebookLMを使い倒せ！起業でAIを活用する方法【実行編 ...",
+            "url": "https://note.com/uta__kuma/n/nd838714a8b49",
+            "snippet": "Jun 2, 2025 ... ... てました。 しかし、今はもっと起業しやすくなりましたよね。 それはAIの普及です。 いわずもがな近年、AI技術の進化は凄まじく、その波はビジネスの ...",
+            "summary": "Gemini×NotebookLMを使い倒せ！起業でAIを活用する方法【実行編⑦】｜歌川貴之＠​起業家顧問 ログイン 会員登録 Gemini×NotebookLMを使い倒せ！起業でAIを活用する方法【実行編⑦】 4 歌川貴之＠​起業家顧問 2025年6月3日 05:23 僕は2016年から起業してます。当時からスマホの普及はしていて、いつでも知りたい情報にアクセスできて、ネットで参考になる話を聞けるようになり「起業しやすい時期に生まれて良かった」と本当に思ってました。しかし、今はもっと起業しやすくなりましたよね。それはAIの普及です。いわずもがな近年、AI技術の進化は凄まじく、その波はビジネスの世界にも押し寄せています。特に、リソースが限られたスタートアップや起業家にとって、AIは業務効率化から新たな価値創造、そして競争力強化など使えることが満載です。僕もググることはせずにAIに聞くことが多くなりました。今後は、ますます起業しやすくなるんだろうなと思います。そのため今回は僕がまたゼロから起業するならどのようにAIを活用するかをまとめます。"
           },
           {
-            "title": "mikimiki(扇田 美紀) @Canva / AI最新トレンド発信中 on X",
-            "url": "https://x.com/Mikimiki10211/status/1988193825572245648",
-            "snippet": "5 days ago ... YouTube公開 【2025最新】超時短‼️Canva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法 youtu.be/v0ugbT1wq78.",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 5 days ago ... YouTube公開 【2025最新】超時短‼️Canva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法 youtu.be/v0ugbT1wq78."
+            "title": "KEITO - AI×WEB YouTuber & ディレクター",
+            "url": "https://kt-life.net/keito-portfolio/",
+            "snippet": "... Gemini × 自動化ツールが便利だったので解説 ... 【AI活用】今、最もオススメな無料AIツール「NotebookLM」が進化してたので改めて解説【Geminiとの組み合わせ方も】.",
+            "summary": "KEITO - AI×WEB YouTuber & ディレクター KEITO AI×WEB ホーム プロフィール YouTube 私の強み SNS お問い合わせ KEITO AI×WEB YouTuber & ディレクター 生成AIの最新情報・活用法を全て自分で検証してリアルを発信 YouTubeをチェック お仕事の依頼 12.6万 YouTube登録者 345 動画本数 29.9K Xフォロワー --> プロフィール 三浦 圭人（KEITO） AI×WEB YouTuber 兼 ディレクター 元WEBディレクターとして会社員を経験後、2023年1月に独立。2022年11月頃にChatGPTを使い始め、その効率性に感銘を受け、AIの可能性を広げるためにYouTubeでの発信を開始しました。現在は、生成AI関連の最新情報や活用方法を発信するYouTubeチャンネルを運営し、企業向けAIコンサルティング・生成AI顧問としても活動。セミナー登壇なども行っています。"
           },
           {
-            "title": "【世界初公開】AI不要、Canvaだけで自動でリールを作る方法を公開 ...",
-            "url": "https://www.youtube.com/watch?v=1qec0eVEFsY",
-            "snippet": "Sep 6, 2025 ... ... インスタ、Tiktok、X、Youtubeから集客している私が実際に行っている各SNSからの販売導線の全貌大公開6. インスタしてたらガチ気をつけて！2025年最新 ...",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC Sep 6, 2025 ... ... インスタ、Tiktok、X、Youtubeから集客している私が実際に行っている各SNSからの販売導線の全貌大公開6. インスタしてたらガチ気をつけて！2025年最新 ..."
+            "title": "「#AIとやってみた」の人気タグ記事一覧｜note ――つくる ...",
+            "url": "https://note.com/hashtag/AI%E3%81%A8%E3%82%84%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F?f=popular",
+            "snippet": "あなたのリアルなAI活用法や体験談を募集します！ 7月9日まで 【賞】Amazonギフトカードのほか、受賞者10名全員にGoogle AI Pro プランの3ヶ月無料特典を ...",
+            "summary": "「#AIとやってみた」の人気タグ記事一覧｜note ――つくる、つながる、とどける。ログイン 会員登録 この募集は終了しました。すでにつかっているひとも、これを機につかってみたというひとも。あなたのリアルなAI活用法や体験談を募集します！ 7月9日まで 【賞】Amazonギフトカードのほか、受賞者10名全員にGoogle AI Pro プランの3ヶ月無料特典をプレゼント！ 人気 急上昇 新着 123,367件 人気の記事一覧 FRBのジェファーソン副議長が生成 AIの普及によりアメリカ経済がどのように変化していくかについて講演しているので、その全文を見ていきます。生成AIの普及によりアメリカ経済は革命的な変化を遂げようとしています。アメリカ市場に投資する際の投資判断に大いに役立つ講演となっています。公益社団法人日本証券アナリスト協会が認定する資産形成コンサルタント資格を取得致しました。資産形成コンサルタントとして読者の方の資産形成のお役に立てるような記事を書いて行きます。経済学や金融理論、投資理論、マーケティング、会計など理論の裏付けのある記事を書いています。"
           }
         ]
       },
       {
-        "title": "【最新版】今週のAIニュース厳選9選！GPT5.1にWorkspace Flowsなど、盛りだくさんでした",
-        "description": "今回の動画では、2025年11月16日までの1週間で押さえておいた方がよいと思ったAIニュース、動画掲載部分もそうでない部分も ...",
-        "url": "https://www.youtube.com/watch?v=3R-YTWdg0zw",
-        "thumbnail": "https://i.ytimg.com/vi/3R-YTWdg0zw/hqdefault.jpg",
-        "publishedAt": "2025-11-16T09:30:01Z",
+        "title": "【速報】ChatGPTから「GPT-5.1」公開。GPT-5と徹底比較 #chatgpt #仕事効率化 #チャエン #ai #最新ai #ビジネス #業務効率化",
+        "description": "【問い合わせフォーム ※期間限定特典付き⬇️】 https://go.pardot.com/l/1097692/2025-03-09/kp1dw7 多すぎるAIモデル、結局 ...",
+        "url": "https://www.youtube.com/watch?v=PVxO5V1PchQ",
+        "thumbnail": "https://i.ytimg.com/vi/PVxO5V1PchQ/hqdefault.jpg",
+        "publishedAt": "2025-11-14T10:00:44Z",
         "searchSummaries": [
           {
-            "title": "【最新】注目AIニュース17選！Google新ツール「Opal」登場、検索 ...",
-            "url": "https://note.com/brightiers/n/nc0b1adfc9038",
-            "snippet": "Jul 28, 2025 ... 最近のAI（人工知能）分野では、次々と新しいサービスや技術が登場しています。本記事では、ビジネスパーソン向けに今週話題となったAIニュース17選を ...",
-            "summary": "【最新】注目AIニュース17選！Google新ツール「Opal」登場、検索新機能「Web Guide」、金融業界AI活用まで一挙紹介｜ブライティアーズAI研究所 ログイン 会員登録 【最新】注目AIニュース17選！Google新ツール「Opal」登場、検索新機能「Web Guide」、金融業界AI活用まで一挙紹介 17 ブライティアーズAI研究所 2025年7月28日 16:34 最近のAI（人工知能）分野では、次々と新しいサービスや技術が登場しています。本記事では、 ビジネスパーソン向けに 今週話題となったAIニュース17選を初心者にもわかりやすく解説します。Googleの最新AIツールから国内企業のAI導入事例、そしてAI業界の技術トレンドや社会動向まで、盛りだくさんの内容です。ぜひ最後までお読みいただき、急速に進化するAIの最前線を押さえてください。"
-          },
-          {
-            "title": "ASCII.jp：アーカイブページ",
-            "url": "https://ascii.jp/archive/top/202503/",
-            "snippet": "Mar 31, 2025 ... 自作PCトーク『ジサトラKTU』生放送～VRAM 24GBなRTX 5090搭載ゲーミングノートPC「Razer Blade 16」ってスゴい!?～ · AI ...",
-            "summary": "ASCII.jp － 記事アーカイブ ASCII.jp トップ AI IoT ビジネス TECH デジタル iPhone/Mac ホビー 自作PC AV アキバ スマホ スタートアップ ゲーム ASCII倶楽部 アスキーキッズ 格安SIM 家電ASCII アスキーグルメ 週刊アスキー TeamLeaders プログラミング+ SDGs 地方活性 PC 富士通 DELL mouse iiyamaPC ドスパラ Sycom Acer パソコン SEVEN MSI FRONTIER LAVIE Lenovo ゲーミングPC STORM Razer ASUS HP アプライド Digital ELECOM AMD ASUS ROG GIGABYTE Samsung SSD ASRock Crucial HUAWEI Xperia HTC CITIZEN Smart Watch ViewSonic Belkin Business 弥 生 JAWS Acrobat kintone Azure LINE WORKS 名人 シリーズ Google Cloud SORACOM Dropbox CData"
-          },
-          {
-            "title": "生成AIトレンドレポート｜ChatGPT Agent・バイブコーディング ...",
-            "url": "https://note.com/weel_media/n/neb4eca06168d",
-            "snippet": "Jul 21, 2025 ... 生成AIトレンドレポート｜ChatGPT Agent・バイブコーディング・AWSの新IDE「Kiro」など──注目の生成AIニュースまとめ【7/14〜7/21】.",
-            "summary": "生成AIトレンドレポート｜ChatGPT Agent・バイブコーディング・AWSの新IDE「Kiro」など──注目の生成AIニュースまとめ【7/14〜7/21】｜AIを使う全ての人へ｜WEEL ログイン 会員登録 生成AIトレンドレポート｜ChatGPT Agent・バイブコーディング・AWSの新IDE「Kiro」など──注目の生成AIニュースまとめ【7/14〜7/21】 71 AIを使う全ての人へ｜WEEL 2025年7月22日 13:22 こんにちは、WEELメディア部です！ 2025年7月14日〜7月21日までの生成AIまわりの注目トピック をピックアップしてお届けします。先週は、AIの「対話力」と「自律性」に大きな進化が見えた1週間でした。ChatGPT Agent、AIと一緒に仕様から開発まで行うバイブコーディング、AWSの新IDE「Kiro」、世界最高峰の音声認識AI「Voxtral」、そして中国発の超大規模LLM「Kimi K2」 など、業務効率化や創造性向上につながる話題が盛りだくさんです。"
+            "title": "経歴・自己紹介 | デジライズ（DigiRise）",
+            "url": "https://digirise.ai/en/about-chaen/about-me/",
+            "snippet": "【速報】ChatGPTから「GPT-5.1」公開。GPT-5と徹底比較 #chatgpt #仕事効率化 #チャエン #ai #最新ai #ビジネス #業務効率化. YouTube ...",
+            "summary": "経歴・自己紹介 | デジライズ（DigiRise） Skip to the content Your browser does not support the video tag.Click to Enter Biography and Personal Introduction about Company/Service company Activity record results inquiry Contact Top Page Top Page English English Japanese About Biography and Personal Introduction Company Company and service information Results Activity record Press Kit Press Kit Contact inquiry About Biography and Personal Introduction history After studying abroad in Australia and the United Stat"
           }
         ]
       },
       {
-        "title": "【必見技術】CLAUDE公式の語るSKILLを活用してAI臭を避ける方法を徹底解説！",
-        "description": "今回の動画ではClaude公式から共有されたSKILLを通してAI臭いUIデザインを避けるための本質ブログが公開されていたので、 ...",
-        "url": "https://www.youtube.com/watch?v=xjJ8bhO873w",
-        "thumbnail": "https://i.ytimg.com/vi/xjJ8bhO873w/hqdefault.jpg",
-        "publishedAt": "2025-11-15T09:30:37Z",
+        "title": "Windows11を限界までカスタマイズして超オシャレな新Windows作ったった【ウィンドウズカスタマイズ術】",
+        "description": "お知らせ動画＞ 現在小さなころ夢だったゲーム開発に挑戦中です 詳しくはこちらのお知らせ動画をご覧ください♪ ...",
+        "url": "https://www.youtube.com/watch?v=Vj3TGwyltV8",
+        "thumbnail": "https://i.ytimg.com/vi/Vj3TGwyltV8/hqdefault.jpg",
+        "publishedAt": "2025-11-14T10:01:03Z",
         "searchSummaries": [
           {
-            "title": "AI｜note（ノート）",
-            "url": "https://note.com/topic/ai",
-            "snippet": "ボタニカルな水彩画に挑戦 #AIアートnote記事#AIイラスト日記#SeaArt #AI画像生成#みんなのフォトギャラリー#花の画像生成AI#子育て中のワーママ、秋だからやってみた.",
-            "summary": "AI｜note（ノート） ログイン 会員登録 noteプレミアム note pro よくある質問・noteの使い方 プライバシー フィードバック ご利用規約 通常ポイント利用特約 加盟店規約 資⾦決済法に基づく表⽰ 特商法表記 投資情報の免責事項 ボタニカルな水彩画に挑戦 #AIアートnote記事#AIイラスト日記#SeaArt #AI画像生成#みんなのフォトギャラリー#花の画像生成AI#子育て中のワーママ、秋だからやってみた."
+            "title": "Windows 10をもっと便利にする「マルチディスプレイ」活用テク ...",
+            "url": "https://www.eizo.co.jp/eizolibrary/other/itmedia09/",
+            "snippet": "Mar 18, 2016 ... 実際にWindows 10搭載のノートPCとデスクトップPC、そして2台のディスプレイを使って、マルチディスプレイ活用テクニックを見ていこう。 下記の記事は2016 ...",
+            "summary": "Mar 18, 2016 ... 実際にWindows 10搭載のノートPCとデスクトップPC、そして2台のディスプレイを使って、マルチディスプレイ活用テクニックを見ていこう。 下記の記事は2016 ..."
           },
           {
-            "title": "生成AIとクリエイティブの新時代：可能性と活用法 - デザイン新聞",
-            "url": "https://designfirst.co.jp/magazine/%E7%94%9F%E6%88%90ai%E3%81%A8%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%AE%E6%96%B0%E6%99%82%E4%BB%A3%EF%BC%9A%E5%8F%AF%E8%83%BD%E6%80%A7%E3%81%A8%E6%B4%BB%E7%94%A8%E6%B3%95/",
-            "snippet": "May 7, 2025 ... 近年、テクノロジーの進化によって「生成AI」が急速に発展し、クリエイティブ業界に革命をもたらしています。本記事では、生成AIの基本概念から最新の ...",
-            "summary": "生成AIとクリエイティブの新時代：可能性と活用法 - デザイン新聞 デザイン新聞 デザイン ブランディング 経営 新規事業 採用 会社HP お問い合わせ CLOSE キーワード 生成AI 経営 SDGs ブランディング デザイン カテゴリー カテゴリーを選択 経営 デザイン ブランディング 新規事業 SDGs 人事・採用戦略 資料ダウンロード デザインレポート 検索 ブロガー/アフィリエイター向けWPテーマ「THE THOR」の購入ページはこちら 生成AIとクリエイティブの新時代：可能性と活用法 2025年4月30日 2025年5月7日 デザイン 422view デザイン HOME デザイン 生成AIとクリエイティブの新時代：可能性と活用法 目次 1 生成AIとクリエイティブの新時代：可能性と活用法 1.1 目次 1.2 生成AIとは：基本概念と仕組み 1.2.1 生成AIの基本的な仕組み 1.3 クリエイティブ業界における生成AIの活用事例 1.3.1 デザイン分野 1.3.2 映像・アニメーション制作 1.3.3 音楽・サウンドデザイン 1.3.4 文章・コピーライティング 1.4"
+            "title": "【2025年】作業の効率アップ！おすすめのChrome拡張機能34選 ...",
+            "url": "https://sokkin-match.me/base/it/efficiency/1470",
+            "snippet": "... な機能満載。Chromeをカスタマイズして生産性アップ!初心者からプロまで ... 拡張機能はGoogle社だけが作っている訳ではなく、様々な人が作っています。作 ...",
+            "summary": "【2025年】作業の効率アップ！おすすめのChrome拡張機能34選 - SOKKIN MATCH 副業 マーケティング 仕事・キャリア フリーランス・個人事業主 在宅ワーク 転職 稼ぎ方 年収 起業 税金 所得税 法人税 消費税 固定資産税 贈与税 相続税 住民税 事業税 申告・手続き 確定申告 年末調整 青色申告 白色申告 e-tax インタビュー 企業インタビュー パートナーインタビュー 調査 ホーム IT・テクノロジー 業務効率化 【2025年】作業の効率アップ！おすすめのChrome拡張機能34選 【2025年】作業の効率アップ！おすすめのChrome拡張機能34選 業務効率化 X Facebook はてブ Pocket LINE コピー 2024.01.23 2025.10.09 本記事では、作業を効率化できるおすすめのChrome拡張機能を34つと、効率化には繋がらないけれど、おすすめできるChrome拡張機能を5つ紹介します。それぞれの拡張機能の 基本機能、特徴、料金 などをまとめましたので、ぜひ最後までご覧ください。"
           },
           {
-            "title": "ブーメラン効果とは何か？説得が裏目に出る現象の定義と心理的 ...",
-            "url": "https://www.issoh.co.jp/column/details/8737/",
-            "snippet": "Sep 9, 2025 ... ... して反発を軽減する方法とポイントを詳しく解説します; 6.4 相手の意見や ... しつつ顧客の反発を避ける方法を紹介します; 7.5 第三者の影響力を ...",
-            "summary": "Sep 9, 2025 ... ... して反発を軽減する方法とポイントを詳しく解説します; 6.4 相手の意見や ... しつつ顧客の反発を避ける方法を紹介します; 7.5 第三者の影響力を ..."
+            "title": "日経PC21 発売日・バックナンバー",
+            "url": "https://www.fujisan.co.jp/product/1281679724/b/list/?page=2&limit=30",
+            "snippet": "特集1 PCスペックの目利きになる ○PCスペックの目利きになる CPUからSSD、端子まで完全攻略（010p） ○目利きは知っている！ 今は10年に1度の変革期（012p）",
+            "summary": "日経PC21のバックナンバー (2ページ目 30件表示) | 雑誌/電子書籍/定期購読の予約はFujisan マイページ マイライブラリ 本日発売 ランキング 法人の方 ログイン／新規無料登録 ログイン/ 新規無料 登録 カート メニュー ログイン／新規無料登録 TOPページ カテゴリ一覧 雑誌ランキング 本日発売の雑誌 はじめてのお客様へ マイページ マイライブラリ 定期購読 タダ読みサービス 法人サービス 総合案内 会社案内 採用情報 出版社の皆様へ 投資家の皆様へ アフィリエイト お問い合わせ 利用規約 プライバシーポリシー 特定商取引法に基づく表示 トップ パソコン・PC 雑誌 コンピューター・自作PC 雑誌 日経PC21 バックナンバー 定期購読 1冊定価の5%OFF 最新号 2025年10月24日 次号 2025年11月21日 バックナンバー 増刊号・その他 レビュー 日経PC21 発売日・バックナンバー すべての発売年 2025年発売 2024年発売 2023年発売 2022年発売 2021年発売 2020年発売 2019年発売 2018年発売 2017年発売 2016年"
           }
         ]
       },
       {
-        "title": "ChatGPTにLINEのようなグループチャット機能が登場！対人でのメッセージの送受信が可能？",
-        "description": "ChatGPTにSlackやLINEのようにグループを作成して通常のメッセージのやり取りが可能な機能が登場しました。何がどこまで ...",
-        "url": "https://www.youtube.com/watch?v=VAVUtUMGb6M",
-        "thumbnail": "https://i.ytimg.com/vi/VAVUtUMGb6M/hqdefault.jpg",
-        "publishedAt": "2025-11-16T10:57:25Z",
+        "title": "Nano BananaでLINEスタンプを作るChrome拡張",
+        "description": "Nano BananaでLINEスタンプを作るChrome拡張はここで配布中 https://note.com/konho/n/na88516d303f7.",
+        "url": "https://www.youtube.com/watch?v=gQ5oQ5WOj2w",
+        "thumbnail": "https://i.ytimg.com/vi/gQ5oQ5WOj2w/hqdefault.jpg",
+        "publishedAt": "2025-11-13T05:37:34Z",
         "searchSummaries": [
           {
-            "title": "【2024年版】世界のメッセージングアプリ事情 ～WhatsApp ...",
-            "url": "https://mobilus.co.jp/lab/chatbot/global-messaging-app/",
-            "snippet": "1990年代にSMSが登場し、モバイル端末間でのテキストメッセージの送受信が可能になりました。 ... グループチャットなど、さまざまな機能を有するようになっています。また ...",
-            "summary": "【2024年版】世界のメッセージングアプリ事情 ～WhatsApp、Messenger、WeChat、LINEまで勢力分布と今後の展望～ - Mobilus CX-Branding Tech.Lab - モビルス CXブランディングテックラボ - すべてのビジネスに、一歩先行くCXを。モビルスのCX（カスタマーエクスペリエンス）向上情報サイト モビルス製品に関する お問い合わせ お役立ち資料 ダウンロード CX ノンボイス ボイスボット トピック 対談 市場調査 お役立ち資料 モビルス製品一覧 記事検索 モビルス製品に関する お問い合わせ お役立ち資料 ダウンロード 記事検索 CX ノンボイス ボイスボット トピック 対談 市場調査 お役立ち資料 モビルス製品一覧 記事検索 お問い合わせ TOP ノンボイス 【2024年版】世界のメッセージングアプリ事情 ～WhatsApp、Messenger、WeChat、LINEまで勢力分布と今後の展望～ 【2024年版】世界のメッセージングアプリ事情 ～WhatsApp、Messenger、WeChat、LINEまで勢力分布と今後の展望～ 投稿日"
+            "title": "Nano BananaでLINEスタンプを作るChrome拡張｜けいすけ",
+            "url": "https://note.com/konho/n/na88516d303f7",
+            "snippet": "4 days ago ... 特に画像生成ならNano Bananaの性能が抜群です。 ということで、Nano BananaでLINEスタンプを作るプログラムを作りました。 Chrome拡張で動くようにして ...",
+            "summary": "Nano BananaでLINEスタンプを作るChrome拡張｜けいすけ ログイン 会員登録 Nano BananaでLINEスタンプを作るChrome拡張 58 けいすけ 2025年11月13日 14:36 ¥500/月 こんにちは。けいすけです。みなさん！LINE使ってますか？もちろん使ってますよね。そして今の時代はAIがすごいです！ 特に画像生成ならNano Bananaの性能が抜群です。ということで、Nano BananaでLINEスタンプを作るプログラムを作りました。Chrome拡張で動くようにしてあるので、ぜひ使ってみてください。ちなみにこのプログラムはfalというサイトのAPIを使います。APIには課金が必要です。無料では使えません。目安ですが、画像1枚当たり生成に6円くらい。背景透過に2円くらいかかります。40枚のスタンプだとやり直しなど含めて400円くらいかかります。では使い方ですが・・・ 動画で解説したので、こちらをご覧ください。"
           },
           {
-            "title": "知らないと損するLINEの裏技・便利機能43選！【2025年版】",
-            "url": "https://network.mobile.rakuten.co.jp/sumakatsu/contents/articles/2025/00369/",
-            "snippet": "Jul 29, 2025 ... 以下のように、引用付きのメッセージがトークに送信されます。 送信取消 ... メッセージを常にトークルームの上部に表示させるアナウンス機能を使えば、大事 ...",
-            "summary": "知らないと損するLINEの裏技・便利機能43選！【2025年版】 --> 記事一覧 楽天モバイル料金プランへ 記事一覧へ キーワードで探す #AI #Android #eSIM #Google #Instagram #iPhone #LINE #SIM #SNS #TikTok #Webサービス #Wi-Fi #X(Twitter) #YouTube #アクセサリー #アプリ #ストリーミング #スマホの選び方 #セキュリティ #トラブル解決 #リモートワーク #乗り換え #携帯キャリア #料金プラン #格安SIM #機種変更 #機能 #海外 #節約 #通信 #電話 楽天モバイル料金プランへ モバイルトップ ＞ スマ活トップ ＞ 記事一覧 ＞ お役立ち ＞ 知らないと損するLINEの裏技・便利機能43選！【2025年版】 知らないと損するLINEの裏技・便利機能43選！【2025年版】 2025.07.29 普段利用しているLINEアプリで、裏技や便利な機能を知っていると、家族や友人とのやり取りの中で役立つ場面があります。"
+            "title": "オトーワン Nakamura@編集とか生成AIしたり配信する人 ...",
+            "url": "https://x.com/otousan19",
+            "snippet": "Nano BananaでLineスタンプを作るChrome拡張ができました！ 使ってみたい方はこのポストにいいねとRTを・・・ していただかなくてもリプに貼っておきます。 （いいねRT ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. Nano BananaでLineスタンプを作るChrome拡張ができました！ 使ってみたい方はこのポストにいいねとRTを・・・ していただかなくてもリプに貼っておきます。 （いいねRT ..."
           },
           {
-            "title": "ChatGPTとは？使い方、料金、できること、注意点、社会への影響 ...",
-            "url": "https://exawizards.com/column/article/ai/chatgpt/",
-            "snippet": "Apr 20, 2023 ... 無料のため利用できる回数には制限がありますが、「試しに使ってみたい方」、「使う頻度が少ない方」、「GPT-4は使えなくても良い方」はLINEのAIチャット ...",
-            "summary": "ChatGPTとは？使い方、料金、できること、注意点、社会への影響まで徹底解説 - DXコラム - 株式会社エクサウィザーズ Skip to content DXコラム ノウハウ記事 DX DX人材 HR AI ChatGPT 特集 経営層インタビュー セミナーレポート お役立ち資料 検索: DXコラム > ノウハウ記事 > AI > ChatGPTとは？使い方、料金、できること、注意点、社会への影響まで徹底解説 メールマガジンを登録 --> --> ChatGPTとは？使い方、料金、できること、注意点、社会への影響まで徹底解説 AI 公開日 2023.04.20 更新日 2025.08.04 #AI #ChatGPT DXコラム編集部 ChatGPTとは、米国のAI開発組織であるOpenAIが2022年11月に公開した対話型AIサービスです。本記事ではChatGPTの紹介と、GPTという技術の説明、他のサーピスとの連携、APIの料金や何ができるのか、利用の際の注意点や社会に与えている影響まで説明します。今話題のChatGPTについて簡単に網羅的に学べますのでぜひご一読ください。"
+            "title": "けいすけ / kei31 - YouTube",
+            "url": "https://www.youtube.com/@kei31e",
+            "snippet": "Videos · Nano BananaでLINEスタンプを作る実況RTA · Nano BananaでLINEスタンプを作るChrome拡張 · Canvaで画像をワンクリでコピーできるChrome拡張.",
+            "summary": "けいすけ / kei31 - YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC Videos · Nano BananaでLINEスタンプを作る実況RTA · Nano BananaでLINEスタンプを作るChrome拡張 · Canvaで画像をワンクリでコピーできるChrome拡張."
           }
         ]
       },
       {
-        "title": "ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説",
-        "description": "ChatGPTがGPT-5.1にマイナーアップデートされてたので、何がどう変わったのか解説。 ☆プロセボ｜AIコミュニティ AI活用を ...",
-        "url": "https://www.youtube.com/watch?v=SGnV6SP1Hgg",
-        "thumbnail": "https://i.ytimg.com/vi/SGnV6SP1Hgg/hqdefault.jpg",
-        "publishedAt": "2025-11-14T11:01:03Z",
+        "title": "今話題のGoogle Workspace Flowsを&quot;弱点&quot;も含め、徹底解説します！（AIワークフロー／n8n）",
+        "description": "Googleの新サービス、Google Workspace Flowsを一緒に見ていきましょう！ □ 01_お仕事のご依頼・お問い合わせ お仕事のご ...",
+        "url": "https://www.youtube.com/watch?v=FUAwo7cJFEA",
+        "thumbnail": "https://i.ytimg.com/vi/FUAwo7cJFEA/hqdefault.jpg",
+        "publishedAt": "2025-11-13T12:35:22Z",
+        "searchSummaries": []
+      },
+      {
+        "title": "【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI",
+        "description": "動画のもとになったNote記事 https://note.com/ai_hakase/n/n00dee2b109f0 他のフル動画版などもこちらで掲載しております！",
+        "url": "https://www.youtube.com/watch?v=bSwwWGAEf7g",
+        "thumbnail": "https://i.ytimg.com/vi/bSwwWGAEf7g/hqdefault.jpg",
+        "publishedAt": "2025-11-13T12:53:49Z",
         "searchSummaries": [
           {
-            "title": "ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説 ...",
-            "url": "https://x.com/kenlog_net/status/1989309680900808902",
-            "snippet": "2 days ago ... kenlog (@kenlog_net). 164 views. ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説 https://t.co/mjgi4iP1R2 @YouTubeより.",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 2 days ago ... kenlog (@kenlog_net). 164 views. ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説 https://t.co/mjgi4iP1R2 @YouTubeより."
+            "title": "【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V ...",
+            "url": "https://note.com/ai_hakase/n/n00dee2b109f0",
+            "snippet": "4 days ago ... 新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI. 53.",
+            "summary": "【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI｜ハカセ アイ (Ai-Hakase)🐱YouTube × 記事でトレンドAIを解説する為のnote🐾 ログイン 会員登録 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI 53 ハカセ アイ (Ai-Hakase)🐱YouTube × 記事でトレンドAIを解説する為のnote🐾 2025年11月13日 18:25 ¥2,599/月 どうも皆さん！季節の変わり目って、なんでこんなに風邪をひきやすいんですかね、 葉加瀬あい（ハカセアイ） です！ さて、今回はAI動画生成の歴史が、また一つ大きく変わるかもしれない…そんな革命的な技術をご紹介します！ これまで私たちが作ってきたAI動画は、言ってみれば「始点」の画像と「終点」の動きをAIにお任せするスタイルが主流でした。"
           },
           {
-            "title": "ChatGPT 5 Just Changed Your Business Forever (9 Use Cases ...",
-            "url": "https://chatgpt.retromanplanning.com/archives/18369",
-            "snippet": "Aug 12, 2025 ... chatGPT 活用動画まとめ 作業効率をUPさせるchatGPT活用方法をまとめています。 ... ChatGPT ...",
-            "summary": "ChatGPT 5 Just Changed Your Business Forever (9 Use Cases) » chatGPT 活用動画まとめ chatGPT 活用動画まとめ 作業効率をUPさせるchatGPT活用方法をまとめています。注目キーワード Fusion テキスト＋ キーフレーム ALL ChatGPT 5 Just Changed Your Business Forever (9 Use Cases) 2025.08.12 ALL HOME ALL ChatGPT 5 Just Changed Your Business Forever (9 Use Cases) 🎬 Register for the FREE On-demand video masterclass training, &#8220;How to Attract Unlimited Clients From YouTube&#8221; Just go to: https://wesmcdowell.com/youtube I’ve been stress-testing ChatGPT 5 f"
+            "title": "AI動画の「演出家」になるための詳しい設定方法や、 今回ご紹介 ...",
+            "url": "https://x.com/ai_hakase_/status/1988911516431626656",
+            "snippet": "4 days ago ... 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロール ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 4 days ago ... 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロール ..."
           },
           {
-            "title": "【AI有益動画シェア】 GPT-5.1が“冷たいAI”から“人間らしいAI”へ ...",
-            "url": "https://x.com/atsuking4312/status/1989514942572122279",
-            "snippet": "1 day ago ... ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説. ChatGPTがGPT-5.1にマイナーアップデートされてたので、何がどう変わったのか解説。",
-            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 1 day ago ... ChatGPT-5.1が素晴らしい！なぜ好評？何がどう変わったのか解説. ChatGPTがGPT-5.1にマイナーアップデートされてたので、何がどう変わったのか解説。"
+            "title": "[B!] 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード ...",
+            "url": "https://b.hatena.ne.jp/entry/s/note.com/ai_hakase/n/n00dee2b109f0",
+            "snippet": "【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI｜ハカセ アイ (Ai-Hakase) YouTube ...",
+            "summary": "[B!] 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI｜ハカセ アイ (Ai-Hakase)🐱YouTube × 記事でトレンドAIを解説する為のnote🐾 close サクサク読めて、 アプリ限定の機能も多数！ アプリで開く はてなブックマーク 閉じる はてなブックマークって？アプリ・拡張の紹介 ユーザー登録 ログイン 総合 一般 世の中 政治と経済 暮らし 学び テクノロジー おもしろ エンタメ アニメとゲーム テクノロジー 【複数画像で展開を操る】設定2つだけ！新Wan2.2ノード『FMLF2V』で、始点・中間・終点を完全コントロールする方法を徹底解説｜ComfyUI｜ハカセ アイ (Ai-Hakase)🐱YouTube × 記事でトレンドAIを解説する為のnote🐾 気に入った記事をブックマーク 気に入った記事を保存 できます 保存した記事の一覧は、はてなブックマークで確認・編集ができます 記事を読んだ 感想やメモを書き残せます 非公開でブックマーク することもできます"
           }
         ]
       },
       {
-        "title": "【Geminiで資料作成】資料作成これで良い。GeminiからGoogle Slidesを直接生成できる機能が公開。使い方と秘伝のプロンプトを紹介。",
-        "description": "【問い合わせフォーム】 動画内で紹介した資料の入手やAI研修・開発の問い合わせ ...",
-        "url": "https://www.youtube.com/watch?v=9URnNSkZ1R8",
-        "thumbnail": "https://i.ytimg.com/vi/9URnNSkZ1R8/hqdefault.jpg",
-        "publishedAt": "2025-11-10T10:30:14Z",
+        "title": "OpenAIの新しいモデル「GPT-5.1」登場！",
+        "description": "メンバーシップ開始しました！当チャンネルをサポートしてくださる方を募集しております  ‍♂️  (YouTubeアプリからの加入 ...",
+        "url": "https://www.youtube.com/watch?v=_8sj8xmxjkE",
+        "thumbnail": "https://i.ytimg.com/vi/_8sj8xmxjkE/hqdefault.jpg",
+        "publishedAt": "2025-11-13T02:08:46Z",
         "searchSummaries": [
           {
-            "title": "[Creating documents with Gemini] This is all you need for creating ...",
-            "url": "https://www.youtube.com/watch?v=9URnNSkZ1R8",
-            "snippet": "6 days ago ... ... 資料が作れる「秘伝のプロンプト」も3種類プレゼント。 ＜配布プロンプト一覧＞ ChatGPT用： 対話しながら資料構成を練り上げる「プレゼン作成Bot」 Gemini ...",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 6 days ago ... ... 資料が作れる「秘伝のプロンプト」も3種類プレゼント。 ＜配布プロンプト一覧＞ ChatGPT用： 対話しながら資料構成を練り上げる「プレゼン作成Bot」 Gemini ..."
+            "title": "GPT-5 が登場 | OpenAI",
+            "url": "https://openai.com/ja-JP/index/introducing-gpt-5/",
+            "snippet": "Aug 7, 2025 ... GPT‑5 は、従来のモデルを上回るベンチマーク性能で、質問にもより迅速に回答しますが、最も重要なことは、実際のユーザーからの実世界での質問において、 ...",
+            "summary": "Aug 7, 2025 ... GPT‑5 は、従来のモデルを上回るベンチマーク性能で、質問にもより迅速に回答しますが、最も重要なことは、実際のユーザーからの実世界での質問において、 ..."
           },
           {
-            "title": "【資料作成から解放？】Claudeの新機能「ファイル生成」が ...",
-            "url": "https://note.com/chaen_channel/n/neb37577011ee",
-            "snippet": "Sep 15, 2025 ... みなさん、こんにちは。 チャエンです！（自己紹介はこちら） 速報です！Claudeが遂にファイル作成に対応しました！ ChatGPTには以前から搭載されていた ...",
-            "summary": "【資料作成から解放？】Claudeの新機能「ファイル生成」がChatGPT超えの精度《パワーポイント、エクセル、ワード、PDFが生成可能。活用事例5選と秘伝のプロンプトを大公開》｜チャエン | 重要AIニュースを毎日発信⚡️ ログイン 会員登録 【資料作成から解放？】Claudeの新機能「ファイル生成」がChatGPT超えの精度《パワーポイント、エクセル、ワード、PDFが生成可能。活用事例5選と秘伝のプロンプトを大公開》 6 返金可 チャエン | 重要AIニュースを毎日発信⚡️ 2025年9月16日 01:27 ¥1,980 みなさん、こんにちは。チャエンです！（自己紹介は こちら ） 速報です！Claudeが遂にファイル作成に対応しました！ ChatGPTには以前から搭載されていた機能が、ついにClaudeにも搭載されました。Claude can now create and edit files."
+            "title": "ChatGPT研究所 (@ctgptlb) / Posts and Replies / X",
+            "url": "https://x.com/ctgptlb/with_replies",
+            "snippet": "【徹底解説】GPT-5.1登場 ... Build a coding agent with GPT 5.1 | OpenAI Cookbook. cookbook.openai.com.",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 【徹底解説】GPT-5.1登場 ... Build a coding agent with GPT 5.1 | OpenAI Cookbook. cookbook.openai.com."
           },
           {
-            "title": "[Create PowerPoint files in an instant] Claude's new \"File Generation ...",
-            "url": "https://www.youtube.com/watch?v=hLJkuDle4OE",
-            "snippet": "Sep 10, 2025 ... ... 直接生成できるようになりました。もう面倒な資料作成に時間を費やす必要はありません。 この動画では、Claudeの新機能を徹底解説。具体的な使い方から ...",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC Sep 10, 2025 ... ... 直接生成できるようになりました。もう面倒な資料作成に時間を費やす必要はありません。 この動画では、Claudeの新機能を徹底解説。具体的な使い方から ..."
+            "title": "GPT-5 が登場 | OpenAI",
+            "url": "https://openai.com/ja-JP/gpt-5/",
+            "snippet": "最も高性能で高速、かつ実用性に優れたモデルです。思考機能を標準搭載しています。すべての人にご利用いただけます。 ChatGPT で試す （新しいウィンドウで開く）調査 ...",
+            "summary": "最も高性能で高速、かつ実用性に優れたモデルです。思考機能を標準搭載しています。すべての人にご利用いただけます。 ChatGPT で試す （新しいウィンドウで開く）調査 ..."
           }
         ]
       },
       {
-        "title": "注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど",
-        "description": "新刊：『Gemini 最強のAI仕事術』 https://amzn.to/3KHIrVk ▽最強の初心者向けハンズオン研修（ChatGPT/Gemini対応） ...",
-        "url": "https://www.youtube.com/watch?v=sySmsCeVIZE",
-        "thumbnail": "https://i.ytimg.com/vi/sySmsCeVIZE/hqdefault.jpg",
-        "publishedAt": "2025-11-16T06:00:53Z",
+        "title": "【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したGPT-5.1の概要と使い方！ ～ChatGPTの新機能も～",
+        "description": "動画の説明 (2025年)11月13日、OpenAIは 最新のAIモデル「GPT-5.1」を公開し ChatGPTの全ユーザーに展開すると発表しました ...",
+        "url": "https://www.youtube.com/watch?v=ZZ_4IfLMXCk",
+        "thumbnail": "https://i.ytimg.com/vi/ZZ_4IfLMXCk/hqdefault.jpg",
+        "publishedAt": "2025-11-13T09:06:34Z",
         "searchSummaries": [
           {
-            "title": "注目AIニュース24選～ChatGPTグループチャット、Google Flows ...",
-            "url": "https://www.youtube.com/watch?v=sySmsCeVIZE",
-            "snippet": "6 hours ago ... 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど. 1.4K views · 3 hours ago ...",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 6 hours ago ... 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど. 1.4K views · 3 hours ago ..."
+            "title": "【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化した ...",
+            "url": "https://x.com/stone_system_jp/status/1989106222482563164",
+            "snippet": "3 days ago ... 【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したGPT-5.1の概要と使い方！ ～ChatGPTの新機能も～. ◇動画の説明(2025年)11月13日、OpenAIは ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 3 days ago ... 【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したGPT-5.1の概要と使い方！ ～ChatGPTの新機能も～. ◇動画の説明(2025年)11月13日、OpenAIは ..."
           },
           {
-            "title": "いけともch - YouTube",
-            "url": "https://www.youtube.com/@iketomo-ch",
-            "snippet": "1:04:49. 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど. 228 views. 30 minutes ago · 1:23:58 ...",
-            "summary": "いけともch - YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 1:04:49. 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど. 228 views. 30 minutes ago · 1:23:58 ..."
+            "title": "AI解説者が分析！「GPT-5.1は温かみのあるAIに進化」冷たいAI批判 ...",
+            "url": "https://news.livedoor.com/article/detail/29979412/",
+            "snippet": "3 days ago ... 動画「【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したChatGPT GPT-5.1の概要と使い方！」で、AI解説者のミライ氏がOpenAIの新 ...",
+            "summary": "AI����Ԥ�ʬ�ϡ���GPT-5.1�ϲ����ߤΤ���AI�˿ʲ����䤿��AI��Ƚ������������ʡɥ��åץ�&#12540;�Ȥ��®���� - �饤�֥ɥ��˥塼�� �饤�֥ɥ��˥塼�� �ɥ��դ� �������� livedoor �˥塼���ȥå� > IT �кѥ˥塼�� > AI����Ԥ�ʬ�ϡ���GPT-5.1�ϲ����ߤΤ���AI�˿ʲ����䤿��AI��Ƚ��� �˥塼���ȥå� > IT �кѥ˥塼�� > AI����Ԥ�ʬ�ϡ���GPT-5.1�ϲ����ߤΤ���AI�˿ʲ����䤿��AI��Ƚ��� AI����Ԥ�ʬ�ϡ���GPT-5.1�ϲ����ߤΤ���AI�˿ʲ����䤿��AI��Ƚ������������ʡɥ��åץ�&#12540;�Ȥ��®���� AI����Ԥ�ʬ�ϡ���GPT-5.1�ϲ����ߤΤ���AI�˿ʲ����䤿��AI��Ƚ������������ʡɥ��åץ�&#12540;�Ȥ��®���� 2025ǯ11��13�� 21��17ʬ AI�饤������ư��"
           },
           {
-            "title": "GPT-5.1 is here! Is OpenAI shifting its focus to emotions over ...",
-            "url": "https://www.youtube.com/watch?v=rTXmhPsEzSg",
-            "snippet": "3 days ago ... 1:04:49 · Go to channel · 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど.",
-            "summary": "- YouTube About Press Copyright Contact us Creators Advertise Developers Terms Privacy Policy & Safety How YouTube works Test new features NFL Sunday Ticket &copy; 2025 Google LLC 3 days ago ... 1:04:49 · Go to channel · 注目AIニュース24選～ChatGPTグループチャット、Google Flows、Claude for Excel、全業務を可視化するScribe optimizeなど."
-          }
-        ]
-      },
-      {
-        "title": "Sherlock Dash AlphaとSherlock Think Alphaをテストしましょう！",
-        "description": "https://www.twitch.tv/technavi_tooru https://x.com/technavi_tooru https://discord.com/invite/X6DuaZyQW6.",
-        "url": "https://www.youtube.com/watch?v=sKZyXbRud6g",
-        "thumbnail": "https://i.ytimg.com/vi/sKZyXbRud6g/hqdefault_live.jpg",
-        "publishedAt": "2025-11-16T12:00:14Z",
-        "searchSummaries": [
-          {
-            "title": "「Gemini 3.0」のYahoo!リアルタイム検索 - X（旧Twitter）を ...",
-            "url": "https://search.yahoo.co.jp/realtime/search?rkf=1&p=Gemini%203.0&btid=MTk1MzQ5NTE3MTE2NzA4NDc3OA%3D%3D&ifr=tp_bz",
-            "snippet": "... しょう。 いず｜フリー ... x.com/openrouterai/s… OpenRouter @OpenRouterAI. New Stealth Models! - Sherlock Think Alpha (reasoning) - Sherlock Dash Alpha ...",
-            "summary": "「Gemini 3.0」のX（旧Twitter）検索結果 - Yahoo!リアルタイム検索 ウェブ 画像 動画 リアルタイム ニュース キーワードを消す 検索 ミュートしたアカウント すべて 画像・動画 自動更新 並べ替え： 新着順 メニューを開く Gemini 3 .0 とかQwen4とか、いつになるんですかね… 雷之電@古明地ゲー体験版出ました @ lunaticlives 2分前 メニューを開く Gemini 3 .0 早く出ないかなぁ Flowry @ yura_407 4分前 メニューを開く 【Google AI・プロダクト】最新動向（2025年11月16日） | 次世代AI「 Gemini 3 .0 」と「Nano Banana Pro」のリーク情報が加速｜Sun Bunny @yk198901212 note.com/leal_colt3215/… Sun Bunny @ yk198901212 17分前 メニューを開く Googleの次の大型AIモデル「 Gemini 3 ."
-          },
-          {
-            "title": "Untitled",
-            "url": "https://mirrors.sonic.net/ubuntu/dists/bionic-proposed/universe/i18n/by-hash/SHA256/f35085987e1b76773a50e379894c28363cb9b1d02324ccdc039d152500f89f1a",
-            "snippet": "... テストのためのフレームワークを提供しているかどうかを チェックすることを可能 ... しょう。 . AfterStep は BowMan ウィンドウマネージャプロジェクトを ...",
-            "summary": "Package: 2vcard Description-md5: 2c96ee919233c4f6128f265ad35ff488 Description-ja: アドレス帳から VCARD ファイルフォーマットへの変換用 perl スクリプト 2vcard converts address books and alias files into the widely-used vCard format.Currently it can convert from abook, Eudora, Juno, LDIF, mutt, mh and pine.Package: 7kaa Description-md5: 37b0a07b664e6e2e6b3370a23d7a49cb Description-ja: 七王国 古代の敵対者 (Seven Kingdoms Ancient Adversaries): リアルタイム戦略ゲーム 七王国 (Seven Kingdoms) は Trevor Chan によって設計された、 リアルタイム戦略ゲームに貿易、外交、そしてスパイを融合させた ユニーク"
-          },
-          {
-            "title": "サイトマップ | おすすめ英会話・英語学習の比較・ランキング ...",
-            "url": "https://englishhub.jp/sitemap",
-            "snippet": "Jan 15, 2017 ... ... テスト活用法とは～ · 英語で学ぶ日本、英語で伝える日本 · 海外へ行こう！特集 · 英語コーチング特集 ～学び方をデザイン～ · English Hubについて · IELTS ...",
-            "summary": "サイトマップ | おすすめ英会話・英語学習の比較・ランキング- English Hub 英語学習トップ 英会話スクール オンライン英会話 留学 英語学習アプリ TOEIC対策 TOEFL対策 IELTS対策 英検対策 子供向け 英語学習ノウハウ キャリア search 最新記事 Latest オンライン英会話 オンライン英会話業界の最新ニュースをご紹介しています。オンライン英会話の気になる新サービス情報や、大変おとくなキャンペーン、割引情報など、おすすめの情報が満載です。オンライン英会話で英語を学んでいる方やこれからオンライン英会話を始めようとしている方はぜひ参考にしてください。英会話教室 留学 アプリ 教材 TOEIC TOEFL 新商品 キャンペーン 英会話教室、オンライン英会話、英語学習アプリ、語学留学などに関する最新のキャンペーン情報を配信しています。"
-          }
-        ]
-      },
-      {
-        "title": "【週刊最新AIツール&amp;ニュース】テキストや画像から3D空間を構築できるAI「Marble」/温かみのある会話のできるAIモデル「GPT-5.1」/NotebookLMに4つの新機能実装",
-        "description": "動画の説明 今週リリース(発表)されたAIツールとAIニュースをまとめています なるべく無料で使えるツールを中心に紹介します！",
-        "url": "https://www.youtube.com/watch?v=qIePtei1ipY",
-        "thumbnail": "https://i.ytimg.com/vi/qIePtei1ipY/hqdefault.jpg",
-        "publishedAt": "2025-11-16T09:06:40Z",
-        "searchSummaries": [
-          {
-            "title": "SDGsニュースリスト – // もちぶろ",
-            "url": "https://slash-mochi.net/blog/2019/01/04/post-1169/",
-            "snippet": "Jan 4, 2019 ... 前日の米市場でハイテク株が下落した流れを引き継いで、東京市場でもAI（人工知能）株に売りが出た。日経平均は一時1000円超下落した。 産業と技術革新の ...",
-            "summary": "SDGsニュースリスト &#8211; // もちぶろ コンテンツへスキップ // もちぶろ メニュー メニュー ニュース SDGsニュースリスト もっちりとしたまとめのまとめ もっちりビジネス速報まとめ 芸能速報まとめ スポーツ速報まとめ ツール ゲーム 技術メモ AWS Web WPF C# Windows Deep Learning 電子回路 ひとりごと SDGsニュースリスト 2023-01-19 2019-01-04 by もち --> ニュースの情報源リストは こちら 。ツイッターでもニュースを毎日つぶやいています。→&nbsp; @SlashMochiBot {{ scope.row.title }} {{ scope.row.summary }} {{ tag }} {{ scope.row.sourceName }} {{ scope.row.updated }} --> ツール「SDGsニュースリスト」は「// もちぶろ」の執筆者であるもちの著作物であり、著作権はもちが有しています。"
+            "title": "ストーンシステム | Stone System (@stone_system_jp) / Posts / X",
+            "url": "https://x.com/stone_system_jp",
+            "snippet": "【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したGPT-5.1の概要と使い方！ ～ChatGPTの新機能も～. ◇動画の説明(2025年)11月13日、OpenAIは最新のAIモデル「GPT- ...",
+            "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 【GPT-5.1最速解説】冷たいAIがフレンドリーで賢いAIに進化したGPT-5.1の概要と使い方！ ～ChatGPTの新機能も～. ◇動画の説明(2025年)11月13日、OpenAIは最新のAIモデル「GPT- ..."
           }
         ]
       }
     ],
     "checkedSources": 17,
-    "newCandidates": 12,
-    "totalCandidates": 35,
+    "newCandidates": 11,
+    "totalCandidates": 36,
     "errors": []
   },
   "generator": {
-    "generated": true,
-    "candidateId": "yt-sKZyXbRud6g",
-    "postEntry": {
-      "title": "次世代AI「Gemini 3.0」と新モデルの動向を探る",
-      "date": "2025-11-16",
-      "summary": "この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。",
-      "tags": [
-        {
-          "slug": "generative-ai",
-          "label": "生成AI",
-          "category": "技術トピック",
-          "style": "accent-pink"
-        },
-        {
-          "slug": "ai",
-          "label": "AIモデル",
-          "category": "その他",
-          "style": "accent-neutral"
-        },
-        {
-          "slug": "google-ai",
-          "label": "Google AI",
-          "category": "その他",
-          "style": "accent-neutral"
-        },
-        {
-          "slug": "ai-4",
-          "label": "AI活用",
-          "category": "その他",
-          "style": "accent-neutral"
-        }
-      ],
-      "url": "posts/2025-11-16-aigemini-30.html",
-      "slug": "2025-11-16-aigemini-30"
-    },
-    "draftUrl": "posts/2025-11-16-aigemini-30.html",
-    "topicKey": "sherlock-dash-alphasherlock-think-alpha",
-    "article": {
-      "title": "次世代AI「Gemini 3.0」と新モデルの動向を探る",
-      "summary": "この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。",
-      "intro": "2025年11月現在、AI技術の進化は目覚ましく、特にGoogleの次世代AIモデル「Gemini 3.0」に注目が集まっています。これに加えて、新たに登場した「Sherlock Think Alpha」と「Sherlock Dash Alpha」も話題です。これらの技術は、個人ユーザーや小規模事業者にとってどのような可能性を秘めているのでしょうか。この記事では、これらのAIモデルの特徴と活用方法について詳しく解説し、読者が具体的にどのように活用できるかを考察します。",
-      "conclusion": "AI技術の進化は、私たちの生活やビジネスに大きな変革をもたらしています。Gemini 3.0やSherlockモデルを活用することで、より効率的な業務運営や新たなビジネスチャンスの発掘が可能です。まずはこれらの技術を試し、どのように自分のビジネスに適用できるかを検討してみましょう。導入に際しては、技術の特性をしっかりと理解し、適切な場面での活用を心がけることが重要です。",
-      "tags": [
-        {
-          "slug": "generative-ai",
-          "label": "生成AI",
-          "category": "技術トピック",
-          "style": "accent-pink"
-        },
-        {
-          "slug": "ai",
-          "label": "AIモデル",
-          "category": "その他",
-          "style": "accent-neutral"
-        },
-        {
-          "slug": "google-ai",
-          "label": "Google AI",
-          "category": "その他",
-          "style": "accent-neutral"
-        },
-        {
-          "slug": "ai-4",
-          "label": "AI活用",
-          "category": "その他",
-          "style": "accent-neutral"
-        }
-      ],
-      "sections": [
-        {
-          "heading": "Gemini 3.0の概要と期待される効果",
-          "overview": "Gemini 3.0はGoogleの最新AIモデルで、従来のAI技術を大幅に向上させると期待されています。このセクションでは、Gemini 3.0の特徴とその効果について説明します。",
-          "subSections": [
-            {
-              "heading": "Gemini 3.0の特徴",
-              "body": "Gemini 3.0は、自然言語処理や画像認識などの分野で優れた性能を発揮することが期待されています。特に、より複雑なタスクを迅速かつ正確に処理できる能力が強化されており、これにより多様なビジネスシーンでの活用が可能となります。例えば、カスタマーサポートの自動化やデータ分析の効率化が挙げられます。"
-            }
-          ]
-        },
-        {
-          "heading": "Sherlock Think AlphaとDash Alphaの革新性",
-          "overview": "Sherlock Think AlphaとDash Alphaは、新たなAIモデルとして注目されています。このセクションでは、それぞれのモデルの特徴と、どのように活用できるかを詳しく解説します。",
-          "subSections": [
-            {
-              "heading": "Sherlock Think Alphaの活用法",
-              "body": "Sherlock Think Alphaは、特に推論能力に優れており、複雑な問題を解決するための強力なツールです。例えば、ビジネスにおける意思決定支援や戦略的なデータ解析に利用できます。これにより、企業はより迅速かつ的確な判断を下すことが可能になります。"
-            },
-            {
-              "heading": "Sherlock Dash Alphaの可能性",
-              "body": "Sherlock Dash Alphaは、データの迅速な処理と分析に特化しています。リアルタイムでのデータ処理が求められる状況で、その能力を発揮します。例えば、マーケティングキャンペーンの効果測定やリアルタイムの顧客行動分析に活用することで、より効果的な戦略を立案できます。"
-            }
-          ]
-        },
-        {
-          "heading": "AI技術の今後の展望",
-          "overview": "AI技術は今後も進化を続け、私たちの生活やビジネスに多大な影響を与えるでしょう。このセクションでは、AI技術の未来について考察します。",
-          "subSections": [
-            {
-              "heading": "AIがもたらす未来",
-              "body": "AI技術は、今後ますます多くの分野で活用されることが予想されます。特に、医療や教育、製造業などの分野では、AIの導入が進むことで効率化が図られ、より良いサービスの提供が可能になるでしょう。また、AIによる新たなビジネスモデルの創出も期待されています。"
-            }
-          ]
-        }
-      ],
-      "slug": "2025-11-16-aigemini-30",
-      "date": "2025-11-16",
-      "htmlContent": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>次世代AI「Gemini 3.0」と新モデルの動向を探る | AI情報ブログ</title>\n  <meta name=\"description\" content=\"この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。\">\n\n  <!-- ファビコン -->\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"../assets/img/logo.svg\">\n  <link rel=\"apple-touch-icon\" href=\"../assets/img/logo.svg\">\n\n  <!-- Open Graph / SNS共有 -->\n  <meta property=\"og:type\" content=\"article\">\n  <meta property=\"og:title\" content=\"次世代AI「Gemini 3.0」と新モデルの動向を探る | AI情報ブログ\">\n  <meta property=\"og:description\" content=\"この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。\">\n  <meta property=\"og:image\" content=\"../assets/img/ogp-default.svg\">\n  <meta property=\"og:site_name\" content=\"AI情報ブログ\">\n  <meta property=\"og:locale\" content=\"ja_JP\">\n  <meta property=\"article:published_time\" content=\"2025.11.16T00:00:00+09:00\">\n\n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"次世代AI「Gemini 3.0」と新モデルの動向を探る | AI情報ブログ\">\n  <meta name=\"twitter:description\" content=\"この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。\">\n  <meta name=\"twitter:image\" content=\"../assets/img/ogp-default.svg\">\n\n  <link rel=\"stylesheet\" href=\"../assets/css/style.css\">\n</head>\n<body class=\"article-page\">\n  <!-- ヘッダーはcomponents.jsで動的に挿入されます -->\n\n  <main>\n    <article class=\"article-detail\">\n      <section class=\"inner article-hero\">\n        <p class=\"article-eyebrow\">Daily Briefing</p>\n        <div class=\"article-hero-main\">\n          <p class=\"post-meta\">2025.11.16</p>\n          <h1>次世代AI「Gemini 3.0」と新モデルの動向を探る</h1>\n          <p class=\"article-summary\">この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。</p>\n        </div>\n\n        <ul class=\"article-tags\">\n          <li class=\"tag\" data-tag-slug=\"generative-ai\" data-tag-category=\"技術トピック\" data-tag-style=\"accent-pink\">生成AI</li>\n          <li class=\"tag\" data-tag-slug=\"ai\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">AIモデル</li>\n          <li class=\"tag\" data-tag-slug=\"google-ai\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">Google AI</li>\n          <li class=\"tag\" data-tag-slug=\"ai-4\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">AI活用</li>\n        </ul>\n      </section>\n\n      <div class=\"inner article-grid\">\n        <div class=\"article-main-column\">\n          <article class=\"post-article article-content\">\n\n        <section class=\"article-intro-block\">\n<p>2025年11月現在、AI技術の進化は目覚ましく、特にGoogleの次世代AIモデル「Gemini 3.0」に注目が集まっています。これに加えて、新たに登場した「Sherlock Think Alpha」と「Sherlock Dash Alpha」も話題です。これらの技術は、個人ユーザーや小規模事業者にとってどのような可能性を秘めているのでしょうか。この記事では、これらのAIモデルの特徴と活用方法について詳しく解説し、読者が具体的にどのように活用できるかを考察します。</p>\n        </section>\n\n            <section class=\"article-section\" id=\"gemini-30\">\n              <h2>Gemini 3.0の概要と期待される効果</h2>\n              <p>Gemini 3.0はGoogleの最新AIモデルで、従来のAI技術を大幅に向上させると期待されています。このセクションでは、Gemini 3.0の特徴とその効果について説明します。</p>\n              \n              <div class=\"article-subsection\">\n                <h3>Gemini 3.0の特徴</h3>\n                <p>Gemini 3.0は、自然言語処理や画像認識などの分野で優れた性能を発揮することが期待されています。特に、より複雑なタスクを迅速かつ正確に処理できる能力が強化されており、これにより多様なビジネスシーンでの活用が可能となります。例えば、カスタマーサポートの自動化やデータ分析の効率化が挙げられます。</p>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"sherlock-think-alphadash-alpha\">\n              <h2>Sherlock Think AlphaとDash Alphaの革新性</h2>\n              <p>Sherlock Think AlphaとDash Alphaは、新たなAIモデルとして注目されています。このセクションでは、それぞれのモデルの特徴と、どのように活用できるかを詳しく解説します。</p>\n              \n              <div class=\"article-subsection\">\n                <h3>Sherlock Think Alphaの活用法</h3>\n                <p>Sherlock Think Alphaは、特に推論能力に優れており、複雑な問題を解決するための強力なツールです。例えば、ビジネスにおける意思決定支援や戦略的なデータ解析に利用できます。これにより、企業はより迅速かつ的確な判断を下すことが可能になります。</p>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3>Sherlock Dash Alphaの可能性</h3>\n                <p>Sherlock Dash Alphaは、データの迅速な処理と分析に特化しています。リアルタイムでのデータ処理が求められる状況で、その能力を発揮します。例えば、マーケティングキャンペーンの効果測定やリアルタイムの顧客行動分析に活用することで、より効果的な戦略を立案できます。</p>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2>AI技術の今後の展望</h2>\n              <p>AI技術は今後も進化を続け、私たちの生活やビジネスに多大な影響を与えるでしょう。このセクションでは、AI技術の未来について考察します。</p>\n              \n              <div class=\"article-subsection\">\n                <h3>AIがもたらす未来</h3>\n                <p>AI技術は、今後ますます多くの分野で活用されることが予想されます。特に、医療や教育、製造業などの分野では、AIの導入が進むことで効率化が図られ、より良いサービスの提供が可能になるでしょう。また、AIによる新たなビジネスモデルの創出も期待されています。</p>\n              </div>\n            </section>\n          </article>\n        </div>\n\n        <aside class=\"article-sidebar\" aria-label=\"補足情報\">\n          <section class=\"article-card article-toc\">\n            <p class=\"article-card-label\">目次</p>\n            <ol class=\"toc-list\" data-toc-list aria-live=\"polite\"></ol>\n          </section>\n        </aside>\n      </div>\n\n      \n      <section class=\"article-conclusion inner\">\n        <h2>まとめ</h2>\n<p>AI技術の進化は、私たちの生活やビジネスに大きな変革をもたらしています。Gemini 3.0やSherlockモデルを活用することで、より効率的な業務運営や新たなビジネスチャンスの発掘が可能です。まずはこれらの技術を試し、どのように自分のビジネスに適用できるかを検討してみましょう。導入に際しては、技術の特性をしっかりと理解し、適切な場面での活用を心がけることが重要です。</p>\n      </section>\n    </article>\n  </main>\n\n  <!-- フッターはcomponents.jsで動的に挿入されます -->\n\n  <script src=\"../assets/js/components.js\"></script>\n  <script src=\"../assets/js/main.js\" defer></script>\n  <script src=\"../assets/js/article.js\" defer></script>\n</body>\n</html>",
-      "relativePath": "posts/2025-11-16-aigemini-30.html",
-      "source": {
-        "name": "technavi_tooru",
-        "url": "https://www.youtube.com/@technavi_tooru"
-      },
-      "video": {
-        "title": "Sherlock Dash AlphaとSherlock Think Alphaをテストしましょう！",
-        "url": "https://www.youtube.com/watch?v=sKZyXbRud6g"
-      },
-      "searchSummaries": [
-        {
-          "title": "「Gemini 3.0」のYahoo!リアルタイム検索 - X（旧Twitter）を ...",
-          "url": "https://search.yahoo.co.jp/realtime/search?rkf=1&p=Gemini%203.0&btid=MTk1MzQ5NTE3MTE2NzA4NDc3OA%3D%3D&ifr=tp_bz",
-          "snippet": "... しょう。 いず｜フリー ... x.com/openrouterai/s… OpenRouter @OpenRouterAI. New Stealth Models! - Sherlock Think Alpha (reasoning) - Sherlock Dash Alpha ...",
-          "summary": "「Gemini 3.0」のX（旧Twitter）検索結果 - Yahoo!リアルタイム検索 ウェブ 画像 動画 リアルタイム ニュース キーワードを消す 検索 ミュートしたアカウント すべて 画像・動画 自動更新 並べ替え： 新着順 メニューを開く Gemini 3 .0 とかQwen4とか、いつになるんですかね… 雷之電@古明地ゲー体験版出ました @ lunaticlives 2分前 メニューを開く Gemini 3 .0 早く出ないかなぁ Flowry @ yura_407 4分前 メニューを開く 【Google AI・プロダクト】最新動向（2025年11月16日） | 次世代AI「 Gemini 3 .0 」と「Nano Banana Pro」のリーク情報が加速｜Sun Bunny @yk198901212 note.com/leal_colt3215/… Sun Bunny @ yk198901212 17分前 メニューを開く Googleの次の大型AIモデル「 Gemini 3 ."
-        },
-        {
-          "title": "Untitled",
-          "url": "https://mirrors.sonic.net/ubuntu/dists/bionic-proposed/universe/i18n/by-hash/SHA256/f35085987e1b76773a50e379894c28363cb9b1d02324ccdc039d152500f89f1a",
-          "snippet": "... テストのためのフレームワークを提供しているかどうかを チェックすることを可能 ... しょう。 . AfterStep は BowMan ウィンドウマネージャプロジェクトを ...",
-          "summary": "Package: 2vcard Description-md5: 2c96ee919233c4f6128f265ad35ff488 Description-ja: アドレス帳から VCARD ファイルフォーマットへの変換用 perl スクリプト 2vcard converts address books and alias files into the widely-used vCard format.Currently it can convert from abook, Eudora, Juno, LDIF, mutt, mh and pine.Package: 7kaa Description-md5: 37b0a07b664e6e2e6b3370a23d7a49cb Description-ja: 七王国 古代の敵対者 (Seven Kingdoms Ancient Adversaries): リアルタイム戦略ゲーム 七王国 (Seven Kingdoms) は Trevor Chan によって設計された、 リアルタイム戦略ゲームに貿易、外交、そしてスパイを融合させた ユニーク"
-        },
-        {
-          "title": "サイトマップ | おすすめ英会話・英語学習の比較・ランキング ...",
-          "url": "https://englishhub.jp/sitemap",
-          "snippet": "Jan 15, 2017 ... ... テスト活用法とは～ · 英語で学ぶ日本、英語で伝える日本 · 海外へ行こう！特集 · 英語コーチング特集 ～学び方をデザイン～ · English Hubについて · IELTS ...",
-          "summary": "サイトマップ | おすすめ英会話・英語学習の比較・ランキング- English Hub 英語学習トップ 英会話スクール オンライン英会話 留学 英語学習アプリ TOEIC対策 TOEFL対策 IELTS対策 英検対策 子供向け 英語学習ノウハウ キャリア search 最新記事 Latest オンライン英会話 オンライン英会話業界の最新ニュースをご紹介しています。オンライン英会話の気になる新サービス情報や、大変おとくなキャンペーン、割引情報など、おすすめの情報が満載です。オンライン英会話で英語を学んでいる方やこれからオンライン英会話を始めようとしている方はぜひ参考にしてください。英会話教室 留学 アプリ 教材 TOEIC TOEFL 新商品 キャンペーン 英会話教室、オンライン英会話、英語学習アプリ、語学留学などに関する最新のキャンペーン情報を配信しています。"
-        }
-      ]
-    }
+    "generated": false,
+    "reason": "duplicate-topic",
+    "candidateId": "yt-VAVUtUMGb6M"
   },
   "publisher": {
-    "addedPost": true,
+    "addedPost": false,
     "totalPosts": 5,
-    "outputFile": "posts/2025-11-16-aigemini-30.html"
+    "outputFile": null
   }
 }

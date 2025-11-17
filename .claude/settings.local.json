@@ -22,7 +22,8 @@
       "Bash(gh run list:*)",
       "Bash(node:*)",
       "Bash(gh issue create:*)",
-      "Bash(gh issue close:*)"
+      "Bash(gh issue close:*)",
+      "Bash(ffmpeg:*)"
     ],
     "deny": [],
     "ask": []

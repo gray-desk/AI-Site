@@ -267,6 +267,8 @@ ${toHtmlParagraphs(article.conclusion)}
   <title>${article.title} | AI情報ブログ</title>
   <meta name="description" content="${article.summary ?? ''}">
 
+  <script src="${normalizedAssetBase}assets/js/analytics.js"></script>
+
   <!-- ファビコン -->
   <link rel="icon" type="image/svg+xml" href="${normalizedAssetBase}assets/img/logo.svg">
   <link rel="apple-touch-icon" href="${normalizedAssetBase}assets/img/logo.svg">

@@ -228,7 +228,7 @@ const runCollector = async () => {
   const beforeCleanup = updatedCandidates.length;
 
   updatedCandidates = updatedCandidates.filter((candidate) => {
-    if (candidate.status === 'collected' || candidate.status === 'researched' || candidate.status === 'pending') {
+    if (candidate.status === 'collected' || candidate.status === 'researched') {
       return true;
     }
     const updatedTime = new Date(candidate.updatedAt || candidate.createdAt).getTime();
@@ -240,12 +240,12 @@ const runCollector = async () => {
     console.log(`[collector] 処理済み候補を${cleanedCount}件削除しました（${CLEANUP_PROCESSED_DAYS}日以上経過）。`);
   }
 
-  // クリーンアップ: pending + collected + researched 候補を30件に制限
+  // クリーンアップ: collected + researched 候補を30件に制限
   const activeCandidates = updatedCandidates.filter((c) =>
-    c.status === 'collected' || c.status === 'researched' || c.status === 'pending'
+    c.status === 'collected' || c.status === 'researched'
   );
   const processedCandidates = updatedCandidates.filter((c) =>
-    c.status !== 'collected' && c.status !== 'researched' && c.status !== 'pending'
+    c.status !== 'collected' && c.status !== 'researched'
   );
 
   if (activeCandidates.length > MAX_PENDING_CANDIDATES) {

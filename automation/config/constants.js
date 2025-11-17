@@ -9,7 +9,7 @@ const COLLECTOR = {
   VIDEO_LOOKBACK_DAYS: 7,
   SEARCH_PAGE_SIZE: 10,
   CLEANUP_PROCESSED_DAYS: 14,
-  MAX_PENDING_CANDIDATES: 30,
+  MAX_PENDING_CANDIDATES: 30, // collected/researched状態の候補の最大保持数
 };
 
 // Researcher関連

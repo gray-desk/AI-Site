@@ -23,7 +23,7 @@ COLLECTOR: {
   VIDEO_LOOKBACK_DAYS: 7,          // 動画取得の遡及日数
   SEARCH_PAGE_SIZE: 10,            // YouTube検索ページサイズ
   CLEANUP_PROCESSED_DAYS: 14,      // 処理済み候補のクリーンアップ日数
-  MAX_PENDING_CANDIDATES: 30,      // pending状態の候補の最大数
+  MAX_PENDING_CANDIDATES: 30,      // collected/researched状態の候補の最大数
 }
 
 RESEARCHER: {

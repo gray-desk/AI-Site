@@ -1,250 +1,265 @@
 {
   "status": "success",
-  "generatedFile": "posts/2025-11-18-ai5.html",
-  "executedAt": "2025-11-18T00:16:52.668Z",
+  "generatedFile": "posts/2025-11-18-ai.html",
+  "executedAt": "2025-11-18T12:06:20.353Z",
   "collector": {
     "source": "YouTube",
     "checkedSources": 17,
-    "newCandidates": 7,
-    "totalCandidates": 39,
+    "newCandidates": 9,
+    "totalCandidates": 40,
     "errors": [],
     "metrics": {
-      "totalVideosFound": 45,
-      "newVideosAdded": 7,
-      "duplicatesSkipped": 35
+      "totalVideosFound": 46,
+      "newVideosAdded": 9,
+      "duplicatesSkipped": 34
     }
   },
   "researcher": {
-    "processed": 7,
-    "succeeded": 7,
+    "processed": 9,
+    "succeeded": 9,
     "failed": 0,
     "errors": [
       {
-        "candidateId": "yt-DjLwfacFbx8",
-        "videoTitle": "【開発効率爆UP】AI駆動の並列開発が楽になる神ツール『gtr』が登場！痒い所に手が届くgit worktreeの活用ツール",
+        "candidateId": "yt-sS7rPKNsYhc",
+        "videoTitle": "AI導入で「伸びる会社」と「伸びない会社」の決定的な違い #shorts #AI #ビジネス #仕事効率化",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-xjJ8bhO873w",
-        "videoTitle": "【必見技術】CLAUDE公式の語るSKILLを活用してAI臭を避ける方法を徹底解説！",
+        "candidateId": "yt-aSM0QQaqjjs",
+        "videoTitle": "【ChatGPT感覚で使えるデザインAI】Nano BananaもSora 2も全部まとめて使えるデザインAIエージェント「Lovart」徹底解説！",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-PVxO5V1PchQ",
-        "videoTitle": "【速報】ChatGPTから「GPT-5.1」公開。GPT-5と徹底比較 #chatgpt #仕事効率化 #チャエン #ai #最新ai #ビジネス #業務効率化",
+        "candidateId": "yt-PYP3U3Mpdi0",
+        "videoTitle": "いけとも × KEITO（最近のAIの話でも？）",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-iEVEnnyOnOc",
-        "videoTitle": "【無料AI】Google Mixboardが凄く良い！画像生成ツールの理想形！",
+        "candidateId": "yt-svvpnHRlUG8",
+        "videoTitle": "【使い勝手最高！】『Grok4.1』が登場！文章力の評価で世界1位！個性が強すぎるAIを解説します",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-VFQFtTbQpgQ",
-        "videoTitle": "【AI活用】今、最もオススメな無料AIツール「NotebookLM」が進化してたので改めて解説【Geminiとの組み合わせ方も】",
+        "candidateId": "yt-gSL0ju8DYNw",
+        "videoTitle": "AAの吹き出しを簡単に作れるChrome拡張",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-2yZLQr2Y6iw",
-        "videoTitle": "【仕事が5倍速くなる魔法】タイピングはもう古い？音声入力AI「Aqua Voice」で生産性を爆上げ。#生産性向上 #AI #仕事術 #AquaVoice #音声入力 #時短 #ビジネス",
+        "candidateId": "yt-v8NW9opR9lQ",
+        "videoTitle": "【皆使うべき】GPT-5.1 Codexが早速登場！使用感爆上がりでガチオススメなので解説します",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       },
       {
-        "candidateId": "yt-v0ugbT1wq78",
-        "videoTitle": "【2025最新】超時短‼️Canva×ChatGPTを使ってInstagram投稿・リールを一瞬で自動生成する方法",
+        "candidateId": "yt-uO2MqV4RxRw",
+        "videoTitle": "【待望！】ついにCanvasで「Googleスライド」がエクスポートできるようになりました！",
         "step": "keyword-extraction",
-        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n"
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
+      },
+      {
+        "candidateId": "yt-PrVHhTvpcmI",
+        "videoTitle": "OpenAI最新！GPT-5.1がリリースされたので解説してみた",
+        "step": "keyword-extraction",
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
+      },
+      {
+        "candidateId": "yt-UcKEutjdkTc",
+        "videoTitle": "【より人間に近づく】ChatGPTから新AIモデル「GPT-5.1」が公開。多すぎるAIモデルどれを使えば良いのか？AI専門家が徹底解説。",
+        "step": "keyword-extraction",
+        "message": "OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+        "errorStack": "Error: OpenAI API error: 403 {\n    \"error\": {\n        \"message\": \"Project `proj_Dp5YUVtPzRS9YS8EYSlI7e8T` does not have access to model `gpt-4o-mini`\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n\n    at callOpenAI (/home/runner/work/AI-Site/AI-Site/automation/lib/openai.js:55:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async extractSearchKeywords (/home/runner/work/AI-Site/AI-Site/automation/lib/extractKeywords.js:33:22)\n    at async runResearcher (/home/runner/work/AI-Site/AI-Site/automation/researcher/index.js:364:21)\n    at async main (/home/runner/work/AI-Site/AI-Site/automation/pipeline/index.js:37:24)"
       }
     ],
     "metrics": {
-      "totalProcessed": 7,
+      "totalProcessed": 9,
       "keywordExtraction": {
         "success": 0,
-        "failure": 7,
-        "fallbackUsed": 7,
+        "failure": 9,
+        "fallbackUsed": 9,
         "successRate": 0
       },
       "googleSearch": {
-        "success": 7,
+        "success": 9,
         "failure": 0,
-        "totalResults": 16,
+        "totalResults": 23,
         "successRate": 100,
-        "avgResultsPerSearch": 2
+        "avgResultsPerSearch": 3
       },
       "performance": {
-        "avgKeywordExtractionTimeMs": 601,
-        "avgGoogleSearchTimeMs": 30990
+        "avgKeywordExtractionTimeMs": 438,
+        "avgGoogleSearchTimeMs": 26907
       }
     }
   },
   "generator": {
     "generated": true,
-    "candidateId": "yt-p6xraf9z234",
+    "candidateId": "yt-sS7rPKNsYhc",
     "postEntry": {
-      "title": "AI時代に淘汰されない人材になるための5つのステップ",
+      "title": "AI導入で成功する企業の条件とその技術的要因",
       "date": "2025-11-18",
-      "summary": "この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。",
+      "summary": "この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。",
       "tags": [
         {
           "slug": "ai",
-          "label": "AI失業",
+          "label": "AI導入",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
           "slug": "tag-2",
-          "label": "労働市場",
+          "label": "ビジネス効率化",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
           "slug": "tag-3",
-          "label": "キャリア戦略",
+          "label": "技術要因",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
-          "slug": "automation",
-          "label": "業務自動化",
-          "category": "ユースケース",
-          "style": "accent-teal"
-        },
-        {
-          "slug": "ai-5",
-          "label": "AI適応",
+          "slug": "tag-4",
+          "label": "企業成長",
           "category": "その他",
           "style": "accent-neutral"
         }
       ],
-      "url": "posts/2025-11-18-ai5.html",
-      "slug": "2025-11-18-ai5"
+      "url": "posts/2025-11-18-ai.html",
+      "slug": "2025-11-18-ai",
+      "publishedAt": "2025-11-18T12:06:20.348Z",
+      "image": {
+        "key": "ai-core-03",
+        "src": "assets/img/articles/ai-core-03.svg",
+        "alt": "AIコアを象徴する抽象的な波形（バリアント3）",
+        "label": "AIコア戦略",
+        "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+        "category": "ai"
+      }
     },
-    "draftUrl": "posts/2025-11-18-ai5.html",
-    "topicKey": "aiaiai5",
+    "draftUrl": "posts/2025-11-18-ai.html",
+    "topicKey": "ai-shorts-ai",
     "article": {
-      "title": "AI時代に淘汰されない人材になるための5つのステップ",
-      "summary": "この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。",
-      "intro": "AI技術の進化は、労働市場に大きな変革をもたらしています。特に、AIによる自動化が進む中で、多くの職種がその影響を受け、従来の業務がAIによって代替されるリスクが高まっています。この記事では、AI時代において淘汰されないための具体的なステップを探ります。これにより、読者は自身のキャリアをAI時代に適応させるための実践的な方法を理解できるでしょう。",
-      "conclusion": "AI時代において淘汰されないためには、継続的な学習とスキルアップが不可欠です。デジタルリテラシーを向上させ、クリエイティブ思考を磨くことで、AIと共存しながら新たな価値を創出することができます。具体的なステップとして、オンラインコースでの学習や業界ネットワークの活用を推奨します。これにより、労働市場での競争力を維持し、AI時代においても活躍できる人材となることが可能です。",
+      "title": "AI導入で成功する企業の条件とその技術的要因",
+      "summary": "この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。",
+      "intro": "AI技術の進化は、企業の成長に大きな影響を与えています。しかし、AI導入が成功する企業とそうでない企業の間には、明確な違いがあります。この記事では、AI導入における成功要因を技術的視点から掘り下げ、具体的な実践方法を紹介します。最新の調査結果を基に、AIの効果的な活用方法とその技術的背景を詳述します。",
+      "conclusion": "AI導入の成功には、技術的要因と組織的要因の両方が重要です。企業は、データインフラの整備やAIモデルの最適化を行うとともに、トップダウンのリーダーシップと従業員のスキルアップを推進する必要があります。今後、AI技術はさらに進化し、より多くの業界での応用が期待されます。企業は、これらの要因を考慮し、AI導入戦略を見直すことで、競争力を高めることができます。具体的なステップとして、まずは現状のデータインフラを評価し、次にAIモデルの選定プロセスを見直し、最後に従業員のAIスキル向上プログラムを実施することを推奨します。",
       "tags": [
         {
           "slug": "ai",
-          "label": "AI失業",
+          "label": "AI導入",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
           "slug": "tag-2",
-          "label": "労働市場",
+          "label": "ビジネス効率化",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
           "slug": "tag-3",
-          "label": "キャリア戦略",
+          "label": "技術要因",
           "category": "その他",
           "style": "accent-neutral"
         },
         {
-          "slug": "automation",
-          "label": "業務自動化",
-          "category": "ユースケース",
-          "style": "accent-teal"
-        },
-        {
-          "slug": "ai-5",
-          "label": "AI適応",
+          "slug": "tag-4",
+          "label": "企業成長",
           "category": "その他",
           "style": "accent-neutral"
         }
       ],
       "sections": [
         {
-          "heading": "AIによる労働市場の変革",
-          "overview": "AI技術の進化がどのように労働市場を変革しているのか、その現状と未来を探ります。",
+          "heading": "AI導入成功の技術的要因",
+          "overview": "AI導入に成功する企業は、特定の技術的要因を持っています。このセクションでは、成功に寄与する技術的要因を詳しく解説します。",
           "subSections": [
             {
-              "heading": "AIの自動化がもたらす影響",
-              "body": "AIの進化により、多くの業務が自動化されるようになりました。特に、製造業やサービス業など、ルーチンワークが多い分野では、AIの導入が進んでいます。これにより、従来の業務がAIに代替されるリスクが高まっており、労働者は新たなスキルを習得する必要に迫られています。"
+              "heading": "データインフラの整備",
+              "body": "成功する企業は、AIを効果的に活用するために堅牢なデータインフラを整備しています。データの収集、保存、分析を効率的に行うためのインフラストラクチャーが不可欠です。これには、クラウドベースのデータストレージやリアルタイムデータ処理能力が含まれます。"
             },
             {
-              "heading": "AI時代の新しい職種の台頭",
-              "body": "AIの進化は新しい職種を生み出しています。データサイエンティストやAIエンジニアなど、AI技術を活用する職種が増加しています。これらの職種は、AIの専門知識を持つ人材が求められており、今後も需要が高まると予想されます。"
+              "heading": "AIモデルの選定と最適化",
+              "body": "AI導入の成功には、適切なAIモデルの選定とその最適化が重要です。企業は、自社のビジネスニーズに合ったモデルを選び、継続的にパフォーマンスを監視し、必要に応じてモデルを調整します。これにより、AIの効果を最大化し、ビジネス価値を高めることができます。"
             }
           ]
         },
         {
-          "heading": "AI時代に必要なスキルセット",
-          "overview": "AI時代において求められるスキルセットを具体的に解説し、どのように習得するかを示します。",
+          "heading": "AI導入の組織的要因",
+          "overview": "技術的要因だけでなく、組織的な要因もAI導入の成功に大きく影響します。このセクションでは、組織的要因について詳しく説明します。",
           "subSections": [
             {
-              "heading": "デジタルリテラシーの向上",
-              "body": "AI時代においては、デジタルリテラシーの向上が不可欠です。基本的なプログラミングスキルやデータ分析能力はもちろん、AIの仕組みを理解することが求められます。これにより、AIを活用した業務改善や新しいビジネスモデルの構築が可能になります。"
+              "heading": "トップダウンのリーダーシップ",
+              "body": "AI導入に成功する企業は、トップダウンのリーダーシップを持っています。経営層がAI戦略を明確にし、全社的なサポートを得ることで、AIプロジェクトが円滑に進行します。リーダーシップの強さが、AI導入の成否を分ける重要な要素となります。"
             },
             {
-              "heading": "クリエイティブ思考と問題解決能力",
-              "body": "AIが得意とするのはデータ処理や分析ですが、創造性や問題解決能力は人間にしかできない領域です。これらのスキルを磨くことで、AIと共存しながら新しい価値を創出することができます。"
+              "heading": "従業員のスキルアップ",
+              "body": "AI技術の導入には、従業員のスキルアップが欠かせません。成功する企業は、従業員に対して継続的なトレーニングを提供し、AI技術を活用するためのスキルを向上させています。これにより、AIの導入効果を最大限に引き出すことが可能になります。"
             }
           ]
         },
         {
-          "heading": "AI時代におけるキャリア戦略",
-          "overview": "AI時代においてどのようにキャリアを構築するか、その戦略を解説します。",
+          "heading": "AI導入の実践的な応用例",
+          "overview": "AI導入の成功事例を通じて、実際の応用シーンを紹介します。このセクションでは、具体的な企業の事例を基に、AIの効果的な活用方法を示します。",
           "subSections": [
             {
-              "heading": "継続的な学習とスキルアップ",
-              "body": "AI時代においては、継続的な学習が重要です。新しい技術やトレンドを常にキャッチアップし、自身のスキルセットをアップデートすることで、労働市場での競争力を維持できます。オンラインコースや専門書を活用し、自己研鑽を続けることが求められます。"
+              "heading": "製造業におけるAI活用",
+              "body": "製造業では、AIを活用して生産効率を向上させています。例えば、AIを用いた予知保全システムにより、機械の故障を未然に防ぎ、ダウンタイムを最小限に抑えることができます。これにより、製造プロセス全体の効率が向上し、コスト削減につながります。"
             },
             {
-              "heading": "ネットワークの構築と活用",
-              "body": "業界内でのネットワークを構築し、活用することも重要です。AI関連のイベントやコミュニティに参加し、最新情報を入手するとともに、同じ志を持つ人々との交流を深めることで、新たなビジネスチャンスを掴むことができます。"
+              "heading": "小売業におけるAI活用",
+              "body": "小売業では、AIを活用して顧客体験を向上させています。AIによる顧客データ分析を通じて、パーソナライズされた商品提案や在庫管理の最適化を実現しています。これにより、顧客満足度が向上し、売上の増加に寄与しています。"
             }
           ]
         }
       ],
-      "slug": "2025-11-18-ai5",
+      "slug": "2025-11-18-ai",
       "date": "2025-11-18",
-      "htmlContent": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>AI時代に淘汰されない人材になるための5つのステップ | AI情報ブログ</title>\n  <meta name=\"description\" content=\"この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。\">\n\n  <script src=\"../assets/js/analytics.js\"></script>\n\n  <!-- ファビコン -->\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"../assets/img/logo.svg\">\n  <link rel=\"apple-touch-icon\" href=\"../assets/img/logo.svg\">\n\n  <!-- Open Graph / SNS共有 -->\n  <meta property=\"og:type\" content=\"article\">\n  <meta property=\"og:title\" content=\"AI時代に淘汰されない人材になるための5つのステップ | AI情報ブログ\">\n  <meta property=\"og:description\" content=\"この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。\">\n  <meta property=\"og:image\" content=\"../assets/img/ogp-default.svg\">\n  <meta property=\"og:site_name\" content=\"AI情報ブログ\">\n  <meta property=\"og:locale\" content=\"ja_JP\">\n  <meta property=\"article:published_time\" content=\"2025.11.18T00:00:00+09:00\">\n\n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"AI時代に淘汰されない人材になるための5つのステップ | AI情報ブログ\">\n  <meta name=\"twitter:description\" content=\"この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。\">\n  <meta name=\"twitter:image\" content=\"../assets/img/ogp-default.svg\">\n\n  <link rel=\"stylesheet\" href=\"../assets/css/style.css\">\n</head>\n<body class=\"article-page\">\n  <!-- ヘッダーはcomponents.jsで動的に挿入されます -->\n\n  <main>\n    <article class=\"article-detail\">\n      <section class=\"inner article-hero\">\n        <p class=\"article-eyebrow\">Daily Briefing</p>\n        <div class=\"article-hero-main\">\n          <p class=\"post-meta\">2025.11.18</p>\n          <h1>AI時代に淘汰されない人材になるための5つのステップ</h1>\n          <p class=\"article-summary\">この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。</p>\n        </div>\n\n        <ul class=\"article-tags\">\n          <li class=\"tag\" data-tag-slug=\"ai\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">AI失業</li>\n          <li class=\"tag\" data-tag-slug=\"tag-2\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">労働市場</li>\n          <li class=\"tag\" data-tag-slug=\"tag-3\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">キャリア戦略</li>\n          <li class=\"tag\" data-tag-slug=\"automation\" data-tag-category=\"ユースケース\" data-tag-style=\"accent-teal\">業務自動化</li>\n          <li class=\"tag\" data-tag-slug=\"ai-5\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">AI適応</li>\n        </ul>\n      </section>\n\n      <div class=\"inner article-grid\">\n        <div class=\"article-main-column\">\n          <article class=\"post-article article-content\">\n\n        <section class=\"article-intro-block\">\n          <div class=\"intro-content\">\n<p>AI技術の進化は、労働市場に大きな変革をもたらしています。特に、AIによる自動化が進む中で、多くの職種がその影響を受け、従来の業務がAIによって代替されるリスクが高まっています。この記事では、AI時代において淘汰されないための具体的なステップを探ります。これにより、読者は自身のキャリアをAI時代に適応させるための実践的な方法を理解できるでしょう。</p>\n          </div>\n        </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AIによる労働市場の変革</h2>\n              <div class=\"section-overview\"><p>AI技術の進化がどのように労働市場を変革しているのか、その現状と未来を探ります。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">AIの自動化がもたらす影響</h3>\n                <div class=\"subsection-body\">\n                  <p>AIの進化により、多くの業務が自動化されるようになりました。特に、製造業やサービス業など、ルーチンワークが多い分野では、AIの導入が進んでいます。これにより、従来の業務がAIに代替されるリスクが高まっており、労働者は新たなスキルを習得する必要に迫られています。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">AI時代の新しい職種の台頭</h3>\n                <div class=\"subsection-body\">\n                  <p>AIの進化は新しい職種を生み出しています。データサイエンティストやAIエンジニアなど、AI技術を活用する職種が増加しています。これらの職種は、AIの専門知識を持つ人材が求められており、今後も需要が高まると予想されます。</p>\n                </div>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AI時代に必要なスキルセット</h2>\n              <div class=\"section-overview\"><p>AI時代において求められるスキルセットを具体的に解説し、どのように習得するかを示します。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">デジタルリテラシーの向上</h3>\n                <div class=\"subsection-body\">\n                  <p>AI時代においては、デジタルリテラシーの向上が不可欠です。基本的なプログラミングスキルやデータ分析能力はもちろん、AIの仕組みを理解することが求められます。これにより、AIを活用した業務改善や新しいビジネスモデルの構築が可能になります。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">クリエイティブ思考と問題解決能力</h3>\n                <div class=\"subsection-body\">\n                  <p>AIが得意とするのはデータ処理や分析ですが、創造性や問題解決能力は人間にしかできない領域です。これらのスキルを磨くことで、AIと共存しながら新しい価値を創出することができます。</p>\n                </div>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AI時代におけるキャリア戦略</h2>\n              <div class=\"section-overview\"><p>AI時代においてどのようにキャリアを構築するか、その戦略を解説します。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">継続的な学習とスキルアップ</h3>\n                <div class=\"subsection-body\">\n                  <p>AI時代においては、継続的な学習が重要です。新しい技術やトレンドを常にキャッチアップし、自身のスキルセットをアップデートすることで、労働市場での競争力を維持できます。オンラインコースや専門書を活用し、自己研鑽を続けることが求められます。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">ネットワークの構築と活用</h3>\n                <div class=\"subsection-body\">\n                  <p>業界内でのネットワークを構築し、活用することも重要です。AI関連のイベントやコミュニティに参加し、最新情報を入手するとともに、同じ志を持つ人々との交流を深めることで、新たなビジネスチャンスを掴むことができます。</p>\n                </div>\n              </div>\n            </section>\n          </article>\n        </div>\n\n        <aside class=\"article-sidebar\" aria-label=\"補足情報\">\n          <section class=\"article-card article-toc\">\n            <p class=\"article-card-label\">目次</p>\n            <ol class=\"toc-list\" data-toc-list aria-live=\"polite\"></ol>\n          </section>\n        </aside>\n      </div>\n\n      \n      <section class=\"article-conclusion inner\">\n        <h2 class=\"conclusion-heading\">まとめ</h2>\n        <div class=\"conclusion-content\">\n<p>AI時代において淘汰されないためには、継続的な学習とスキルアップが不可欠です。デジタルリテラシーを向上させ、クリエイティブ思考を磨くことで、AIと共存しながら新たな価値を創出することができます。具体的なステップとして、オンラインコースでの学習や業界ネットワークの活用を推奨します。これにより、労働市場での競争力を維持し、AI時代においても活躍できる人材となることが可能です。</p>\n        </div>\n      </section>\n    </article>\n  </main>\n\n  <!-- フッターはcomponents.jsで動的に挿入されます -->\n\n  <script src=\"../assets/js/components.js\"></script>\n  <script src=\"../assets/js/main.js\" defer></script>\n  <script src=\"../assets/js/article.js\" defer></script>\n</body>\n</html>",
-      "relativePath": "posts/2025-11-18-ai5.html",
+      "htmlContent": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>AI導入で成功する企業の条件とその技術的要因 | AI情報ブログ</title>\n  <meta name=\"description\" content=\"この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。\">\n\n  <script src=\"../assets/js/analytics.js\"></script>\n\n  <!-- ファビコン -->\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"../assets/img/logo.svg\">\n  <link rel=\"apple-touch-icon\" href=\"../assets/img/logo.svg\">\n\n  <!-- Open Graph / SNS共有 -->\n  <meta property=\"og:type\" content=\"article\">\n  <meta property=\"og:title\" content=\"AI導入で成功する企業の条件とその技術的要因 | AI情報ブログ\">\n  <meta property=\"og:description\" content=\"この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。\">\n  <meta property=\"og:image\" content=\"../assets/img/articles/ai-core-03.svg\">\n  <meta property=\"og:site_name\" content=\"AI情報ブログ\">\n  <meta property=\"og:locale\" content=\"ja_JP\">\n  <meta property=\"article:published_time\" content=\"2025.11.18T00:00:00+09:00\">\n\n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\" content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"AI導入で成功する企業の条件とその技術的要因 | AI情報ブログ\">\n  <meta name=\"twitter:description\" content=\"この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。\">\n  <meta name=\"twitter:image\" content=\"../assets/img/articles/ai-core-03.svg\">\n\n  <link rel=\"stylesheet\" href=\"../assets/css/style.css\">\n</head>\n<body class=\"article-page\">\n  <!-- ヘッダーはcomponents.jsで動的に挿入されます -->\n\n  <main>\n    <article class=\"article-detail\">\n      <section class=\"inner article-hero\">\n        <p class=\"article-eyebrow\">Daily Briefing</p>\n        <div class=\"article-hero-layout\">\n          <div class=\"article-hero-main\">\n            <p class=\"post-meta\">2025.11.18</p>\n            <h1>AI導入で成功する企業の条件とその技術的要因</h1>\n            <p class=\"article-summary\">この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。</p>\n          </div>\n          \n          <figure class=\"article-hero-image\">\n            <img src=\"../assets/img/articles/ai-core-03.svg\" alt=\"AIコアを象徴する抽象的な波形（バリアント3）\" loading=\"lazy\" decoding=\"async\" width=\"1200\" height=\"675\">\n            <figcaption>大規模言語モデルやAI基盤の戦略を示すグラデーションアート。</figcaption>\n          </figure>\n        </div>\n\n        <ul class=\"article-tags\">\n          <li class=\"tag\" data-tag-slug=\"ai\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">AI導入</li>\n          <li class=\"tag\" data-tag-slug=\"tag-2\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">ビジネス効率化</li>\n          <li class=\"tag\" data-tag-slug=\"tag-3\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">技術要因</li>\n          <li class=\"tag\" data-tag-slug=\"tag-4\" data-tag-category=\"その他\" data-tag-style=\"accent-neutral\">企業成長</li>\n        </ul>\n      </section>\n\n      <div class=\"inner article-grid\">\n        <div class=\"article-main-column\">\n          <article class=\"post-article article-content\">\n\n        <section class=\"article-intro-block\">\n          <div class=\"intro-content\">\n<p>AI技術の進化は、企業の成長に大きな影響を与えています。しかし、AI導入が成功する企業とそうでない企業の間には、明確な違いがあります。この記事では、AI導入における成功要因を技術的視点から掘り下げ、具体的な実践方法を紹介します。最新の調査結果を基に、AIの効果的な活用方法とその技術的背景を詳述します。</p>\n          </div>\n        </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AI導入成功の技術的要因</h2>\n              <div class=\"section-overview\"><p>AI導入に成功する企業は、特定の技術的要因を持っています。このセクションでは、成功に寄与する技術的要因を詳しく解説します。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">データインフラの整備</h3>\n                <div class=\"subsection-body\">\n                  <p>成功する企業は、AIを効果的に活用するために堅牢なデータインフラを整備しています。データの収集、保存、分析を効率的に行うためのインフラストラクチャーが不可欠です。これには、クラウドベースのデータストレージやリアルタイムデータ処理能力が含まれます。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">AIモデルの選定と最適化</h3>\n                <div class=\"subsection-body\">\n                  <p>AI導入の成功には、適切なAIモデルの選定とその最適化が重要です。企業は、自社のビジネスニーズに合ったモデルを選び、継続的にパフォーマンスを監視し、必要に応じてモデルを調整します。これにより、AIの効果を最大化し、ビジネス価値を高めることができます。</p>\n                </div>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AI導入の組織的要因</h2>\n              <div class=\"section-overview\"><p>技術的要因だけでなく、組織的な要因もAI導入の成功に大きく影響します。このセクションでは、組織的要因について詳しく説明します。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">トップダウンのリーダーシップ</h3>\n                <div class=\"subsection-body\">\n                  <p>AI導入に成功する企業は、トップダウンのリーダーシップを持っています。経営層がAI戦略を明確にし、全社的なサポートを得ることで、AIプロジェクトが円滑に進行します。リーダーシップの強さが、AI導入の成否を分ける重要な要素となります。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">従業員のスキルアップ</h3>\n                <div class=\"subsection-body\">\n                  <p>AI技術の導入には、従業員のスキルアップが欠かせません。成功する企業は、従業員に対して継続的なトレーニングを提供し、AI技術を活用するためのスキルを向上させています。これにより、AIの導入効果を最大限に引き出すことが可能になります。</p>\n                </div>\n              </div>\n            </section>\n\n            <section class=\"article-section\" id=\"ai\">\n              <h2 class=\"section-heading\">AI導入の実践的な応用例</h2>\n              <div class=\"section-overview\"><p>AI導入の成功事例を通じて、実際の応用シーンを紹介します。このセクションでは、具体的な企業の事例を基に、AIの効果的な活用方法を示します。</p></div>\n              \n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">製造業におけるAI活用</h3>\n                <div class=\"subsection-body\">\n                  <p>製造業では、AIを活用して生産効率を向上させています。例えば、AIを用いた予知保全システムにより、機械の故障を未然に防ぎ、ダウンタイムを最小限に抑えることができます。これにより、製造プロセス全体の効率が向上し、コスト削減につながります。</p>\n                </div>\n              </div>\n\n              <div class=\"article-subsection\">\n                <h3 class=\"subsection-heading\">小売業におけるAI活用</h3>\n                <div class=\"subsection-body\">\n                  <p>小売業では、AIを活用して顧客体験を向上させています。AIによる顧客データ分析を通じて、パーソナライズされた商品提案や在庫管理の最適化を実現しています。これにより、顧客満足度が向上し、売上の増加に寄与しています。</p>\n                </div>\n              </div>\n            </section>\n          </article>\n        </div>\n\n        <aside class=\"article-sidebar\" aria-label=\"補足情報\">\n          <section class=\"article-card article-toc\">\n            <p class=\"article-card-label\">目次</p>\n            <ol class=\"toc-list\" data-toc-list aria-live=\"polite\"></ol>\n          </section>\n        </aside>\n      </div>\n\n      \n      <section class=\"article-conclusion inner\">\n        <h2 class=\"conclusion-heading\">まとめ</h2>\n        <div class=\"conclusion-content\">\n<p>AI導入の成功には、技術的要因と組織的要因の両方が重要です。企業は、データインフラの整備やAIモデルの最適化を行うとともに、トップダウンのリーダーシップと従業員のスキルアップを推進する必要があります。今後、AI技術はさらに進化し、より多くの業界での応用が期待されます。企業は、これらの要因を考慮し、AI導入戦略を見直すことで、競争力を高めることができます。具体的なステップとして、まずは現状のデータインフラを評価し、次にAIモデルの選定プロセスを見直し、最後に従業員のAIスキル向上プログラムを実施することを推奨します。</p>\n        </div>\n      </section>\n    </article>\n  </main>\n\n  <!-- フッターはcomponents.jsで動的に挿入されます -->\n\n  <script src=\"../assets/js/components.js\"></script>\n  <script src=\"../assets/js/main.js\" defer></script>\n  <script src=\"../assets/js/article.js\" defer></script>\n</body>\n</html>",
+      "relativePath": "posts/2025-11-18-ai.html",
+      "image": {
+        "key": "ai-core-03",
+        "src": "assets/img/articles/ai-core-03.svg",
+        "alt": "AIコアを象徴する抽象的な波形（バリアント3）",
+        "label": "AIコア戦略",
+        "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+        "category": "ai"
+      },
       "source": {
         "name": "chaen-ai-lab",
         "url": "https://www.youtube.com/@chaen-ai-lab"
       },
       "video": {
-        "title": "【AIで社員が半分クビ？】AI失業の最前線に迫る。AI時代に淘汰されない人材になるための「5つのステップ」を徹底解説。《専門家が緊急提言》",
-        "url": "https://www.youtube.com/watch?v=p6xraf9z234"
+        "title": "AI導入で「伸びる会社」と「伸びない会社」の決定的な違い #shorts #AI #ビジネス #仕事効率化",
+        "url": "https://www.youtube.com/watch?v=sS7rPKNsYhc"
       },
       "searchSummaries": [
         {
-          "title": "東京海上の内幕を暴露しよう",
-          "url": "https://egg.5ch.net/test/read.cgi/hoken/1392777304/46-n",
-          "snippet": "5ちゃんねるの保険業界α＠5ch掲示板での議論に参加しましょう：「東京海上の内幕を暴露しよう」。",
-          "summary": "この記事は、東京海上に関する情報を5chの掲示板から集めたもので、特に企業の内部事情や給与に関する議論が中心となっています。主要な技術的発見や事実としては、東京海上の平均年収が1,394万円であることが挙げられます。これは、一般的な日本企業の平均年収と比較して非常に高い水準であり、同社が高収入の職場であることを示しています。\n\n具体的な数値としては、掲示板上での議論において、東京海上の給与が他の企業と比較してどの程度高いかが話題になっています。特に、年収1,394万円という数字は、他の保険業界の企業と比較しても高い水準であることが指摘されています。この数値は、同社が業界内での競争力を維持するために、優秀な人材を引きつけるための戦略の一環であると考えられます。\n\n実装上の制約や注意点としては、掲示板の情報が匿名であり、信憑性に欠ける可能性があることが挙げられます。情報の正確性を確認するためには、他の信頼できる情報源と照らし合わせることが重要です。また、企業の内部情報が外部に漏れることによるリスクも考慮する必要があります。企業としては、情報管理の強化が求められるでしょう。\n\n今後の展望や応用シーンについては、東京海上が高い給与水準を維持することで、優秀な人材を確保し続けることが期待されます。これにより、同社は今後も保険業界での競争力を維持し、さらなる成長を遂げる可能性があります。また、他の企業にとっても、東京海上の給与水準はベンチマークとなり得るため、業界全体の給与水準の引き上げにつながる可能性があります。\n\n総じて、この記事は東京海上の給与水準に関する情報を中心に、企業の内部事情に関する議論を提供していますが、情報の信憑性には注意が必要です。"
-        },
-        {
-          "title": "第一生命セックス族 [無断転載禁止]©2ch.net - 5ちゃんねる掲示板",
-          "url": "https://itest.5ch.net/egg/test/read.cgi/hoken/1461762856/645-n",
-          "snippet": "こういうことになるという実例。 日野OL不倫放火殺人事件（ひのOLふりんほうかさつじんじけん）とは1993年12月14日、東京都日野市で発生した放火殺人事件であり、幼児2人が焼 ...",
-          "summary": "保険業界板のスレッド | itest.5ch.net news/1654610717 news4plus/1650072491 poverty/1666940197 */9245000000 保険業界 5ちゃんねる 閉じる この画像を開く このIDのレスを非表示 この名前のレスを非表示 トップページ 保険業界 全て見る 1-100 最新50 1 全て 戻る スレッド一覧 戻る メニュー 表示 中 文字サイズの変更 投稿フォーム 機能 レス検索 ページの上へ移動 ページの下へ移動 ページ移動 トップ スレッド一覧 スレッド検索 設定 PC版 戻る 返信 --> コメントを投稿する 最新コメを読み込む 全て見る 1-100 最新50 1 全て --> 書き込み 書き込み 閉じる sageる クリア ＊書き込み反映には時間が掛かる場合があります＊ ＊ ＵＰＬＩＦＴ しています＊ ＵＰＬＩＦＴを利用して書き込む ＵＰＬＩＦＴにログイン --> 関連スレッド一覧 過去ログ 保険業界スレッド一覧 --> --> &times; --> &times; --> こういうことになるという実例。 日野OL不倫放火殺人事件（ひのOLふりんほうかさつじんじけん）とは1993年12月14日、東京都日野市で発生した放火殺人事件であり、幼児2人が焼 ..."
-        },
-        {
-          "title": "第一生命セックス族 [無断転載禁止]©2ch.net",
-          "url": "https://egg.5ch.net/test/read.cgi/hoken/1461762856",
-          "snippet": "5ちゃんねるの保険業界α＠5ch掲示板での議論に参加しましょう：「○○○○第一生命セックス族○○○○ [無断転載禁止]©2ch.net」。",
-          "summary": "����������ꐶ���Z�b�N�X���������� [���f�]�ڋ֎~]&#169;2ch.net �T�����˂� �� �ی��ƊE����5ch�f���� UPLIFT ���O�C�� 1002�R�����g 507KB ����������ꐶ���Z�b�N�X���������� [���f�]�ڋ֎~]&#169;2ch.net �X�����܂Ƃ߂� 5ch����p �� gzo.ai �S�� �O100 ��100 �ŐV50 ���X����1000�𒴂��Ă��܂��B����ȏ㏑�����݂͂ł��܂���B 1 �������ׂ̖̈��������� �C�� | ��C 2016/04/27(��) 22:14:16.05 ���ۃi���o�[�����͑�ꐶ�������I 2 �������ׂ̖̈��������� �C�� | ��C 2016/04/27(��) 23:10:25.40 �ی������Ă�(T_T) 3 �������ׂ̖̈��������� �C�� | ��C 2016/04/27(��) 23:20:06.69 ���c�Ƃ̘b�𕷂���������( �G�L�D�M) 4 �������ׂ̖̈��������� �C�� | ��C 2016/04/27(��) 23:29:55.14 �O�E�̖��c�ƂŎq��R�Ȗ^ 5 �������ׂ̖̈��������� �C�� | ��C 2016/04/28(��) 12:17:11.32 ���{�ڂ����b�ŗL���ɂȂ����Ⴂ�܂����ˁB�B�B�B 6 �������ׂ̖̈��������� �C�� | ��C 2016/04/30(�y) 19:54:32.54 ���{�����ɐ�񂶂ăZ�b�N�"
+          "title": "JANE JOHN / インフルエンサー インタビュー (@janejohn_jp ...",
+          "url": "https://www.instagram.com/janejohn_jp/?hl=ja",
+          "snippet": "... 的な表現だけでは伝えきれない部分があると感じます。丁寧な文章と適切な表現 ... 「投稿が伸びる・伸びないに関わらず、『可愛い！好きだ！』と思うことを発信し ...",
+          "summary": "... 的な表現だけでは伝えきれない部分があると感じます。丁寧な文章と適切な表現 ... 「投稿が伸びる・伸びないに関わらず、『可愛い！好きだ！』と思うことを発信し ...",
+          "quality": "low"
         }
       ]
     }
   },
   "publisher": {
     "addedPost": true,
-    "totalPosts": 8,
-    "outputFile": "posts/2025-11-18-ai5.html"
+    "totalPosts": 9,
+    "outputFile": "posts/2025-11-18-ai.html"
   }
 }

@@ -253,17 +253,41 @@ const mapArticleTags = (rawTags) => {
       return;
     }
 
-    const fallbackBase = slugify(tag, 'tag');
-    const fallbackSlug =
-      seen.has(fallbackBase) || fallbackBase === 'tag'
-        ? `${fallbackBase}-${idx + 1}`
-        : fallbackBase;
+    // タグ辞書にマッチしない場合: ユニークなslugを生成
+    const originalLabel = (tag ?? '').toString().trim();
+    if (!originalLabel) return;
+
+    const fallbackBase = slugify(originalLabel, 'tag');
+    let fallbackSlug = fallbackBase;
+
+    // slug重複を完全に回避: 既存のslugと衝突しないようにインデックスを付与
+    if (fallbackBase === 'tag' || seen.has(fallbackBase)) {
+      // 重複する場合は元のラベルを含むユニークなslugを生成
+      const sanitizedLabel = originalLabel
+        .normalize('NFKC')
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9\-]/g, '')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '');
+      fallbackSlug = sanitizedLabel || `tag-${idx + 1}`;
+
+      // さらに重複する場合は番号を追加
+      let counter = 1;
+      let candidateSlug = fallbackSlug;
+      while (seen.has(candidateSlug)) {
+        candidateSlug = `${fallbackSlug}-${counter}`;
+        counter += 1;
+      }
+      fallbackSlug = candidateSlug;
+    }
+
     if (seen.has(fallbackSlug)) return;
     seen.add(fallbackSlug);
-    const fallbackLabel = (tag ?? '').toString().trim() || `タグ${idx + 1}`;
+
     tags.push({
       slug: fallbackSlug,
-      label: fallbackLabel,
+      label: originalLabel || `タグ${idx + 1}`,
       category: 'その他',
       style: 'accent-neutral',
     });

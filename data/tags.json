@@ -94,7 +94,147 @@
     "slug": "ai-topic",
     "label": "AIトピック",
     "category": "その他",
-    "aliases": ["その他", "other", "aiトピック"],
+    "aliases": ["その他", "other", "aiトピック", "ai"],
     "style": "accent-neutral"
+  },
+  {
+    "slug": "ai-utilization",
+    "label": "AI活用",
+    "category": "ユースケース",
+    "aliases": ["ai活用", "ai utilization", "ai利用"],
+    "style": "accent-teal"
+  },
+  {
+    "slug": "ai-unemployment",
+    "label": "AI失業",
+    "category": "社会課題",
+    "aliases": ["ai失業", "失業リスク", "雇用への影響"],
+    "style": "accent-orange"
+  },
+  {
+    "slug": "labor-market",
+    "label": "労働市場",
+    "category": "社会課題",
+    "aliases": ["労働市場", "雇用市場", "就職市場"],
+    "style": "accent-neutral"
+  },
+  {
+    "slug": "career-strategy",
+    "label": "キャリア戦略",
+    "category": "スキル",
+    "aliases": ["キャリア戦略", "キャリア", "career"],
+    "style": "accent-gold"
+  },
+  {
+    "slug": "ai-adaptation",
+    "label": "AI適応",
+    "category": "スキル",
+    "aliases": ["ai適応", "ai対応", "適応戦略"],
+    "style": "accent-gold"
+  },
+  {
+    "slug": "beginner-guide",
+    "label": "初心者ガイド",
+    "category": "学習リソース",
+    "aliases": ["初心者", "ビギナー", "入門"],
+    "style": "accent-sky"
+  },
+  {
+    "slug": "ai-learning",
+    "label": "AI学習",
+    "category": "学習リソース",
+    "aliases": ["ai学習", "学習", "勉強"],
+    "style": "accent-sky"
+  },
+  {
+    "slug": "ai-steps",
+    "label": "AIステップ",
+    "category": "学習リソース",
+    "aliases": ["ステップ", "段階", "手順"],
+    "style": "accent-sky"
+  },
+  {
+    "slug": "group-chat",
+    "label": "グループチャット",
+    "category": "ツール機能",
+    "aliases": ["グループチャット", "チャット", "コラボレーション"],
+    "style": "accent-lavender"
+  },
+  {
+    "slug": "technology",
+    "label": "テクノロジー",
+    "category": "その他",
+    "aliases": ["テクノロジー", "技術", "tech"],
+    "style": "accent-neutral"
+  },
+  {
+    "slug": "ai-note-taking",
+    "label": "AIノート作成",
+    "category": "ユースケース",
+    "aliases": ["ノート作成", "メモ", "note-taking"],
+    "style": "accent-lime"
+  },
+  {
+    "slug": "information-management",
+    "label": "情報整理",
+    "category": "ユースケース",
+    "aliases": ["情報整理", "整理", "知識管理"],
+    "style": "accent-lime"
+  },
+  {
+    "slug": "ai-model",
+    "label": "AIモデル",
+    "category": "技術トピック",
+    "aliases": ["aiモデル", "モデル", "model"],
+    "style": "accent-pink"
+  },
+  {
+    "slug": "google-ai",
+    "label": "Google AI",
+    "category": "企業・プロダクト",
+    "aliases": ["google", "グーグル", "gemini"],
+    "style": "accent-purple"
+  },
+  {
+    "slug": "ai-tools-comparison",
+    "label": "AIツール比較",
+    "category": "ユースケース",
+    "aliases": ["比較", "ツール比較", "comparison"],
+    "style": "accent-lime"
+  },
+  {
+    "slug": "pixai",
+    "label": "PixAI",
+    "category": "企業・プロダクト",
+    "aliases": ["pixai", "pix ai"],
+    "style": "accent-purple"
+  },
+  {
+    "slug": "ai-development",
+    "label": "AI駆動開発",
+    "category": "開発",
+    "aliases": ["ai開発", "ai-driven", "ai駆動"],
+    "style": "accent-blue"
+  },
+  {
+    "slug": "github-copilot",
+    "label": "GitHub Copilot",
+    "category": "ツール",
+    "aliases": ["copilot", "コパイロット", "github"],
+    "style": "accent-purple"
+  },
+  {
+    "slug": "coding-assistant",
+    "label": "コーディング支援",
+    "category": "ツール機能",
+    "aliases": ["コーディング", "coding", "プログラミング支援"],
+    "style": "accent-lavender"
+  },
+  {
+    "slug": "developer-tools",
+    "label": "開発ツール",
+    "category": "開発",
+    "aliases": ["開発ツール", "dev tools", "開発環境"],
+    "style": "accent-blue"
   }
 ]

@@ -45,19 +45,19 @@
     "summary": "この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。",
     "tags": [
       {
-        "slug": "ai",
+        "slug": "ai-unemployment",
         "label": "AI失業",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "tag-2",
+        "slug": "labor-market",
         "label": "労働市場",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "tag-3",
+        "slug": "career-strategy",
         "label": "キャリア戦略",
         "category": "その他",
         "style": "accent-neutral"
@@ -69,7 +69,7 @@
         "style": "accent-teal"
       },
       {
-        "slug": "ai-5",
+        "slug": "ai-adaptation",
         "label": "AI適応",
         "category": "その他",
         "style": "accent-neutral"
@@ -127,25 +127,25 @@
     "summary": "この記事を読むと、AI初心者がどのようにAIを活用し始めるかを具体的に理解できます。4つのステップでわかりやすく解説します。",
     "tags": [
       {
-        "slug": "ai",
+        "slug": "ai-utilization",
         "label": "AI活用",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "tag-2",
+        "slug": "beginner-guide",
         "label": "初心者ガイド",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "ai-3",
+        "slug": "ai-learning",
         "label": "AI学習",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "ai-4",
+        "slug": "ai-steps",
         "label": "AIステップ",
         "category": "その他",
         "style": "accent-neutral"
@@ -175,7 +175,7 @@
         "style": "accent-purple"
       },
       {
-        "slug": "ai",
+        "slug": "ai-topic",
         "label": "AI",
         "category": "その他",
         "style": "accent-neutral"
@@ -187,13 +187,13 @@
         "style": "accent-lime"
       },
       {
-        "slug": "tag-4",
+        "slug": "group-chat",
         "label": "グループチャット",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "tag-5",
+        "slug": "technology",
         "label": "テクノロジー",
         "category": "その他",
         "style": "accent-neutral"
@@ -209,13 +209,13 @@
     "summary": "NotebookLMの新機能により、AIを活用したノート作成がより簡単になりました。この記事では、具体的な機能とその活用方法を詳しく解説します。",
     "tags": [
       {
-        "slug": "ai",
+        "slug": "ai-note-taking",
         "label": "AIノート作成",
         "category": "その他",
         "style": "accent-neutral"
       },
       {
-        "slug": "tag-2",
+        "slug": "information-management",
         "label": "情報整理",
         "category": "その他",
         "style": "accent-neutral"
@@ -251,7 +251,7 @@
         "style": "accent-pink"
       },
       {
-        "slug": "ai",
+        "slug": "ai-model",
         "label": "AIモデル",
         "category": "その他",
         "style": "accent-neutral"
@@ -263,7 +263,7 @@
         "style": "accent-neutral"
       },
       {
-        "slug": "ai-4",
+        "slug": "ai-utilization",
         "label": "AI活用",
         "category": "その他",
         "style": "accent-neutral"
@@ -293,7 +293,7 @@
         "style": "accent-purple"
       },
       {
-        "slug": "tag-2",
+        "slug": "group-chat",
         "label": "グループチャット",
         "category": "その他",
         "style": "accent-neutral"
@@ -305,7 +305,7 @@
         "style": "accent-lime"
       },
       {
-        "slug": "ai",
+        "slug": "ai-utilization",
         "label": "AI活用",
         "category": "その他",
         "style": "accent-neutral"
@@ -335,7 +335,7 @@
         "style": "accent-pink"
       },
       {
-        "slug": "ai",
+        "slug": "ai-tools-comparison",
         "label": "AIツール比較",
         "category": "その他",
         "style": "accent-neutral"

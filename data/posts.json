@@ -30,7 +30,8 @@
       }
     ],
     "url": "posts/2025-11-17-ai04.html",
-    "slug": "2025-11-17-ai04"
+    "slug": "2025-11-17-ai04",
+    "publishedAt": "2025-11-17T23:59:00.000Z"
   },
   {
     "title": "NotebookLMの最新アップデートでAIノート作成がさらに便利に！",
@@ -57,7 +58,8 @@
       }
     ],
     "url": "posts/2025-11-16-notebooklmai.html",
-    "slug": "2025-11-16-notebooklmai"
+    "slug": "2025-11-16-notebooklmai",
+    "publishedAt": "2025-11-16T23:59:00.000Z"
   },
   {
     "title": "次世代AI「Gemini 3.0」と新モデルの動向を探る",
@@ -90,7 +92,8 @@
       }
     ],
     "url": "posts/2025-11-16-aigemini-30.html",
-    "slug": "2025-11-16-aigemini-30"
+    "slug": "2025-11-16-aigemini-30",
+    "publishedAt": "2025-11-16T23:58:00.000Z"
   },
   {
     "title": "ChatGPTでLINE不要の新時代",
@@ -117,7 +120,8 @@
       }
     ],
     "url": "posts/2025-11-15-linechatgptai.html",
-    "slug": "2025-11-15-linechatgptai"
+    "slug": "2025-11-15-linechatgptai",
+    "publishedAt": "2025-11-15T23:59:00.000Z"
   },
   {
     "title": "ChatGPTのグループチャット機能で業務効率を劇的に向上させる方法",
@@ -150,7 +154,8 @@
       }
     ],
     "url": "posts/2025-11-15-chatgpt.html",
-    "slug": "2025-11-15-chatgpt"
+    "slug": "2025-11-15-chatgpt",
+    "publishedAt": "2025-11-15T23:58:00.000Z"
   },
   {
     "title": "AIツール徹底比較：ChatGPT、Gemini、PixAIの選び方",
@@ -183,6 +188,7 @@
       }
     ],
     "url": "posts/2025-11-15-aichatgptgeminipixai.html",
-    "slug": "2025-11-15-aichatgptgeminipixai"
+    "slug": "2025-11-15-aichatgptgeminipixai",
+    "publishedAt": "2025-11-15T23:57:00.000Z"
   }
 ]

@@ -465,7 +465,15 @@ const runGenerator = async () => {
     `[generator] 対象候補: ${candidate.id} / ${candidate.source.name} / ${candidate.video?.title}`,
   );
   const sourceUrl = resolveSourceUrl(candidate.source);
-  const topicKey = candidate.topicKey || slugify(candidate.video?.title);
+  const fallbackTopicKey = slugify(candidate.video?.title);
+  const topicKey = candidate.topicKey || fallbackTopicKey;
+  if (candidate.topicKey) {
+    console.log(`[generator] トピックキー: ${topicKey}`);
+  } else {
+    console.log(
+      `[generator] ⚠️ topicKey未設定のため動画タイトルから生成しました: ${topicKey}`,
+    );
+  }
   const duplicate = isDuplicateTopic(topicKey, posts, topicHistory);
   console.log(`[generator] 重複判定: ${duplicate ? '重複あり → スキップ' : '新規トピック'}`);
 
@@ -585,6 +593,7 @@ const runGenerator = async () => {
     tags: normalizedTags,
     url: publishRelativePath,
     slug,
+    publishedAt: now,
   };
 
   const articleData = {

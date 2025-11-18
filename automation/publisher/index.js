@@ -14,12 +14,41 @@ const postsDir = path.join(root, 'posts');
 const postsJsonPath = path.join(root, 'data', 'posts.json');
 const statusPath = path.join(root, 'automation', 'output', 'pipeline-status.json');
 
+const parseDateValue = (value, fallbackDate) => {
+  if (value) {
+    const parsed = new Date(value);
+    if (!Number.isNaN(parsed.getTime())) return parsed.getTime();
+  }
+  if (fallbackDate) {
+    const parsed = new Date(`${fallbackDate}T00:00:00Z`);
+    if (!Number.isNaN(parsed.getTime())) return parsed.getTime();
+  }
+  return 0;
+};
+
 const updatePosts = (posts, newEntry) => {
   const list = Array.isArray(posts) ? [...posts] : [];
   if (!newEntry) return list;
-  const filtered = list.filter((post) => post.url !== newEntry.url);
-  filtered.push(newEntry);
-  filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+  const normalizedEntry = {
+    ...newEntry,
+    publishedAt: newEntry.publishedAt || new Date().toISOString(),
+  };
+  const filtered = list.filter((post) => post.url !== normalizedEntry.url);
+  filtered.push(normalizedEntry);
+  filtered.sort((a, b) => {
+    const bTime = parseDateValue(b.publishedAt, b.date);
+    const aTime = parseDateValue(a.publishedAt, a.date);
+    if (bTime !== aTime) return bTime - aTime;
+    const bDate = new Date(b.date);
+    const aDate = new Date(a.date);
+    if (!Number.isNaN(bDate) && !Number.isNaN(aDate) && bDate.getTime() !== aDate.getTime()) {
+      return bDate - aDate;
+    }
+    return (b.slug || b.url || '').localeCompare(a.slug || a.url || '', undefined, {
+      sensitivity: 'base',
+      numeric: true,
+    });
+  });
   return filtered;
 };
 

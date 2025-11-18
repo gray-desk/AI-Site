@@ -1805,12 +1805,21 @@ body.article-page main {
   /* 記事詳細ページのレイアウト調整 */
   .article-grid {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* スマホでは目次を上に表示 */
   .article-sidebar {
     position: static;
     max-height: none;
-    margin-top: var(--space-xl);
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    order: -1; /* サイドバーを上に移動 */
+  }
+
+  .article-main-column {
+    order: 0;
   }
 
   .article-content {

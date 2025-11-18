@@ -12,10 +12,12 @@ const { readJson, writeJson } = require('../lib/io');
 const { extractSearchKeywords } = require('../lib/extractKeywords');
 const { searchTopArticles } = require('../lib/googleSearch');
 const { decodeHtmlEntities } = require('../lib/text');
+const slugify = require('../lib/slugify');
 const { RESEARCHER, RATE_LIMITS } = require('../config/constants');
 const { SUMMARY_GENERATION } = require('../config/models');
 const PROMPTS = require('../config/prompts');
 const { callOpenAI, extractContent } = require('../lib/openai');
+const { deriveTopicKey } = require('../lib/topicKey');
 
 const root = path.resolve(__dirname, '..', '..');
 const candidatesPath = path.join(root, 'data', 'candidates.json');
@@ -31,6 +33,9 @@ const BLOCKED_DOMAINS = [
   't.co',
   'facebook.com',
   'instagram.com',
+  'youtube.com',
+  'youtu.be',
+  'm.youtube.com',
 ];
 
 const stripHtmlTags = (html) => {
@@ -166,6 +171,18 @@ const summarizeSearchResult = async (item, index, apiKey) => {
     bodyText = await fetchArticleText(url);
   }
 
+  // 品質チェック: 低品質コンテンツは早期リターン
+  if (!isQualityContent(bodyText)) {
+    console.warn(`[researcher] 低品質コンテンツをスキップ: ${url} (日本語率が低いか、メタデータが多い)`);
+    return {
+      title,
+      url,
+      snippet,
+      summary: snippet, // フォールバックとしてスニペットを使用
+      quality: 'low',
+    };
+  }
+
   // まずAI要約を試行
   let summary = '';
   if (bodyText && bodyText.length >= 200 && apiKey) {
@@ -182,6 +199,7 @@ const summarizeSearchResult = async (item, index, apiKey) => {
     url,
     snippet,
     summary,
+    quality: 'high',
   };
 };
 
@@ -195,6 +213,35 @@ const shouldSkipResult = (url) => {
   } catch {
     return true;
   }
+};
+
+/**
+ * 検索結果の品質チェック
+ * @param {string} text - チェック対象のテキスト
+ * @returns {boolean} - 品質が十分ならtrue
+ */
+const isQualityContent = (text) => {
+  if (!text || text.length < 100) {
+    return false;
+  }
+
+  // 日本語文字の割合をチェック（文字化け検出）
+  const japaneseChars = text.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF]/g);
+  const japaneseRatio = japaneseChars ? japaneseChars.length / text.length : 0;
+
+  // 日本語が30%未満なら低品質と判定
+  if (japaneseRatio < 0.3) {
+    return false;
+  }
+
+  // 著作権表示など、メタデータが多い場合は低品質
+  const metaKeywords = ['Copyright', 'Press', 'Privacy Policy', 'Terms', 'NFL Sunday Ticket'];
+  const hasMetaKeywords = metaKeywords.some((keyword) => text.includes(keyword));
+  if (hasMetaKeywords && text.length < 500) {
+    return false;
+  }
+
+  return true;
 };
 
 const fetchSearchSummaries = async (query, googleApiKey, googleCx, openaiApiKey) => {
@@ -313,7 +360,7 @@ const runResearcher = async () => {
     const keywordStartTime = Date.now();
 
     try {
-      console.log(`[researcher] キーワード抽出: "${video.title}"`);
+      console.log(`[researcher] キーワード抽出開始: "${video.title}"`);
       searchQuery = await extractSearchKeywords(
         openaiApiKey,
         video.title,
@@ -322,9 +369,14 @@ const runResearcher = async () => {
       const keywordEndTime = Date.now();
       metrics.performance.keywordExtractionTimeMs.push(keywordEndTime - keywordStartTime);
 
+      // 抽出されたキーワードが元のタイトルと同じ場合は警告
+      if (searchQuery === video.title) {
+        console.warn(`[researcher] ⚠️ キーワード抽出が元のタイトルと同じです: "${searchQuery}"`);
+      }
+
       metrics.keywordExtraction.success += 1;
       keywordExtractionMethod = 'openai';
-      console.log(`[researcher] 抽出キーワード: "${searchQuery}" (${keywordEndTime - keywordStartTime}ms)`);
+      console.log(`[researcher] ✓ 抽出キーワード: "${searchQuery}" (元: "${video.title.substring(0, 30)}...", ${keywordEndTime - keywordStartTime}ms)`);
     } catch (error) {
       const keywordEndTime = Date.now();
       metrics.performance.keywordExtractionTimeMs.push(keywordEndTime - keywordStartTime);
@@ -332,6 +384,8 @@ const runResearcher = async () => {
       metrics.keywordExtraction.fallbackUsed += 1;
 
       console.error(`[researcher] ⚠️ キーワード抽出失敗: ${error.message}`);
+      console.error(`[researcher]   - エラー詳細: ${error.stack || 'スタックトレースなし'}`);
+      console.error(`[researcher]   - 対象タイトル: "${video.title}"`);
       searchQuery = video.title;
       keywordExtractionMethod = 'fallback';
 
@@ -340,11 +394,37 @@ const runResearcher = async () => {
         videoTitle: video.title,
         step: 'keyword-extraction',
         message: error.message,
+        errorStack: error.stack,
       });
     }
 
     // レート制限対策
     await sleep(RATE_LIMITS.KEYWORD_EXTRACTION_WAIT_MS);
+
+    // トピックキー抽出
+    let topicKeyInfo = {
+      topicKey: slugify(video.title, 'ai-topic'),
+      method: 'fallback',
+      raw: video.title,
+    };
+    try {
+      topicKeyInfo = await deriveTopicKey(openaiApiKey, video, candidate.source);
+      const confidenceText =
+        typeof topicKeyInfo.confidence === 'number'
+          ? topicKeyInfo.confidence.toFixed(2)
+          : 'n/a';
+      console.log(
+        `[researcher] トピックキー抽出: ${topicKeyInfo.topicKey} (confidence: ${confidenceText})`,
+      );
+    } catch (error) {
+      console.warn(`[researcher] トピックキー抽出に失敗: ${error.message}`);
+      topicKeyInfo = {
+        topicKey: slugify(video.title, 'ai-topic'),
+        method: 'fallback',
+        raw: video.title,
+        error: error.message,
+      };
+    }
 
     // Google検索
     let searchSummaries = [];
@@ -365,6 +445,8 @@ const runResearcher = async () => {
       metrics.googleSearch.failure += 1;
 
       console.error(`[researcher] ⚠️ Google検索失敗: ${error.message}`);
+      console.error(`[researcher]   - エラー詳細: ${error.stack || 'スタックトレースなし'}`);
+      console.error(`[researcher]   - 検索クエリ: "${searchQuery}"`);
       searchSummaries = [];
 
       errors.push({
@@ -373,6 +455,7 @@ const runResearcher = async () => {
         step: 'google-search',
         searchQuery,
         message: error.message,
+        errorStack: error.stack,
       });
     }
 
@@ -384,6 +467,17 @@ const runResearcher = async () => {
         original: video.title,
         extracted: searchQuery,
         method: keywordExtractionMethod,
+      },
+      topicKey: topicKeyInfo.topicKey,
+      topicKeyMeta: {
+        method: topicKeyInfo.method,
+        raw: topicKeyInfo.raw || topicKeyInfo.topicKey,
+        product: topicKeyInfo.product || null,
+        feature: topicKeyInfo.feature || null,
+        category: topicKeyInfo.category || null,
+        confidence: typeof topicKeyInfo.confidence === 'number' ? topicKeyInfo.confidence : null,
+        reasoning: topicKeyInfo.reasoning || null,
+        error: topicKeyInfo.error || null,
       },
       searchSummaries,
       status: 'researched',

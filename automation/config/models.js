@@ -13,6 +13,14 @@ const KEYWORD_EXTRACTION = {
   max_tokens: 100,
 };
 
+// トピックキー抽出
+const TOPIC_KEY_EXTRACTION = {
+  model: 'gpt-4o-mini',
+  temperature: 0.2,
+  max_tokens: 200,
+  response_format: { type: 'json_object' },
+};
+
 // 要約生成
 const SUMMARY_GENERATION = {
   model: 'gpt-4o',
@@ -31,6 +39,7 @@ module.exports = {
   OPENAI_API_URL,
   YOUTUBE_API_BASE,
   KEYWORD_EXTRACTION,
+  TOPIC_KEY_EXTRACTION,
   SUMMARY_GENERATION,
   ARTICLE_GENERATION,
 };

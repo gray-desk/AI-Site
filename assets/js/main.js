@@ -108,6 +108,41 @@
     return `${y}.${m}.${d}`;
   };
 
+  const getSortableTimestamp = (post) => {
+    if (!post) return 0;
+    const candidateValues = [post.publishedAt, post.updatedAt];
+    for (const value of candidateValues) {
+      if (!value) continue;
+      const parsed = new Date(value);
+      if (!Number.isNaN(parsed.getTime())) {
+        return parsed.getTime();
+      }
+    }
+    if (post.date) {
+      const parsed = new Date(`${post.date}T00:00:00Z`);
+      if (!Number.isNaN(parsed.getTime())) {
+        return parsed.getTime();
+      }
+    }
+    return 0;
+  };
+
+  const comparePosts = (a, b) => {
+    const timeDiff = getSortableTimestamp(b) - getSortableTimestamp(a);
+    if (timeDiff !== 0) return timeDiff;
+
+    if (a?.date && b?.date) {
+      const dateDiff = new Date(b.date) - new Date(a.date);
+      if (!Number.isNaN(dateDiff) && dateDiff !== 0) {
+        return dateDiff;
+      }
+    }
+
+    const slugA = (a?.slug || a?.url || '').toString();
+    const slugB = (b?.slug || b?.url || '').toString();
+    return slugB.localeCompare(slugA, undefined, { sensitivity: 'base', numeric: true });
+  };
+
   const slugifyTag = (value, fallback = 'tag') => {
     if (!value) return fallback;
     const normalized = value
@@ -226,7 +261,7 @@
       return response.json();
     })
     .then((posts) => {
-      const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+      const sorted = [...posts].sort(comparePosts);
 
       // データ取得後、少し遅延させて表示（UX向上）
       setTimeout(() => {

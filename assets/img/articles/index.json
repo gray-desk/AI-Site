@@ -1,7 +1,7 @@
 [
   {
     "key": "ai-core-01",
-    "src": "assets/img/articles/ai-core-01.svg",
+    "src": "assets/img/article-templates/ai-core-01.webp",
     "label": "AIコア戦略",
     "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
     "description": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -18,7 +18,7 @@
   },
   {
     "key": "ai-core-02",
-    "src": "assets/img/articles/ai-core-02.svg",
+    "src": "assets/img/article-templates/ai-core-02.webp",
     "label": "AIコア戦略",
     "alt": "AIコアを象徴する抽象的な波形（バリアント2）",
     "description": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -34,7 +34,7 @@
   },
   {
     "key": "ai-core-03",
-    "src": "assets/img/articles/ai-core-03.svg",
+    "src": "assets/img/article-templates/ai-core-03.webp",
     "label": "AIコア戦略",
     "alt": "AIコアを象徴する抽象的な波形（バリアント3）",
     "description": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -50,7 +50,7 @@
   },
   {
     "key": "ai-core-04",
-    "src": "assets/img/articles/ai-core-04.svg",
+    "src": "assets/img/article-templates/ai-core-04.webp",
     "label": "AIコア戦略",
     "alt": "AIコアを象徴する抽象的な波形（バリアント4）",
     "description": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -66,7 +66,7 @@
   },
   {
     "key": "ai-core-05",
-    "src": "assets/img/articles/ai-core-05.svg",
+    "src": "assets/img/article-templates/ai-core-05.webp",
     "label": "AIコア戦略",
     "alt": "AIコアを象徴する抽象的な波形（バリアント5）",
     "description": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -82,7 +82,7 @@
   },
   {
     "key": "collab-01",
-    "src": "assets/img/articles/collab-01.svg",
+    "src": "assets/img/article-templates/collab-01.webp",
     "label": "コラボレーションダイナミクス",
     "alt": "チーム協業とチャットを思わせるシンボル（バリアント1）",
     "description": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -98,7 +98,7 @@
   },
   {
     "key": "collab-02",
-    "src": "assets/img/articles/collab-02.svg",
+    "src": "assets/img/article-templates/collab-02.webp",
     "label": "コラボレーションダイナミクス",
     "alt": "チーム協業とチャットを思わせるシンボル（バリアント2）",
     "description": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -114,7 +114,7 @@
   },
   {
     "key": "collab-03",
-    "src": "assets/img/articles/collab-03.svg",
+    "src": "assets/img/article-templates/collab-03.webp",
     "label": "コラボレーションダイナミクス",
     "alt": "チーム協業とチャットを思わせるシンボル（バリアント3）",
     "description": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -130,7 +130,7 @@
   },
   {
     "key": "collab-04",
-    "src": "assets/img/articles/collab-04.svg",
+    "src": "assets/img/article-templates/collab-04.webp",
     "label": "コラボレーションダイナミクス",
     "alt": "チーム協業とチャットを思わせるシンボル（バリアント4）",
     "description": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -146,7 +146,7 @@
   },
   {
     "key": "collab-05",
-    "src": "assets/img/articles/collab-05.svg",
+    "src": "assets/img/article-templates/collab-05.webp",
     "label": "コラボレーションダイナミクス",
     "alt": "チーム協業とチャットを思わせるシンボル（バリアント5）",
     "description": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -162,7 +162,7 @@
   },
   {
     "key": "automation-01",
-    "src": "assets/img/articles/automation-01.svg",
+    "src": "assets/img/article-templates/automation-01.webp",
     "label": "オートメーションワークフロー",
     "alt": "自動化されたシステムライン（バリアント1）",
     "description": "RPAや業務自動化のフローをイメージした背景。",
@@ -177,7 +177,7 @@
   },
   {
     "key": "automation-02",
-    "src": "assets/img/articles/automation-02.svg",
+    "src": "assets/img/article-templates/automation-02.webp",
     "label": "オートメーションワークフロー",
     "alt": "自動化されたシステムライン（バリアント2）",
     "description": "RPAや業務自動化のフローをイメージした背景。",
@@ -192,7 +192,7 @@
   },
   {
     "key": "automation-03",
-    "src": "assets/img/articles/automation-03.svg",
+    "src": "assets/img/article-templates/automation-03.webp",
     "label": "オートメーションワークフロー",
     "alt": "自動化されたシステムライン（バリアント3）",
     "description": "RPAや業務自動化のフローをイメージした背景。",
@@ -207,7 +207,7 @@
   },
   {
     "key": "automation-04",
-    "src": "assets/img/articles/automation-04.svg",
+    "src": "assets/img/article-templates/automation-04.webp",
     "label": "オートメーションワークフロー",
     "alt": "自動化されたシステムライン（バリアント4）",
     "description": "RPAや業務自動化のフローをイメージした背景。",
@@ -222,7 +222,7 @@
   },
   {
     "key": "automation-05",
-    "src": "assets/img/articles/automation-05.svg",
+    "src": "assets/img/article-templates/automation-05.webp",
     "label": "オートメーションワークフロー",
     "alt": "自動化されたシステムライン（バリアント5）",
     "description": "RPAや業務自動化のフローをイメージした背景。",
@@ -237,7 +237,7 @@
   },
   {
     "key": "infra-01",
-    "src": "assets/img/articles/infra-01.svg",
+    "src": "assets/img/article-templates/infra-01.webp",
     "label": "クラウド・インフラ",
     "alt": "クラウド連携を示す幾何学模様（バリアント1）",
     "description": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -252,7 +252,7 @@
   },
   {
     "key": "infra-02",
-    "src": "assets/img/articles/infra-02.svg",
+    "src": "assets/img/article-templates/infra-02.webp",
     "label": "クラウド・インフラ",
     "alt": "クラウド連携を示す幾何学模様（バリアント2）",
     "description": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -267,7 +267,7 @@
   },
   {
     "key": "infra-03",
-    "src": "assets/img/articles/infra-03.svg",
+    "src": "assets/img/article-templates/infra-03.webp",
     "label": "クラウド・インフラ",
     "alt": "クラウド連携を示す幾何学模様（バリアント3）",
     "description": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -282,7 +282,7 @@
   },
   {
     "key": "infra-04",
-    "src": "assets/img/articles/infra-04.svg",
+    "src": "assets/img/article-templates/infra-04.webp",
     "label": "クラウド・インフラ",
     "alt": "クラウド連携を示す幾何学模様（バリアント4）",
     "description": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -297,7 +297,7 @@
   },
   {
     "key": "infra-05",
-    "src": "assets/img/articles/infra-05.svg",
+    "src": "assets/img/article-templates/infra-05.webp",
     "label": "クラウド・インフラ",
     "alt": "クラウド連携を示す幾何学模様（バリアント5）",
     "description": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -312,7 +312,7 @@
   },
   {
     "key": "research-01",
-    "src": "assets/img/articles/research-01.svg",
+    "src": "assets/img/article-templates/research-01.webp",
     "label": "リサーチ＆インサイト",
     "alt": "リサーチデータの波形（バリアント1）",
     "description": "Gemini 3.0や深掘り分析記事にフィット。",
@@ -327,7 +327,7 @@
   },
   {
     "key": "research-02",
-    "src": "assets/img/articles/research-02.svg",
+    "src": "assets/img/article-templates/research-02.webp",
     "label": "リサーチ＆インサイト",
     "alt": "リサーチデータの波形（バリアント2）",
     "description": "Gemini 3.0や深掘り分析記事にフィット。",
@@ -342,7 +342,7 @@
   },
   {
     "key": "research-03",
-    "src": "assets/img/articles/research-03.svg",
+    "src": "assets/img/article-templates/research-03.webp",
     "label": "リサーチ＆インサイト",
     "alt": "リサーチデータの波形（バリアント3）",
     "description": "Gemini 3.0や深掘り分析記事にフィット。",
@@ -357,7 +357,7 @@
   },
   {
     "key": "research-04",
-    "src": "assets/img/articles/research-04.svg",
+    "src": "assets/img/article-templates/research-04.webp",
     "label": "リサーチ＆インサイト",
     "alt": "リサーチデータの波形（バリアント4）",
     "description": "Gemini 3.0や深掘り分析記事にフィット。",
@@ -372,7 +372,7 @@
   },
   {
     "key": "research-05",
-    "src": "assets/img/articles/research-05.svg",
+    "src": "assets/img/article-templates/research-05.webp",
     "label": "リサーチ＆インサイト",
     "alt": "リサーチデータの波形（バリアント5）",
     "description": "Gemini 3.0や深掘り分析記事にフィット。",
@@ -387,7 +387,7 @@
   },
   {
     "key": "data-vision-01",
-    "src": "assets/img/articles/data-vision-01.svg",
+    "src": "assets/img/article-templates/data-vision-01.webp",
     "label": "データビジョン",
     "alt": "データ可視化を思わせる幾何パターン（バリアント1）",
     "description": "指標やダッシュボードの考察向け。",
@@ -402,7 +402,7 @@
   },
   {
     "key": "data-vision-02",
-    "src": "assets/img/articles/data-vision-02.svg",
+    "src": "assets/img/article-templates/data-vision-02.webp",
     "label": "データビジョン",
     "alt": "データ可視化を思わせる幾何パターン（バリアント2）",
     "description": "指標やダッシュボードの考察向け。",
@@ -417,7 +417,7 @@
   },
   {
     "key": "data-vision-03",
-    "src": "assets/img/articles/data-vision-03.svg",
+    "src": "assets/img/article-templates/data-vision-03.webp",
     "label": "データビジョン",
     "alt": "データ可視化を思わせる幾何パターン（バリアント3）",
     "description": "指標やダッシュボードの考察向け。",
@@ -432,7 +432,7 @@
   },
   {
     "key": "data-vision-04",
-    "src": "assets/img/articles/data-vision-04.svg",
+    "src": "assets/img/article-templates/data-vision-04.webp",
     "label": "データビジョン",
     "alt": "データ可視化を思わせる幾何パターン（バリアント4）",
     "description": "指標やダッシュボードの考察向け。",
@@ -447,7 +447,7 @@
   },
   {
     "key": "data-vision-05",
-    "src": "assets/img/articles/data-vision-05.svg",
+    "src": "assets/img/article-templates/data-vision-05.webp",
     "label": "データビジョン",
     "alt": "データ可視化を思わせる幾何パターン（バリアント5）",
     "description": "指標やダッシュボードの考察向け。",
@@ -462,7 +462,7 @@
   },
   {
     "key": "security-01",
-    "src": "assets/img/articles/security-01.svg",
+    "src": "assets/img/article-templates/security-01.webp",
     "label": "セキュリティラティス",
     "alt": "セキュリティを示す保護レイヤ（バリアント1）",
     "description": "トラストやガバナンス記事に使用。",
@@ -477,7 +477,7 @@
   },
   {
     "key": "security-02",
-    "src": "assets/img/articles/security-02.svg",
+    "src": "assets/img/article-templates/security-02.webp",
     "label": "セキュリティラティス",
     "alt": "セキュリティを示す保護レイヤ（バリアント2）",
     "description": "トラストやガバナンス記事に使用。",
@@ -492,7 +492,7 @@
   },
   {
     "key": "security-03",
-    "src": "assets/img/articles/security-03.svg",
+    "src": "assets/img/article-templates/security-03.webp",
     "label": "セキュリティラティス",
     "alt": "セキュリティを示す保護レイヤ（バリアント3）",
     "description": "トラストやガバナンス記事に使用。",
@@ -507,7 +507,7 @@
   },
   {
     "key": "security-04",
-    "src": "assets/img/articles/security-04.svg",
+    "src": "assets/img/article-templates/security-04.webp",
     "label": "セキュリティラティス",
     "alt": "セキュリティを示す保護レイヤ（バリアント4）",
     "description": "トラストやガバナンス記事に使用。",
@@ -522,7 +522,7 @@
   },
   {
     "key": "security-05",
-    "src": "assets/img/articles/security-05.svg",
+    "src": "assets/img/article-templates/security-05.webp",
     "label": "セキュリティラティス",
     "alt": "セキュリティを示す保護レイヤ（バリアント5）",
     "description": "トラストやガバナンス記事に使用。",
@@ -537,7 +537,7 @@
   },
   {
     "key": "robotics-01",
-    "src": "assets/img/articles/robotics-01.svg",
+    "src": "assets/img/article-templates/robotics-01.webp",
     "label": "ロボティクス×エッジ",
     "alt": "ロボティクスやハードウェアを想起させるライン（バリアント1）",
     "description": "エッジデバイスやハードウェア連携記事に。",
@@ -552,7 +552,7 @@
   },
   {
     "key": "robotics-02",
-    "src": "assets/img/articles/robotics-02.svg",
+    "src": "assets/img/article-templates/robotics-02.webp",
     "label": "ロボティクス×エッジ",
     "alt": "ロボティクスやハードウェアを想起させるライン（バリアント2）",
     "description": "エッジデバイスやハードウェア連携記事に。",
@@ -567,7 +567,7 @@
   },
   {
     "key": "robotics-03",
-    "src": "assets/img/articles/robotics-03.svg",
+    "src": "assets/img/article-templates/robotics-03.webp",
     "label": "ロボティクス×エッジ",
     "alt": "ロボティクスやハードウェアを想起させるライン（バリアント3）",
     "description": "エッジデバイスやハードウェア連携記事に。",
@@ -582,7 +582,7 @@
   },
   {
     "key": "robotics-04",
-    "src": "assets/img/articles/robotics-04.svg",
+    "src": "assets/img/article-templates/robotics-04.webp",
     "label": "ロボティクス×エッジ",
     "alt": "ロボティクスやハードウェアを想起させるライン（バリアント4）",
     "description": "エッジデバイスやハードウェア連携記事に。",
@@ -597,7 +597,7 @@
   },
   {
     "key": "robotics-05",
-    "src": "assets/img/articles/robotics-05.svg",
+    "src": "assets/img/article-templates/robotics-05.webp",
     "label": "ロボティクス×エッジ",
     "alt": "ロボティクスやハードウェアを想起させるライン（バリアント5）",
     "description": "エッジデバイスやハードウェア連携記事に。",
@@ -612,7 +612,7 @@
   },
   {
     "key": "creative-01",
-    "src": "assets/img/articles/creative-01.svg",
+    "src": "assets/img/article-templates/creative-01.webp",
     "label": "クリエイティブAI",
     "alt": "クリエイティブな光の帯（バリアント1）",
     "description": "PixAIや生成系デザインの記事向け。",
@@ -627,7 +627,7 @@
   },
   {
     "key": "creative-02",
-    "src": "assets/img/articles/creative-02.svg",
+    "src": "assets/img/article-templates/creative-02.webp",
     "label": "クリエイティブAI",
     "alt": "クリエイティブな光の帯（バリアント2）",
     "description": "PixAIや生成系デザインの記事向け。",
@@ -642,7 +642,7 @@
   },
   {
     "key": "creative-03",
-    "src": "assets/img/articles/creative-03.svg",
+    "src": "assets/img/article-templates/creative-03.webp",
     "label": "クリエイティブAI",
     "alt": "クリエイティブな光の帯（バリアント3）",
     "description": "PixAIや生成系デザインの記事向け。",
@@ -657,7 +657,7 @@
   },
   {
     "key": "creative-04",
-    "src": "assets/img/articles/creative-04.svg",
+    "src": "assets/img/article-templates/creative-04.webp",
     "label": "クリエイティブAI",
     "alt": "クリエイティブな光の帯（バリアント4）",
     "description": "PixAIや生成系デザインの記事向け。",
@@ -672,7 +672,7 @@
   },
   {
     "key": "creative-05",
-    "src": "assets/img/articles/creative-05.svg",
+    "src": "assets/img/article-templates/creative-05.webp",
     "label": "クリエイティブAI",
     "alt": "クリエイティブな光の帯（バリアント5）",
     "description": "PixAIや生成系デザインの記事向け。",
@@ -687,7 +687,7 @@
   },
   {
     "key": "future-01",
-    "src": "assets/img/articles/future-01.svg",
+    "src": "assets/img/article-templates/future-01.webp",
     "label": "フューチャービジョン",
     "alt": "未来感のあるホログラム調（バリアント1）",
     "description": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -702,7 +702,7 @@
   },
   {
     "key": "future-02",
-    "src": "assets/img/articles/future-02.svg",
+    "src": "assets/img/article-templates/future-02.webp",
     "label": "フューチャービジョン",
     "alt": "未来感のあるホログラム調（バリアント2）",
     "description": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -717,7 +717,7 @@
   },
   {
     "key": "future-03",
-    "src": "assets/img/articles/future-03.svg",
+    "src": "assets/img/article-templates/future-03.webp",
     "label": "フューチャービジョン",
     "alt": "未来感のあるホログラム調（バリアント3）",
     "description": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -732,7 +732,7 @@
   },
   {
     "key": "future-04",
-    "src": "assets/img/articles/future-04.svg",
+    "src": "assets/img/article-templates/future-04.webp",
     "label": "フューチャービジョン",
     "alt": "未来感のあるホログラム調（バリアント4）",
     "description": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -747,7 +747,7 @@
   },
   {
     "key": "future-05",
-    "src": "assets/img/articles/future-05.svg",
+    "src": "assets/img/article-templates/future-05.webp",
     "label": "フューチャービジョン",
     "alt": "未来感のあるホログラム調（バリアント5）",
     "description": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -762,7 +762,7 @@
   },
   {
     "key": "knowledge-01",
-    "src": "assets/img/articles/knowledge-01.svg",
+    "src": "assets/img/article-templates/knowledge-01.webp",
     "label": "ナレッジグラフ",
     "alt": "ノートや知識体系を示す重なり（バリアント1）",
     "description": "NotebookLMや知識管理の話題に。",
@@ -777,7 +777,7 @@
   },
   {
     "key": "knowledge-02",
-    "src": "assets/img/articles/knowledge-02.svg",
+    "src": "assets/img/article-templates/knowledge-02.webp",
     "label": "ナレッジグラフ",
     "alt": "ノートや知識体系を示す重なり（バリアント2）",
     "description": "NotebookLMや知識管理の話題に。",
@@ -792,7 +792,7 @@
   },
   {
     "key": "knowledge-03",
-    "src": "assets/img/articles/knowledge-03.svg",
+    "src": "assets/img/article-templates/knowledge-03.webp",
     "label": "ナレッジグラフ",
     "alt": "ノートや知識体系を示す重なり（バリアント3）",
     "description": "NotebookLMや知識管理の話題に。",
@@ -807,7 +807,7 @@
   },
   {
     "key": "knowledge-04",
-    "src": "assets/img/articles/knowledge-04.svg",
+    "src": "assets/img/article-templates/knowledge-04.webp",
     "label": "ナレッジグラフ",
     "alt": "ノートや知識体系を示す重なり（バリアント4）",
     "description": "NotebookLMや知識管理の話題に。",
@@ -822,7 +822,7 @@
   },
   {
     "key": "knowledge-05",
-    "src": "assets/img/articles/knowledge-05.svg",
+    "src": "assets/img/article-templates/knowledge-05.webp",
     "label": "ナレッジグラフ",
     "alt": "ノートや知識体系を示す重なり（バリアント5）",
     "description": "NotebookLMや知識管理の話題に。",

@@ -34,7 +34,7 @@
     "publishedAt": "2025-11-19T00:19:45.687Z",
     "image": {
       "key": "infra-01",
-      "src": "assets/img/articles/infra-01.svg",
+      "src": "assets/img/article-templates/infra-01.webp",
       "alt": "クラウド連携を示す幾何学模様（バリアント1）",
       "label": "クラウド・インフラ",
       "caption": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -79,7 +79,15 @@
     ],
     "url": "posts/2025-11-18-ai-driven-development.html",
     "slug": "2025-11-18-ai-driven-development",
-    "publishedAt": "2025-11-18T23:59:00.000Z"
+    "publishedAt": "2025-11-18T23:59:00.000Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "title": "AI時代に淘汰されない人材になるための5つのステップ",
@@ -119,7 +127,15 @@
     ],
     "url": "posts/2025-11-18-ai5.html",
     "slug": "2025-11-18-ai5",
-    "publishedAt": "2025-11-18T23:58:00.000Z"
+    "publishedAt": "2025-11-18T23:58:00.000Z",
+    "image": {
+      "key": "ai-core-02",
+      "src": "assets/img/article-templates/ai-core-02.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント2）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "title": "AI導入で成功する企業の条件とその技術的要因",
@@ -156,7 +172,7 @@
     "publishedAt": "2025-11-18T12:06:20.348Z",
     "image": {
       "key": "ai-core-03",
-      "src": "assets/img/articles/ai-core-03.svg",
+      "src": "assets/img/article-templates/ai-core-03.webp",
       "alt": "AIコアを象徴する抽象的な波形（バリアント3）",
       "label": "AIコア戦略",
       "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -195,7 +211,7 @@
     ],
     "image": {
       "key": "ai-core-04",
-      "src": "assets/img/articles/ai-core-04.svg",
+      "src": "assets/img/article-templates/ai-core-04.webp",
       "alt": "AIコアを象徴する抽象的な波形（バリアント4）",
       "label": "AIコア戦略",
       "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -243,7 +259,15 @@
     ],
     "url": "posts/2025-11-17-chatgpt.html",
     "slug": "2025-11-17-chatgpt",
-    "publishedAt": "2025-11-17T23:58:00.000Z"
+    "publishedAt": "2025-11-17T23:58:00.000Z",
+    "image": {
+      "key": "collab-02",
+      "src": "assets/img/article-templates/collab-02.webp",
+      "alt": "チーム協業とチャットを思わせるシンボル（バリアント2）",
+      "label": "コラボレーションダイナミクス",
+      "caption": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
+      "category": "collaboration"
+    }
   },
   {
     "title": "NotebookLMの最新アップデートでAIノート作成がさらに便利に！",
@@ -271,7 +295,7 @@
     ],
     "image": {
       "key": "knowledge-02",
-      "src": "assets/img/articles/knowledge-02.svg",
+      "src": "assets/img/article-templates/knowledge-02.webp",
       "alt": "ノートや知識体系を示す重なり（バリアント2）",
       "label": "ナレッジグラフ",
       "caption": "NotebookLMや知識管理の話題に。",
@@ -313,7 +337,7 @@
     ],
     "image": {
       "key": "future-03",
-      "src": "assets/img/articles/future-03.svg",
+      "src": "assets/img/article-templates/future-03.webp",
       "alt": "未来感のあるホログラム調（バリアント3）",
       "label": "フューチャービジョン",
       "caption": "次世代ロードマップやGemini 3.0の展望記事向け。",
@@ -355,7 +379,7 @@
     ],
     "image": {
       "key": "collab-02",
-      "src": "assets/img/articles/collab-02.svg",
+      "src": "assets/img/article-templates/collab-02.webp",
       "alt": "チーム協業とチャットを思わせるシンボル（バリアント2）",
       "label": "コラボレーションダイナミクス",
       "caption": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
@@ -397,7 +421,7 @@
     ],
     "image": {
       "key": "creative-03",
-      "src": "assets/img/articles/creative-03.svg",
+      "src": "assets/img/article-templates/creative-03.webp",
       "alt": "クリエイティブな光の帯（バリアント3）",
       "label": "クリエイティブAI",
       "caption": "PixAIや生成系デザインの記事向け。",

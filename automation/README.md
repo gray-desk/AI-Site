@@ -28,10 +28,10 @@ GitHub Actions から `automation/pipeline/index.js` を呼び出し、以下の
 
 ## 記事ビジュアル（ヒーロー/カード画像）
 
-- `assets/img/articles/index.json` に 16:9 比率のテンプレート画像（55種）を定義し、`key`・`src`・`alt`・`topics` などのメタデータを持たせています。SVG 本体も同ディレクトリ配下に配置します。  
+- `assets/img/articles/index.json` で 16:9 比率のテンプレート画像（WEBP）を定義し、`key`・`src`・`alt`・`topics` などのメタデータを管理します。実体の WEBP ファイルは `assets/img/article-templates/` に配置します。  
 - generator は記事タグ・`topicKey`・ソースの focus などをトークン化してマニフェストの `topics` と突き合わせ、決定的に1枚を自動割り当てします。選択結果は `candidate.image` / `candidate.imageKey`、`generatorResult.postEntry.image` に格納されます。  
-- publisher は渡された `image` 情報をそのまま `data/posts.json` に保存し、`index.html` のカード一覧と `posts/<slug>.html` のヒーローセクションが同じビジュアルを参照します。  
-- 手動で差し替える場合は `data/candidates.json` の対象候補に `image` / `imageKey` を上書きするか、`data/posts.json` を直接編集してください。再利用したい画像はマニフェストに追加した上で `topics` を設定すると自動割当の候補に含まれます。
+- publisher は渡された `image` 情報をそのまま `data/posts.json` に保存し、`index.html` のカード一覧と `posts/<slug>.html` のヒーローセクションが同じ WEBP を参照します。  
+- 手動で差し替える場合は `assets/img/article-templates/` に WEBP を配置し、`assets/img/articles/index.json` に `src`・`topics` を追記してください。個々の記事で使い分けたい場合は `data/candidates.json` や `data/posts.json` の `image` / `imageKey` を上書きします。
 
 ## 必要なシークレット
 

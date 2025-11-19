@@ -69,7 +69,7 @@
     "outputFile": "posts/2025-11-19-google-anti-gravityide.html",
     "image": {
       "key": "infra-01",
-      "src": "assets/img/articles/infra-01.svg",
+      "src": "assets/img/article-templates/infra-01.webp",
       "alt": "クラウド連携を示す幾何学模様（バリアント1）",
       "label": "クラウド・インフラ",
       "caption": "Googleやクラウドプラットフォーム関連トピック向け。",
@@ -140,7 +140,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-19T00:13:44.689Z"
+    "researchedAt": "2025-11-19T00:13:44.689Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-R9mzOdwX9gM",
@@ -205,7 +213,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:14:23.913Z"
+    "researchedAt": "2025-11-19T00:14:23.913Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-sS7rPKNsYhc",
@@ -263,7 +279,7 @@
     "outputFile": "posts/2025-11-18-ai.html",
     "image": {
       "key": "ai-core-03",
-      "src": "assets/img/articles/ai-core-03.svg",
+      "src": "assets/img/article-templates/ai-core-03.webp",
       "alt": "AIコアを象徴する抽象的な波形（バリアント3）",
       "label": "AIコア戦略",
       "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
@@ -320,7 +336,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-18T12:01:41.188Z"
+    "researchedAt": "2025-11-18T12:01:41.188Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-PYP3U3Mpdi0",
@@ -385,7 +409,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-18T12:02:09.642Z"
+    "researchedAt": "2025-11-18T12:02:09.642Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-svvpnHRlUG8",
@@ -450,7 +482,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-18T12:02:52.931Z"
+    "researchedAt": "2025-11-18T12:02:52.931Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-gSL0ju8DYNw",
@@ -515,7 +555,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-18T12:03:14.615Z"
+    "researchedAt": "2025-11-18T12:03:14.615Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-LSYpUMvUE78",
@@ -552,7 +600,15 @@
     "generatedAt": "2025-11-17T12:12:33.681Z",
     "postDate": "2025-11-17",
     "slug": "2025-11-17-chatgpt",
-    "outputFile": "posts/2025-11-17-chatgpt.html"
+    "outputFile": "posts/2025-11-17-chatgpt.html",
+    "image": {
+      "key": "collab-02",
+      "src": "assets/img/article-templates/collab-02.webp",
+      "alt": "チーム協業とチャットを思わせるシンボル（バリアント2）",
+      "label": "コラボレーションダイナミクス",
+      "caption": "ChatGPTやコラボレーション系の議論を彩るビジュアル。",
+      "category": "collaboration"
+    }
   },
   {
     "id": "yt-p6xraf9z234",
@@ -608,7 +664,15 @@
     "generatedAt": "2025-11-18T00:16:52.665Z",
     "postDate": "2025-11-18",
     "slug": "2025-11-18-ai5",
-    "outputFile": "posts/2025-11-18-ai5.html"
+    "outputFile": "posts/2025-11-18-ai5.html",
+    "image": {
+      "key": "ai-core-02",
+      "src": "assets/img/article-templates/ai-core-02.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント2）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-ZNiRzCS8afI",
@@ -641,7 +705,15 @@
       "method": "fallback"
     },
     "searchSummaries": [],
-    "researchedAt": "2025-11-17T12:03:05.600Z"
+    "researchedAt": "2025-11-17T12:03:05.600Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-DjLwfacFbx8",
@@ -687,7 +759,15 @@
         "summary": "Something went wrong, but don’t fret — let’s give it another shot. Try again Some privacy related extensions may cause issues on x.com. Please disable them and try again. 【開発効率爆UP】AI駆動の並列開発が楽になる神ツール『gtr』が登場！痒い所に手が届くgit worktreeの活用ツール. 今回の動画ではGit Worktreeをより簡単に操作できる ..."
       }
     ],
-    "researchedAt": "2025-11-18T00:12:50.098Z"
+    "researchedAt": "2025-11-18T00:12:50.098Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-IZHsLovznUQ",
@@ -752,7 +832,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-19T00:14:57.343Z"
+    "researchedAt": "2025-11-19T00:14:57.343Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-sKZyXbRud6g",
@@ -803,7 +891,15 @@
     "generatedAt": "2025-11-16T12:02:27.411Z",
     "postDate": "2025-11-16",
     "slug": "2025-11-16-aigemini-30",
-    "outputFile": "posts/2025-11-16-aigemini-30.html"
+    "outputFile": "posts/2025-11-16-aigemini-30.html",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-VAVUtUMGb6M",
@@ -851,7 +947,15 @@
     "updatedAt": "2025-11-17T00:13:31.834Z",
     "topicKey": "chatgptline",
     "notes": "YouTube Data API: keitoaiweb の最新動画",
-    "skipReason": "duplicate-topic"
+    "skipReason": "duplicate-topic",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-3R-YTWdg0zw",
@@ -916,7 +1020,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:16:14.695Z"
+    "researchedAt": "2025-11-19T00:16:14.695Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-qIePtei1ipY",
@@ -962,7 +1074,15 @@
         "summary": "この記事は、「// もちぶろ」というブログで提供されている「SDGsニュースリスト」というオンラインツールに関する情報を紹介しています。このツールは、持続可能な開発目標（SDGs）に関連するニュースをまとめて提供するもので、執筆者である「もち」が著作権を有しています。記事によれば、このツールは多くのユーザーに利用されており、記事の閲覧数は475,904回に達しています。\n\n「SDGsニュースリスト」は、SDGsに関連する最新のニュースを効率的に収集し、ユーザーに提供することを目的としています。具体的には、RSSフィードやTwitterを活用してニュースを集約し、ユーザーが簡単にアクセスできるようにしています。このツールは、持続可能な開発に関心のあるビジネスパーソンや研究者にとって有用なリソースとなっています。\n\n技術的な側面としては、Web技術を駆使してニュースの集約と配信を行っており、特にRSSフィードの活用が目立ちます。また、Twitterアカウント「@SlashMochiBot」を通じて、日々のニュースを発信している点も特徴です。これにより、ユーザーはリアルタイムで情報を受け取ることができ、SDGsに関する最新の動向を逃さずに把握できます。\n\n実装上の制約としては、ニュースの収集元の信頼性や、情報の更新頻度が挙げられます。特に、RSSフィードやTwitterからの情報は、元の情報源の更新に依存するため、常に最新の情報を保証することは難しい場合があります。また、情報の正確性を確保するためには、信頼できるニュースソースを選定する必要があります。\n\n今後の展望としては、このツールをさらに多くのユーザーに広めることで、SDGsに関する意識を高めることが期待されます。また、技術的なアップデートを通じて、より多様な情報源からのニュース収集や、ユーザーインターフェースの改善を図ることが考えられます。これにより、持続可能な開発に関する情報をより多くの人々に届けることができ、SDGsの達成に向けた取り組みを支援することが可能となるでしょう。\n\nこのように、「SDGsニュースリスト」は、持続可能な開発目標に関する情報を効率的に提供するための重要なツールであり、その技術的な基盤と今後の発展が注目されています。"
       }
     ],
-    "researchedAt": "2025-11-17T12:05:26.716Z"
+    "researchedAt": "2025-11-17T12:05:26.716Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-gMZV1DhUsEA",
@@ -991,7 +1111,15 @@
     "updatedAt": "2025-11-15T12:02:06.306Z",
     "topicKey": "googleworkspace-flows-ai-google-gemini",
     "notes": "YouTube Data API: chaen-ai-lab の最新動画",
-    "skipReason": "no-search-summaries"
+    "skipReason": "no-search-summaries",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-R809zJr__fE",
@@ -1020,7 +1148,15 @@
     "updatedAt": "2025-11-16T00:13:56.293Z",
     "topicKey": "aiquotquotwan22quotquotpainteri2vcomfyui",
     "notes": "YouTube Data API: AI-Hakase の最新動画",
-    "skipReason": "no-search-summaries"
+    "skipReason": "no-search-summaries",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-xjJ8bhO873w",
@@ -1072,7 +1208,15 @@
         "summary": "AI時代において重要なのは、AIを操作する技術ではなく、「審美眼」と呼ばれる物事の本質を見抜く力であると記事は主張しています。AIは人間の能力を増幅する「鏡」のような存在であり、その出力の質は人間の判断力に大きく依存します。AIが生成する文章は、文法的に正しく論理的である一方で、予測可能性が高く、驚きや感情に欠けるため、しばしば退屈に感じられます。これを克服するためには、人間がAIの出力に対して「違和感」を感じ、それを言語化し、適切にフィードバックする能力が求められます。\n\n具体的な数値や性能指標は示されていませんが、AIを使った生産性の向上が3倍になったという具体例が挙げられています。また、AIが生成する「80点のコンテンツ」が市場に溢れることで、均質化が進むリスクも指摘されています。この均質化を打破するためには、AIには真似できない「自分だけの視点」や「感性」が必要であり、それを磨くことが重要です。\n\n実装上の注意点として、AIは「判断」することができず、与えられた指示に基づいて出力を行うため、その質は指示を出す人間の「目」に依存します。したがって、AIの出力をそのまま使うのではなく、人間が編集を加えることが重要です。AIの「完璧さ」を人間らしさに翻訳する作業が求められます。\n\n今後の展望として、AI時代における「審美眼」を養うためには、質の高い情報に触れ続けることが重要であり、「越境する読書」や論文を読むことが推奨されています。これにより、情報的メタボリズムを高め、創造性を刺激することが可能になります。AIとの対話をスムーズにするためには、論理的思考力を鍛えることも重要であり、これがAIの能力を最大限に引き出す鍵となります。"
       }
     ],
-    "researchedAt": "2025-11-18T00:13:50.865Z"
+    "researchedAt": "2025-11-18T00:13:50.865Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-0yqyeJ9VQFw",
@@ -1104,7 +1248,15 @@
     "generatedAt": "2025-11-16T00:27:12.246Z",
     "postDate": "2025-11-16",
     "slug": "2025-11-16-notebooklmai",
-    "outputFile": "posts/2025-11-16-notebooklmai.html"
+    "outputFile": "posts/2025-11-16-notebooklmai.html",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-j0fks57hakI",
@@ -1155,7 +1307,15 @@
     "generatedAt": "2025-11-15T07:03:55.709Z",
     "postDate": "2025-11-15",
     "slug": "2025-11-15-chatgpt",
-    "outputFile": "posts/2025-11-15-chatgpt.html"
+    "outputFile": "posts/2025-11-15-chatgpt.html",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-M04rk7XOw84",
@@ -1206,7 +1366,15 @@
     "generatedAt": "2025-11-15T07:20:02.305Z",
     "postDate": "2025-11-15",
     "slug": "2025-11-15-aichatgptgeminipixai",
-    "outputFile": "posts/2025-11-15-aichatgptgeminipixai.html"
+    "outputFile": "posts/2025-11-15-aichatgptgeminipixai.html",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-mq-7-5lzuxw",
@@ -1262,7 +1430,15 @@
     "generatedAt": "2025-11-17T00:46:58.182Z",
     "postDate": "2025-11-17",
     "slug": "2025-11-17-ai04",
-    "outputFile": "posts/2025-11-17-ai04.html"
+    "outputFile": "posts/2025-11-17-ai04.html",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-sn9U_mcWq3M",
@@ -1327,7 +1503,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:16:43.709Z"
+    "researchedAt": "2025-11-19T00:16:43.709Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-PVxO5V1PchQ",
@@ -1367,7 +1551,15 @@
         "summary": "この記事は、デジライズ（DigiRise）の創設者であり、AI業界で活躍するCHAEN MASAHIRO氏の経歴と活動を紹介しています。彼は大阪で生まれ、同志社大学在学中にオーストラリアとアメリカで留学経験を積みました。その後、上海で人事評価システムのコンサルティング会社「Ashita Team」の支店立ち上げに参加し、ビデオ求人サイトを立ち上げるなど、国際的な経験を重ねました。\n\n日本に帰国後は、Twitterを活用した採用支援を行うTALMOOD Inc.を設立し、2022年にはスペインで世界初の「Eat-to-Earn」NFTゲーム「Eatnsmile」を共同設立しました。AI分野にも進出し、「AI Database」や「Knowledge AI」などのサービスを提供しています。これらのサービスは、グローバルなAIツールの検索や、企業向けのAIアシスタント、セレブ向けのAI LINEボット作成、AIを使った英会話学習など、多岐にわたります。\n\nCHAEN氏は、AIトレンドやその活用法についての情報をTwitterなどのソーシャルメディアで発信し、ABEMA NewsやTBSテレビなどのメディアにも出演しています。また、GMO AI & Web3 Inc.のアドバイザーや生成AI活用促進協会の理事も務め、2023年にはAI取引会社Digirise Inc.とAIシステム開発会社AI-zen Inc.を設立しました。\n\n彼の活動は、AIの実用的な応用に焦点を当てており、特に生成AIを活用したビジネス効率化の方法を提案しています。例えば、保険業界におけるChatGPTの活用方法を紹介するセミナーを開催し、AIがどのように業界を変革するかについて議論しています。彼はまた、AIの最新利用戦略を企業に提案し、AI革命がもたらす職業やスキル、マインドセットの変化についても講演を行っています。\n\n今後の展望としては、AI技術のさらなる進化と、それに伴うビジネスや社会への影響を見据えた活動を続けることが期待されます。CHAEN氏の取り組みは、AIがどのように日常生活やビジネスに浸透し、変革をもたらすかを示す重要な事例となっています。彼の活動は、AIを活用した新しいビジネスモデルの創出や、既存の産業構造の変革に寄与することが期待されます。"
       }
     ],
-    "researchedAt": "2025-11-18T00:14:04.862Z"
+    "researchedAt": "2025-11-18T00:14:04.862Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-v8NW9opR9lQ",
@@ -1432,7 +1624,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-18T12:03:56.996Z"
+    "researchedAt": "2025-11-18T12:03:56.996Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-uO2MqV4RxRw",
@@ -1497,7 +1697,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-18T12:04:27.854Z"
+    "researchedAt": "2025-11-18T12:04:27.854Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-URxwCd8t8xU",
@@ -1549,7 +1757,15 @@
         "summary": "「世界モデル（World Models）」は、AIエージェントが環境を観測し、その変化や行動の結果を学習・予測する技術であり、AIに「想像力」を持たせる手法です。この概念は、2018年にGoogle BrainのDavid Ha氏とLSTMの考案者Jürgen Schmidhuber氏によって発表された論文に由来します。彼らの研究は、シミュレーション環境での自動運転車の学習を通じて、AIがどのように環境を認識し、インタラクションを行うかを示しました。\n\n世界モデルのアーキテクチャは、Vision、Memory、Controllerの三つの部分で構成されます。Visionは変分オートエンコーダ（VAE）を用いて高次元の画像データを低次元に圧縮し、Memoryはリカレントニューラルネットワーク（RNN）を使って未来の状態を予測します。Controllerはこれらのデータを基に行動を決定し、報酬を最大化するように調整されます。この構造により、AIはシミュレーション環境での効率的な学習と意思決定を可能にします。\n\n「世界モデル」は、人間の「メンタルモデル」と類似しており、AIが内部に世界を持ち、想像力を駆使して学習を深める「生成的理解」を実現します。これにより、AIは実世界での経験に頼らず、仮想環境で効率的に学習を進めることができます。例えば、自動運転車はシミュレーション環境で何万回も走行することで、実際の運転よりも効率的に学習を行えます。\n\n今後の展望として、世界モデルは特定のタスクに依存せず汎用的に成立するため、AIの汎用性を高め、AGI（汎用人工知能）の開発に寄与する可能性があります。また、OpenAIの動画生成AI「Sora」も世界モデルを基にした技術であり、AGI達成の重要なマイルストーンとされています。\n\nしかし、世界モデルの実装には注意が必要です。特に、透明性や解釈可能性が求められる場面では、説明可能なAI（XAI）の研究成果を反映させる必要があります。また、LLM（大規模言語モデル）とのシナジーを活用することで、より複雑な問題の解決が期待されますが、LLMの処理速度やバイアスの問題も考慮する必要があります。\n\n総じて、世界モデルはAIの未来を切り開く鍵となる技術であり、今後のAIの発展における重要な役割を担うことが期待されています。"
       }
     ],
-    "researchedAt": "2025-11-17T12:08:15.980Z"
+    "researchedAt": "2025-11-17T12:08:15.980Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-iEVEnnyOnOc",
@@ -1601,7 +1817,15 @@
         "summary": "「#画像生成AIチャレンジ」は、note上で多くのユーザーが参加し、画像生成AIを活用した様々な試みが行われたイベントです。このチャレンジでは、アドビの技術を用いて、ユーザーが独自の画像を生成し、その成果を共有しています。記事内では、特に人気の高い投稿やユニークな試みが紹介されています。\n\n技術的なポイントとして、画像生成AIの利用にはいくつかのツールが挙げられています。例えば、DALL·EやMidjourney、NanoBanana（正式にはGemini 2.5 Flash Image）などがあり、それぞれが異なる特性と機能を持っています。DALL·Eは、特定のテーマに基づくイラスト生成に用いられ、Midjourneyはプロンプトに基づいて多様な画像を生成する能力を持っています。一方、NanoBananaは、生成・編集・合成が一体化されており、部分編集やマルチ画像合成が可能です。\n\n具体的な数値や性能指標としては、Midjourneyの利用には月額10ドルのベーシックプランが必要であり、PixAIの新モデル「v3.0 高速版」は、動画生成においてマルチショット生成機能を備え、様々な角度や画角の変化を自然に行うことができます。これにより、キャラクターや背景が崩れることなく、より自然な動画生成が可能となっています。\n\n実装上の制約や注意点として、画像生成AIの利用には高いPCスペックや専門的な知識が求められることが多く、初心者にとってはハードルが高い場合があります。特に、Stable Diffusionのようなソフトウェアは、PCの性能に依存するため、適切な環境が整っていないと満足のいく結果が得られないことがあります。また、生成された画像が意図したものと異なる場合があるため、プロンプトの設定や調整が重要です。\n\n今後の展望として、画像生成AIは、SNSでのコンテンツ作成やマーケティング、クリエイティブなプロジェクトにおいて、ますます重要な役割を果たすと考えられます。特に、AIを活用した画像生成は、個人が簡単に高品質なビジュアルコンテンツを作成できる手段として、広く普及する可能性があります。また、AI技術の進化に伴い、より直感的で使いやすいツールが開発されることで、さらに多くのユーザーがこの技術を活用できるようになるでしょう。"
       }
     ],
-    "researchedAt": "2025-11-18T00:15:09.809Z"
+    "researchedAt": "2025-11-18T00:15:09.809Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-PrVHhTvpcmI",
@@ -1666,7 +1890,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-18T12:05:12.806Z"
+    "researchedAt": "2025-11-18T12:05:12.806Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-n6Z3hdLgWk0",
@@ -1731,7 +1963,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:17:24.611Z"
+    "researchedAt": "2025-11-19T00:17:24.611Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-UcKEutjdkTc",
@@ -1796,7 +2036,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-18T12:05:53.377Z"
+    "researchedAt": "2025-11-18T12:05:53.377Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-ZZ_4IfLMXCk",
@@ -1848,7 +2096,15 @@
         "summary": "GPT-5.1は、OpenAIの最新のAIモデルであり、InstantとThinkingという2つの異なるラインナップを提供しています。Instantは軽快で日常的なタスクに最適化されており、Thinkingは複雑な推論や高度なタスクに特化しています。GPT-5.1の大きな進化点は、指示追従（Instruction Following）の強化であり、ユーザーの指示をより正確に理解し、実行する能力が向上しています。特に、Adaptive Reasoning機能により、タスクの難易度に応じて思考時間を調整することができ、簡単なタスクには迅速に対応し、複雑なタスクには時間をかけて正確な回答を提供します。\n\nInstantは、テンポの良いレスポンスと自然で温かみのある会話トーンが特徴で、日常的な文章作成や調べもの、アイデア出しに適しています。一方、Thinkingは深い推論力を持ち、複雑なコード解析や論文の補助、長文の構造化などに優れています。これにより、Instantは「普段使いの相棒」として、Thinkingは「慎重な専門家」としての役割を果たします。\n\n指示追従の強化により、GPT-5.1は長い指示や複数条件を正確に解釈し、出力形式の指定も守りやすくなっています。Instantはスピード重視で一般的なタスクに十分な正確さを提供し、Thinkingは複雑な条件や長文タスクでも高精度で実行します。\n\nさらに、GPT-5.1では会話のトーンやスタイルをカスタマイズできる機能が追加され、ユーザーは用途に応じて話し方を選択できます。これにより、ビジネス文書やフレンドリーな会話など、状況に応じた最適なコミュニケーションが可能になります。\n\nGPT-5.1は段階的に展開されており、まず有料プランのユーザーが利用可能です。無料版にも順次展開される予定ですが、Thinkingは主に有料ユーザー向けに提供される可能性が高いです。APIの提供スキームも変更され、開発者は用途に応じてInstantとThinkingを選択できます。\n\n実際の使用感として、Instantは自然でスムーズな会話ができ、Thinkingはロジックの一貫性が高く、複雑な課題で力を発揮します。プログラミングタスクやクリエイティブタスクでも精度が向上しており、特にThinkingはコードの意図説明や改善ポイントの提示に優れています。\n\n今後、GPT-5.1は生成AIの基準となり、API展開や追加機能の進展により、さらなる応用が期待されます。InstantとThinkingをタスクに応じて使い分けることで、より効果的なAI活用が可能です。"
       }
     ],
-    "researchedAt": "2025-11-17T12:10:29.301Z"
+    "researchedAt": "2025-11-17T12:10:29.301Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-_8sj8xmxjkE",
@@ -1900,7 +2156,15 @@
         "summary": "最も高性能で高速、かつ実用性に優れたモデルです。思考機能を標準搭載しています。すべての人にご利用いただけます。 ChatGPT で試す （新しいウィンドウで開く）調査 ..."
       }
     ],
-    "researchedAt": "2025-11-17T12:11:17.311Z"
+    "researchedAt": "2025-11-17T12:11:17.311Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-x9wBDxkejbk",
@@ -1965,7 +2229,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:18:37.490Z"
+    "researchedAt": "2025-11-19T00:18:37.490Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-8d9FTUVoYXk",
@@ -2030,7 +2302,15 @@
         "quality": "low"
       }
     ],
-    "researchedAt": "2025-11-19T00:18:47.970Z"
+    "researchedAt": "2025-11-19T00:18:47.970Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-K2M4PAOSfEE",
@@ -2095,7 +2375,15 @@
         "quality": "high"
       }
     ],
-    "researchedAt": "2025-11-19T00:19:27.083Z"
+    "researchedAt": "2025-11-19T00:19:27.083Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-VFQFtTbQpgQ",
@@ -2147,7 +2435,15 @@
         "summary": "「#AIとやってみた」の人気タグ記事一覧は、AI技術を活用した様々な取り組みや体験談を紹介するプラットフォームとしてnoteで展開されています。この記事では、AI技術の進化がもたらす可能性や実際の応用例について多くの視点から紹介されています。\n\nまず、AIの普及が経済に与える影響について、FRBのジェファーソン副議長が生成AIの普及によりアメリカ経済が革命的な変化を遂げる可能性を指摘しています。これは投資判断においても重要な情報となり得ます。また、AIを活用した音楽制作や動画生成が新たな副業トレンドとして注目されており、特にAI音楽は不労所得を生む可能性があるとされています。AIを使った動画は、YouTubeで100万再生を達成するなど、注目を集めるコンテンツとなっています。\n\n具体的な技術としては、Googleの最新AI動画モデル「Veo 3.1」や、AIノーコードWeb制作ツール「create.xyz」などが紹介されています。これらのツールは、プログラミングの知識がなくてもアイデアを迅速に形にすることが可能で、特に「create.xyz」はアイデアを1日でサービスに変えることができるとされています。\n\n実装上の制約としては、AIによる画像生成が「パクリ」として指摘される場面があることや、AIツールの利用に伴うコストが挙げられます。例えば、Stable Diffusionを使った画像生成では、電気代やツールの利用料が赤字になることもあると報告されています。\n\n今後の展望としては、AI技術の進化がさらに加速し、AIを活用した新しいビジネスモデルや副業の可能性が広がることが期待されています。特に、AIを活用したキャラクターブランドの構築や、AIでのMV制作が副業として有望視されており、これらの分野での収益化が進むと考えられます。\n\nこのように、AI技術は多岐にわたる分野での応用が進んでおり、その影響は経済から個人の副業に至るまで広範囲に及んでいます。AI技術の進化に伴い、さらなる可能性が開かれることが期待されます。"
       }
     ],
-    "researchedAt": "2025-11-18T00:16:07.650Z"
+    "researchedAt": "2025-11-18T00:16:07.650Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-2yZLQr2Y6iw",
@@ -2187,7 +2483,15 @@
         "summary": "この記事は、デジライズ（DigiRise）の代表であるCHAEN MASAHIRO氏の経歴と活動について詳述しています。彼は同志社大学在学中にオーストラリアとアメリカで留学し、その後、上海で人事評価システムコンサルティング会社の支店立ち上げに参加しました。帰国後は、Twitterを活用した採用支援会社TALMOOD Inc.を設立し、2022年にはスペインで世界初の「Eat-to-Earn」NFTゲーム「Eatnsmile」を共同創業しました。\n\nその後、AI分野に進出し、日本初のグローバルAIツール検索サービス「AI Database」やAIニュースレター「Knowledge AI」、企業向けAI秘書「Star AI」、英会話学習AI「AI Conversation」など、様々なAI関連サービスをリリースしました。彼はまた、GMO AI & Web3 Inc.のアドバイザーや生成AI利用促進協会の理事を務め、2023年にはAI貿易会社Digirise Inc.とAIシステム開発会社AI-zen Inc.を設立しました。\n\n具体的な数値としては、彼の活動は2000人以上が参加したイベントでの講演や、AIセミナーでの発表など、多くの人々に影響を与えています。彼の活動は、AIの最新トレンドやその実用的な利用方法を広めることに重点を置いており、Twitterなどのソーシャルメディアを通じて情報を発信しています。\n\n実装上の制約としては、AI技術の急速な進化に伴い、企業がどのようにAIを導入し、効果的に活用するかが課題となっています。特に、AIを活用した人材の育成や、企業内でのAI導入のためのスキルマップ作成が重要です。\n\n今後の展望として、彼はAI技術がもたらすビジネスの変革に注目しており、特に地方企業がAIを活用して大きな進展を遂げる可能性を強調しています。また、AIが保険業界を含む様々な産業に与える影響についても研究を進めており、具体的な応用例としてChatGPTを活用した業務効率化の方法を提案しています。\n\nCHAEN MASAHIRO氏の活動は、AI技術の普及とその実用的な応用を通じて、ビジネスの未来を形作ることを目指しており、その影響力は国内外に広がっています。彼の取り組みは、AI技術がどのように社会に貢献できるかを示す重要な事例となっています。"
       }
     ],
-    "researchedAt": "2025-11-18T00:16:30.049Z"
+    "researchedAt": "2025-11-18T00:16:30.049Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   },
   {
     "id": "yt-v0ugbT1wq78",
@@ -2239,6 +2543,14 @@
         "summary": "Oct 21, 2025 ... ChatGPTを活用してインスタ運用を効率化する方法を紹介します。投稿アイデアの創出やハッシュタグ選定など、役立つ5つのプロンプトと2つの注意点を ..."
       }
     ],
-    "researchedAt": "2025-11-18T00:16:37.586Z"
+    "researchedAt": "2025-11-18T00:16:37.586Z",
+    "image": {
+      "key": "ai-core-01",
+      "src": "assets/img/article-templates/ai-core-01.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント1）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
   }
 ]

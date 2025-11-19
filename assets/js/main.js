@@ -78,7 +78,7 @@
 (function loadPosts() {
   const list = document.getElementById('post-list');
   const errorLabel = document.getElementById('post-error');
-  const defaultCardImage = 'assets/img/articles/ai-core-01.svg';
+  const defaultCardImage = 'assets/img/article-templates/ai-core-01.webp';
 
   if (!list) return;
 

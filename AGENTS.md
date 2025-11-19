@@ -312,6 +312,11 @@ node automation/publisher/index.js
 - 記事本文は SEO 向けの sections/subSections を含む JSON を元にHTML化している。
 - 構造を変更した際は必ず `automation/templates/` と `posts/` の最終HTMLの整合を確認。
 
+### 記事ビジュアル
+- 記事カードとヒーロー画像は WEBP のみをサポートします。ファイルは `assets/img/article-templates/` に配置し、メタデータは `assets/img/articles/index.json` で管理してください。
+- 画像を追加・差し替える際は `key`・`src`（上記ディレクトリを指すパス）・`alt`・`topics` を追記し、Generator がタグやカテゴリから自動選択できるようにします。
+- 既存記事の `image` オブジェクト（`data/posts.json` / `data/candidates.json`）も WEBP パスに揃っているかを確認してください。
+
 ### 読者レベル設定
 - 記事は「高度な技術背景を持つ読者（YouTubeのテック系コンテンツを日常的に視聴）」向けに生成されます。
 - 基本的なIT用語の説明は不要、専門用語を積極的に使用します。

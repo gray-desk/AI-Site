@@ -230,6 +230,17 @@
     tagSearchElements.suggestions.innerHTML = items;
   };
 
+  // URLパラメータを更新する関数（先に定義）
+  const updateURLParameter = (slug) => {
+    const url = new URL(window.location);
+    if (slug) {
+      url.searchParams.set('tag', slug);
+    } else {
+      url.searchParams.delete('tag');
+    }
+    window.history.pushState({}, '', url);
+  };
+
   const applyPostFilter = (tag) => {
     tagSearchState.selectedTag = tag || null;
     tagSearchState.filteredPosts = filterPostsByTagSlug(tagSearchState.selectedTag?.slug);
@@ -237,6 +248,9 @@
     updateSelectedTagUI();
     updateFilterStatus();
     updateClearButtonState();
+
+    // URLパラメータを更新
+    updateURLParameter(tagSearchState.selectedTag?.slug);
   };
 
   const attachTagSearchEvents = () => {
@@ -359,6 +373,39 @@
     }
 
     applyState();
+  };
+
+  // タグクリックイベントを設定する関数
+  const attachTagClickEvents = () => {
+    const tagElements = list.querySelectorAll('.tag[data-tag-slug]');
+    tagElements.forEach((tagElement) => {
+      tagElement.style.cursor = 'pointer';
+      tagElement.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const slug = tagElement.getAttribute('data-tag-slug');
+        if (!slug) return;
+
+        // 該当するタグオブジェクトを検索
+        const selectedTag = tagSearchState.tags.find((tag) => tag.slug === slug);
+        if (!selectedTag) return;
+
+        // タグフィルタを適用（URLパラメータの更新も含む）
+        applyPostFilter(selectedTag);
+        renderTagSuggestions();
+
+        // タグ検索パネルまでスムーズスクロール
+        if (tagSearchElements.panel) {
+          const headerOffset = 100;
+          const elementPosition = tagSearchElements.panel.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   };
 
   attachTagSearchEvents();
@@ -505,8 +552,12 @@
         </div>
       `;
 
-      // カード全体をクリック可能に
+      // カード全体をクリック可能に（ただしタグは除外）
       item.addEventListener('click', (e) => {
+        // タグクリック時は記事に遷移しない
+        if (e.target.classList.contains('tag') || e.target.closest('.tag')) {
+          return;
+        }
         if (e.target.tagName !== 'A') {
           const link = item.querySelector('h3 a');
           if (link) link.click();
@@ -533,6 +584,9 @@
     }, 10);
 
     enhanceCardAccessibility();
+
+    // タグクリックイベントを設定
+    attachTagClickEvents();
   };
 
   // スケルトンローダーの表示
@@ -556,6 +610,12 @@
 
   showSkeleton();
 
+  // URLパラメータからタグを取得する関数
+  const getTagFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('tag');
+  };
+
   fetch('data/posts.json', { cache: 'no-cache' })
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -574,7 +634,30 @@
           tagSearchElements.input.disabled = tagSearchState.tags.length === 0;
           tagSearchElements.input.value = '';
         }
-        applyPostFilter(null);
+
+        // URLパラメータにタグが指定されている場合は自動的にフィルタを適用
+        const tagSlugFromURL = getTagFromURL();
+        if (tagSlugFromURL) {
+          const selectedTag = tagSearchState.tags.find((tag) => tag.slug === tagSlugFromURL);
+          if (selectedTag) {
+            applyPostFilter(selectedTag);
+
+            // モバイルの場合はタグ検索パネルを展開
+            if (tagSearchElements.toggle && window.innerWidth <= 767) {
+              const mediaQuery = window.matchMedia('(max-width: 767px)');
+              if (mediaQuery.matches && tagSearchElements.panel) {
+                tagSearchElements.panel.dataset.mobileOpen = 'true';
+                tagSearchElements.panel.hidden = false;
+                tagSearchElements.toggle.setAttribute('aria-expanded', 'true');
+              }
+            }
+          } else {
+            applyPostFilter(null);
+          }
+        } else {
+          applyPostFilter(null);
+        }
+
         renderTagSuggestions();
         if (errorLabel) errorLabel.textContent = '';
       }, 300);
@@ -625,15 +708,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // === プリロードとパフォーマンス最適化 ===
 (function optimizePerformance() {
-  // 重要なフォントをプリロード
-  const preloadFont = (url) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'font';
-    link.crossOrigin = 'anonymous';
-    link.href = url;
-    document.head.appendChild(link);
-  };
+  // 重要なフォントをプリロード（将来の拡張用）
+  // const preloadFont = (url) => {
+  //   const link = document.createElement('link');
+  //   link.rel = 'preload';
+  //   link.as = 'font';
+  //   link.crossOrigin = 'anonymous';
+  //   link.href = url;
+  //   document.head.appendChild(link);
+  // };
 
   // 画像の遅延読み込み
   const images = document.querySelectorAll('img[data-src]');

@@ -325,4 +325,24 @@
 
   initResponsiveTocToggle();
   initTocHighlight();
+
+  // === 記事詳細ページのタグクリック機能 ===
+  function initArticleTagClick() {
+    const articleTags = document.querySelectorAll('.article-tags .tag[data-tag-slug]');
+
+    articleTags.forEach((tagElement) => {
+      tagElement.style.cursor = 'pointer';
+      tagElement.addEventListener('click', (e) => {
+        e.preventDefault();
+        const slug = tagElement.getAttribute('data-tag-slug');
+        if (!slug) return;
+
+        // index.htmlにタグパラメータ付きでリダイレクト
+        const basePath = window.location.pathname.includes('/posts/') ? '../' : './';
+        window.location.href = `${basePath}index.html?tag=${encodeURIComponent(slug)}`;
+      });
+    });
+  }
+
+  initArticleTagClick();
 })();

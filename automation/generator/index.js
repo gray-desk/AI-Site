@@ -309,13 +309,6 @@ const compileArticleHtml = (article, meta, options = {}) => {
   const dateParts = formatDateParts(meta.date);
   const heroImage = (meta && meta.image) || options.image || null;
   const heroImageSrc = heroImage?.src ? `${normalizedAssetBase}${heroImage.src}` : null;
-  const heroFigureMarkup = heroImageSrc
-    ? `
-          <figure class="article-hero-image">
-            <img src="${heroImageSrc}" alt="${heroImage?.alt || `${article.title}のイメージ`}" loading="lazy" decoding="async" width="1200" height="675">
-            ${heroImage?.caption || heroImage?.label ? `<figcaption>${heroImage.caption || heroImage.label}</figcaption>` : ''}
-          </figure>`
-    : '';
   const socialImage = heroImageSrc || `${normalizedAssetBase}assets/img/ogp-default.svg`;
 
   const renderTagList = (items) => {
@@ -512,7 +505,6 @@ ${toHtmlParagraphs(article.conclusion)}
             <h1>${article.title}</h1>
             <p class="article-summary">${article.summary ?? ''}</p>
           </div>
-          ${heroFigureMarkup}
         </div>
 
         ${tagMarkup}

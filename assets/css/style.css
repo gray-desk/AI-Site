@@ -450,33 +450,6 @@ body.article-page main {
   z-index: 1;
 }
 
-.article-hero-image {
-  margin: 0;
-  border-radius: var(--radius-2xl);
-  overflow: hidden;
-  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.05));
-  box-shadow: var(--shadow-md);
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-
-.article-hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 16 / 9;
-}
-
-.article-hero-image figcaption {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  padding: var(--space-sm) var(--space-md);
-  background: rgba(255, 255, 255, 0.85);
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
 .article-meta-grid {
   margin-top: var(--space-xl);
   display: grid;

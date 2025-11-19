@@ -1,45 +1,120 @@
+# ====================================================================
+# GitHub Actions ワークフロー: 自動記事生成パイプライン
+# ====================================================================
+# このワークフローは、YouTube動画情報の収集から記事の生成・公開までを
+# 自動で実行します。
+#
+# 実行タイミング:
+# - 手動実行（workflow_dispatch）
+# - スケジュール実行（毎日09:00 JST / 00:00 UTC）
+#
+# 処理フロー:
+# 1. Collector: YouTubeチャンネルから最新動画を収集
+# 2. Researcher: キーワード抽出とGoogle検索による情報収集
+# 3. Generator: OpenAI APIを使った記事生成
+# 4. Publisher: 生成された記事をサイトに公開
+# ====================================================================
+
 name: content-pipeline
 
+# ワークフローの実行トリガー設定
 on:
+  # 手動実行を許可（GitHub UI から実行可能）
   workflow_dispatch:
+
+  # スケジュール実行（cron形式）
   schedule:
-    # 09:00 JST / 00:00 UTC
+    # 09:00 JST / 00:00 UTC - 毎日1回実行
     - cron: '0 0 * * *'
-    # 21:00 JST / 12:00 UTC (一時的に停止中)
+
+    # 21:00 JST / 12:00 UTC（一時的に停止中）
+    # 1日2回実行する場合は、以下のコメントを解除してください
     # - cron: '0 12 * * *'
 
+# GitHub リポジトリへの書き込み権限を付与
+# 生成された記事ファイルをコミット・プッシュするために必要
 permissions:
   contents: write
 
 jobs:
+  # ====================================================================
+  # メインジョブ: パイプライン実行
+  # ====================================================================
   run-pipeline:
+    # Ubuntu最新版の仮想環境で実行
     runs-on: ubuntu-latest
+
     steps:
+      # ----------------------------------------------------------------
+      # ステップ1: リポジトリのチェックアウト
+      # ----------------------------------------------------------------
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # 全ての履歴を取得（fetch-depth: 0）
+          # これにより、git log や git diff が正常に動作します
           fetch-depth: 0
+
+      # ----------------------------------------------------------------
+      # ステップ2: Node.js環境のセットアップ
+      # ----------------------------------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
+          # Node.js バージョン20を使用
           node-version: '20'
+
+      # ----------------------------------------------------------------
+      # ステップ3: 記事生成パイプラインの実行
+      # ----------------------------------------------------------------
+      # OpenAI APIを使用して、以下の処理を順次実行します:
+      # 1. YouTube動画の収集（Collector）
+      # 2. キーワード抽出とGoogle検索（Researcher）
+      # 3. 記事の生成（Generator）
+      # 4. 記事の公開（Publisher）
       - name: Generate article via OpenAI API
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_SEARCH_API_KEY }}
-          GOOGLE_SEARCH_CX: ${{ secrets.GOOGLE_SEARCH_CX }}
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          # 必要なAPIキーをGitHub Secretsから取得して環境変数に設定
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}           # OpenAI API（記事生成、キーワード抽出）
+          GOOGLE_SEARCH_API_KEY: ${{ secrets.GOOGLE_SEARCH_API_KEY }} # Google Custom Search API
+          GOOGLE_SEARCH_CX: ${{ secrets.GOOGLE_SEARCH_CX }}       # Googleカスタム検索エンジンID
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}         # YouTube Data API v3
         run: node automation/pipeline/index.js
+
+      # ----------------------------------------------------------------
+      # ステップ4: 生成されたコンテンツをGitにコミット・プッシュ
+      # ----------------------------------------------------------------
+      # 新しい記事ファイルやデータファイルの変更がある場合のみ、
+      # 自動でコミット・プッシュします
       - name: Commit generated content
         run: |
+          # git status --porcelain で変更ファイルの有無をチェック
+          # 変更がある場合のみ以下の処理を実行
           if [ -n "$(git status --porcelain)" ]; then
+            # Gitのユーザー情報を設定（GitHub Actions Bot として）
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
+
+            # 全ての変更をステージングに追加
             git add .
+
+            # 変更をコミット
             git commit -m "chore: auto-generate article"
+
+            # リモートリポジトリにプッシュ
             git push
           else
+            # 変更がない場合はメッセージを表示して終了
             echo "No changes to commit."
           fi
+
+      # ----------------------------------------------------------------
+      # ステップ5: パイプラインの実行結果を表示
+      # ----------------------------------------------------------------
+      # pipeline-status.json には以下の情報が記録されています:
+      # - 各ステージ（Collector/Researcher/Generator/Publisher）の実行結果
+      # - 処理された候補数、成功・失敗件数
+      # - 生成されたファイルのパス
+      # - メトリクス情報（処理時間、API呼び出し回数など）
       - name: Show pipeline status
         run: cat automation/output/pipeline-status.json

@@ -6,7 +6,7 @@
  * SEOへの影響を最小限に抑えるため、DOMContentLoadedイベントで即座に実行されます。
  */
 
-(function() {
+(function () {
   'use strict';
 
   /**
@@ -30,9 +30,9 @@
   function getHeaderHTML(basePath) {
     // 現在のページがホームかどうかを判定
     const isHome = !window.location.pathname.includes('/posts/') &&
-                   !window.location.pathname.includes('/about.html');
+      !window.location.pathname.includes('/about.html');
     const isAbout = window.location.pathname.includes('/about.html');
-    
+
     // 各ページへのリンクとロゴ画像のパスを解決
     const homeLink = basePath === '../' ? '../index.html' : 'index.html';
     const aboutLink = basePath === '../' ? '../about.html' : 'about.html';
@@ -72,7 +72,18 @@
     return `
       <footer class="site-footer">
         <div class="inner">
-          <small>&copy; ${currentYear} AI情報ブログ</small>
+          <div class="footer-content">
+            <div class="footer-logo">
+              <span>AI情報ブログ</span>
+            </div>
+            <nav class="footer-nav" aria-label="フッターナビゲーション">
+              <a href="index.html">ホーム</a>
+              <a href="about.html">このサイトについて</a>
+              <a href="privacy-policy.html">プライバシーポリシー</a>
+              <a href="contact.html">お問い合わせ</a>
+            </nav>
+          </div>
+          <small class="copyright">&copy; ${currentYear} AI情報ブログ</small>
         </div>
       </footer>
     `;
@@ -95,7 +106,7 @@
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       menuToggle.setAttribute('aria-label', isExpanded ? 'メニューを開く' : 'メニューを閉じる');
-      
+
       // activeクラスを付け外しして表示を切り替える
       menuToggle.classList.toggle('active');
       nav.classList.toggle('active');

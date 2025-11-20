@@ -34,7 +34,8 @@
   }
 
   .site-header nav a {
-    min-width: 44px; /* タッチターゲット最小サイズ */
+    min-width: 44px;
+    /* タッチターゲット最小サイズ */
     min-height: 44px;
     display: inline-flex;
     align-items: center;
@@ -68,16 +69,18 @@
 /* タブレット縦向き */
 @media (max-width: 768px) {
   body {
-    font-size: 15px; /* 少しフォントサイズを小さく */
+    font-size: 15px;
+    /* 少しフォントサイズを小さく */
   }
 
   .site-header {
     position: sticky;
     top: 0;
     z-index: 1001;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
   .site-header .inner {
@@ -94,7 +97,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    order: 3; /* ロゴの後に配置 */
+    order: 3;
+    /* ロゴの後に配置 */
+    color: var(--text-primary);
   }
 
   .brand {
@@ -120,14 +125,14 @@
     right: -100%;
     width: 280px;
     height: 100vh;
+    /* Modern Tech Gradient Background */
     background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.98) 0%,
-      rgba(255, 247, 250, 0.98) 50%,
-      rgba(255, 241, 247, 0.98) 100%);
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(248, 250, 252, 0.98) 100%);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-left: 1px solid rgba(255, 190, 210, 0.4);
-    box-shadow: -8px 0 32px rgba(255, 116, 177, 0.15);
+    border-left: 1px solid var(--border-subtle);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.1);
     padding: 80px var(--space-lg) var(--space-2xl) var(--space-lg);
     flex-direction: column;
     align-items: stretch;
@@ -144,33 +149,31 @@
 
   .site-header nav a {
     padding: var(--space-md) var(--space-lg);
-    font-size: 1.05rem;
+    font-size: 1rem;
     min-width: auto;
-    min-height: 52px;
+    min-height: 48px;
     white-space: nowrap;
     border-radius: var(--radius-lg);
     text-align: left;
     display: flex;
     align-items: center;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-weight: 600;
     transition: all var(--transition-fast);
     border: 1px solid transparent;
   }
 
   .site-header nav a::after {
-    display: none; /* モバイルメニューではアンダーラインを非表示 */
+    display: none;
+    /* モバイルメニューではアンダーラインを非表示 */
   }
 
   .site-header nav a:hover,
   .site-header nav a[aria-current="page"] {
-    background: linear-gradient(135deg,
-      rgba(255, 241, 247, 0.9) 0%,
-      rgba(255, 228, 241, 0.9) 100%);
+    background: var(--surface-tertiary);
     color: var(--color-primary);
-    border-color: rgba(255, 116, 177, 0.3);
-    box-shadow: 0 2px 8px rgba(255, 116, 177, 0.15);
-    transform: translateX(-2px);
+    border-color: var(--border-medium);
+    transform: translateX(4px);
   }
 
   /* オーバーレイ */
@@ -180,7 +183,8 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(58, 44, 65, 0.5);
+    background: rgba(15, 23, 42, 0.4);
+    /* Slate-900 with opacity */
     backdrop-filter: blur(4px);
     opacity: 0;
     visibility: hidden;
@@ -204,7 +208,7 @@
   /* ヒーローのテキスト */
   #hero h1,
   .hero-panel h1 {
-    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 6vw, 3rem);
     margin-bottom: var(--space-md);
   }
 
@@ -239,7 +243,8 @@
 
   .post-card {
     margin: 0 auto;
-    max-width: 600px; /* モバイルでカードが広がりすぎないように */
+    max-width: 600px;
+    /* モバイルでカードが広がりすぎないように */
   }
 
   .workflow-grid,
@@ -304,7 +309,7 @@
     padding: var(--space-xl) 0;
   }
 
-  main > section {
+  main>section {
     margin-bottom: var(--space-2xl);
   }
 
@@ -321,7 +326,8 @@
     max-height: none;
     margin-top: 0;
     margin-bottom: var(--space-xl);
-    order: -1; /* サイドバーを上に移動 */
+    order: -1;
+    /* サイドバーを上に移動 */
   }
 
   .article-main-column {
@@ -358,7 +364,7 @@
     line-height: 1.7;
   }
 
-  .article-section + .article-section {
+  .article-section+.article-section {
     margin-top: var(--space-2xl);
     padding-top: var(--space-lg);
   }
@@ -426,7 +432,8 @@
   }
 
   .site-header nav {
-    width: 260px; /* 小型モバイルではメニュー幅を狭く */
+    width: 260px;
+    /* 小型モバイルではメニュー幅を狭く */
   }
 
   .site-header nav a {
@@ -439,7 +446,8 @@
   }
 
   .brand span {
-    max-width: 140px; /* ロゴテキストの最大幅 */
+    max-width: 140px;
+    /* ロゴテキストの最大幅 */
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -468,7 +476,7 @@
 
   #hero h1,
   .hero-panel h1 {
-    font-size: clamp(1.5rem, 4.5vw, 2rem);
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
     margin-bottom: var(--space-sm);
   }
 
@@ -610,12 +618,12 @@
     padding: var(--space-lg) 0;
   }
 
-  main > section {
+  main>section {
     margin-bottom: var(--space-xl);
   }
 
   /* セクション間の余白調整 */
-  main > section + section {
+  main>section+section {
     margin-top: 0;
   }
 }
@@ -634,7 +642,8 @@
   }
 
   .site-header nav {
-    width: 240px; /* 極小モバイルではさらに狭く */
+    width: 240px;
+    /* 極小モバイルではさらに狭く */
   }
 
   .site-header nav a {
@@ -675,7 +684,7 @@
 
   #hero h1,
   .hero-panel h1 {
-    font-size: clamp(1.35rem, 4vw, 1.75rem);
+    font-size: clamp(1.5rem, 4vw, 1.75rem);
     margin-bottom: var(--space-xs);
   }
 
@@ -742,13 +751,12 @@
     padding: var(--space-md) 0;
   }
 
-  main > section {
+  main>section {
     margin-bottom: var(--space-lg);
   }
 
   /* セクション間の余白をさらに縮小 */
-  main > section + section {
+  main>section+section {
     margin-top: 0;
   }
 }
-

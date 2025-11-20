@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <!-- ファビコン -->
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
@@ -34,11 +35,14 @@
   <!-- パフォーマンス最適化 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <title>AI情報ブログ - 最新AI情報を自動収集・分析</title>
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
   <!-- ヘッダーはcomponents.jsで動的に挿入されます -->
 
@@ -62,48 +66,31 @@
     -->
 
     <section id="hero" class="inner hero-panel">
-      <div style="grid-column: 1 / -1; text-align: center; max-width: 800px; margin: 0 auto;">
+      <div class="hero-content">
         <p class="eyebrow">Future of Intelligence</p>
         <h1>AI情報ブログ</h1>
-        <p>AI・機械学習の最新トレンドや注目技術を、わかりやすく解説。ChatGPT、Claude、LLMなど、話題のAI技術に関する情報をお届けします。</p>
+        <p>AI・機械学習の最新トレンドや注目技術を、わかりやすく解説。<br class="u-desktop-only">ChatGPT、Claude、LLMなど、話題のAI技術に関する情報をお届けします。</p>
       </div>
     </section>
 
     <section id="posts" class="inner">
       <div class="section-header">
         <h2>最新記事</h2>
-        <button
-          type="button"
-          id="tag-search-toggle"
-          class="tag-search-toggle"
-          aria-controls="tag-search-panel"
-          aria-expanded="false"
-        >
+        <button type="button" id="tag-search-toggle" class="tag-search-toggle" aria-controls="tag-search-panel"
+          aria-expanded="false">
           <span aria-hidden="true">#</span>
           タグで絞り込む
         </button>
       </div>
 
       <!-- タグ検索パネルを記事リストの上に配置 -->
-      <div
-        class="tag-search-panel"
-        id="tag-search-panel"
-        aria-label="タグ検索"
-        data-mobile-open="false"
-      >
+      <div class="tag-search-panel" id="tag-search-panel" aria-label="タグ検索" data-mobile-open="false">
         <div class="tag-search-input-row">
           <label for="tag-search-input">タグ検索</label>
           <div class="tag-search-input">
             <span class="tag-search-icon" aria-hidden="true">#</span>
-            <input
-              type="search"
-              id="tag-search-input"
-              placeholder="タグ名で検索..."
-              autocapitalize="off"
-              autocomplete="off"
-              spellcheck="false"
-              aria-describedby="tag-search-hint"
-            >
+            <input type="search" id="tag-search-input" placeholder="タグ名で検索..." autocapitalize="off" autocomplete="off"
+              spellcheck="false" aria-describedby="tag-search-hint">
             <button type="button" id="tag-search-clear" aria-label="検索キーワードをクリア">クリア</button>
           </div>
         </div>
@@ -178,4 +165,5 @@
   <script src="assets/js/components.js"></script>
   <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>

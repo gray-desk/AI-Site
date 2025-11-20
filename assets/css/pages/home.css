@@ -31,11 +31,17 @@
 }
 
 /* ヒーロー内のコンテンツ中央寄せにするための調整 */
-#hero>div,
-.hero-panel>div {
+.hero-content {
+  grid-column: 1 / -1;
   width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*
@@ -54,6 +60,8 @@
   opacity: 0.5;
   z-index: 0;
   pointer-events: none;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
 }
 
 /*
@@ -77,14 +85,15 @@
 .eyebrow {
   display: inline-block;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-primary);
-  background: rgba(99, 102, 241, 0.1);
-  padding: 0.25em 0.75em;
+  background: rgba(99, 102, 241, 0.08);
+  padding: 0.35em 1em;
   border-radius: var(--radius-full);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   animation: fadeInUp 0.6s ease-out;
 }
 
@@ -95,8 +104,10 @@
 .hero-panel h1 {
   margin: 0 0 var(--space-lg);
   font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   color: var(--text-primary);
   /* Subtle gradient text */
   background: linear-gradient(135deg, var(--text-primary) 30%, var(--color-primary) 100%);
@@ -104,19 +115,35 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: fadeInUp 0.8s ease-out 0.1s both;
+  text-wrap: balance;
 }
 
 /*
  * ヒーローセクション内の段落 (p)
  */
-#hero p,
-.hero-panel p {
+#hero p:not(.eyebrow),
+.hero-panel p:not(.eyebrow) {
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.8;
   color: var(--text-secondary);
-  max-width: 600px;
+  max-width: 640px;
   animation: fadeInUp 0.8s ease-out 0.2s both;
+  text-wrap: balance;
+  /* バランスの良い改行 */
+  word-break: auto-phrase;
+  /* 可能な場合、フレーズ単位で改行 */
+}
+
+/* デスクトップのみの改行 */
+.u-desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .u-desktop-only {
+    display: inline;
+  }
 }
 
 /* === ヒーロー統計カード (.hero-stats) === */

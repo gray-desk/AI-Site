@@ -102,5 +102,13 @@
     "sourceName": "technavi_tooru",
     "videoTitle": "Google Anti-Gravity登場！Cursorの代わりになり得るIDEなのか？！",
     "draftUrl": "posts/2025-11-19-google-anti-gravityide.html"
+  },
+  {
+    "topicKey": "gemini-3",
+    "firstSeen": "2025-11-20T01:54:53.432Z",
+    "lastPublishedAt": "2025-11-20",
+    "sourceName": "Manual Input",
+    "videoTitle": "Gemini 3 最新情報",
+    "draftUrl": "posts/2025-11-20-gemini-3-ai.html"
   }
 ]

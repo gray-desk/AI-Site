@@ -1,5 +1,53 @@
 [
   {
+    "title": "Gemini 3の革新: AIアシスタントの新機能と応用展望",
+    "date": "2025-11-20",
+    "summary": "この記事では、Googleの最新AIアシスタントGemini 3の新機能とその技術的背景、実践的な応用例を深掘りします。",
+    "tags": [
+      {
+        "slug": "gemini-3",
+        "label": "Gemini 3",
+        "category": "その他",
+        "style": "accent-gold"
+      },
+      {
+        "slug": "ai",
+        "label": "AIアシスタント",
+        "category": "その他",
+        "style": "accent-blue"
+      },
+      {
+        "slug": "google-ai",
+        "label": "Google AI",
+        "category": "企業・プロダクト",
+        "style": "accent-purple"
+      },
+      {
+        "slug": "tag-4",
+        "label": "マルチモーダル",
+        "category": "その他",
+        "style": "accent-sky"
+      },
+      {
+        "slug": "tag-5",
+        "label": "推論能力",
+        "category": "その他",
+        "style": "accent-pink"
+      }
+    ],
+    "url": "posts/2025-11-20-gemini-3-ai.html",
+    "slug": "2025-11-20-gemini-3-ai",
+    "publishedAt": "2025-11-20T01:54:53.432Z",
+    "image": {
+      "key": "ai-core-04",
+      "src": "assets/img/article-templates/ai-core-04.webp",
+      "alt": "AIコアを象徴する抽象的な波形（バリアント4）",
+      "label": "AIコア戦略",
+      "caption": "大規模言語モデルやAI基盤の戦略を示すグラデーションアート。",
+      "category": "ai"
+    }
+  },
+  {
     "title": "Google Anti-Gravityの可能性とIDE業界へのインパクト",
     "date": "2025-11-19",
     "summary": "この記事では、Googleの新しいIDE『Anti-Gravity』が業界に与える影響とその技術的特性を深掘りします。",

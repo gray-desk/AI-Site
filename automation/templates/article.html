@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-       crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <!-- ファビコン -->
   <link rel="icon" type="image/svg+xml" href="{{ASSET_BASE}}assets/img/logo.svg">
@@ -31,12 +32,14 @@
   <meta name="twitter:description" content="{{SUMMARY}}">
   <meta name="twitter:image" content="{{SOCIAL_IMAGE}}">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
   <link rel="stylesheet" href="{{ASSET_BASE}}assets/css/main.css">
 </head>
-<body class="article-page">
+
+<body class="article-page" data-barba="wrapper">
   <!-- ヘッダーはcomponents.jsで動的に挿入されます -->
 
-  <main>
+  <main data-barba="container" data-barba-namespace="article">
     <article class="article-detail">
       <section class="inner article-hero">
         <p class="article-eyebrow">Daily Briefing</p>
@@ -56,8 +59,8 @@
       <div class="inner article-grid">
         <div class="article-main-column">
           <article class="post-article article-content">
-{{INTRO_MARKUP}}
-{{SECTION_MARKUP}}
+            {{INTRO_MARKUP}}
+            {{SECTION_MARKUP}}
           </article>
         </div>
 
@@ -78,7 +81,15 @@
   <!-- フッターはcomponents.jsで動的に挿入されます -->
 
   <script src="{{ASSET_BASE}}assets/js/components.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
   <script src="{{ASSET_BASE}}assets/js/main.js" defer></script>
   <script src="{{ASSET_BASE}}assets/js/article.js" defer></script>
+  <script src="{{ASSET_BASE}}assets/js/transitions.js" defer></script>
 </body>
+
 </html>

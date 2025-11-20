@@ -152,7 +152,7 @@ const runPublisher = async ({ collectorResult, researcherResult, generatorResult
     }
 
     generatedFilePath = relativePath;
-    
+
     // posts.jsonに保存するエントリを作成
     const basePostEntry =
       generatorResult.postEntry || {
@@ -228,8 +228,53 @@ const runPublisher = async ({ collectorResult, researcherResult, generatorResult
     };
   }
 
+  // sitemap.xmlの生成
+  try {
+    await generateSitemap(updatedPosts);
+  } catch (error) {
+    console.warn('[publisher] ⚠️  sitemap.xml の生成に失敗しました:', error.message);
+    // sitemap生成失敗は致命的なエラーとはしない
+  }
+
   // ステータスをファイルに書き込んで返す
   return writeStatusSnapshot(status);
+};
+
+/**
+ * 記事リストからsitemap.xmlを生成します。
+ * @param {Array<object>} posts - 記事リスト
+ */
+const generateSitemap = async (posts) => {
+  const { SitemapStream, streamToPromise } = require('sitemap');
+  const { Readable } = require('stream');
+  const { SITE_CONFIG } = require('../config/constants');
+
+  console.log('[publisher] sitemap.xml を生成しています...');
+
+  const links = [
+    { url: '/', changefreq: 'daily', priority: 1.0 },
+    { url: '/about.html', changefreq: 'monthly', priority: 0.5 },
+    { url: '/contact.html', changefreq: 'monthly', priority: 0.5 },
+  ];
+
+  // 記事ページを追加
+  posts.forEach((post) => {
+    if (post.url) {
+      links.push({
+        url: `/${post.url}`,
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod: post.publishedAt || post.date,
+      });
+    }
+  });
+
+  const stream = new SitemapStream({ hostname: SITE_CONFIG.BASE_URL });
+  const xmlBuffer = await streamToPromise(Readable.from(links).pipe(stream));
+
+  const sitemapPath = path.join(root, 'sitemap.xml');
+  fs.writeFileSync(sitemapPath, xmlBuffer.toString());
+  console.log(`[publisher] sitemap.xml を書き込みました: ${sitemapPath}`);
 };
 
 // スクリプトが直接実行された場合にrunPublisherを実行

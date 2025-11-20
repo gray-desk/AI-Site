@@ -1,0 +1,31 @@
+{
+  "name": "ai-info-blog-automation",
+  "version": "1.0.0",
+  "description": "Automation pipeline for AI Information Blog",
+  "main": "automation/pipeline/index.js",
+  "scripts": {
+    "pipeline": "node automation/pipeline/index.js",
+    "research": "node automation/researcher/index.js",
+    "generate": "node automation/generator/index.js",
+    "publish": "node automation/publisher/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "blog",
+    "automation",
+    "pipeline"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.0",
+    "minimist": "^1.2.8",
+    "openai": "^4.52.0",
+    "puppeteer": "^24.30.0",
+    "sharp": "^0.34.5",
+    "sitemap": "^8.0.2"
+  }
+}

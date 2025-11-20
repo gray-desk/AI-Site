@@ -7,84 +7,45 @@
  * - 目次のレスポンシブ対応（折りたたみ機能）
  * - 記事内タグのクリックによるトップページへの遷移
  */
-(function initArticlePage() {
+/**
+ * @fileoverview 記事詳細ページ専用のUI制御スクリプト
+ * 以下の機能を提供します:
+ * - 目次（Table of Contents）の自動生成とスクロール連動ハイライト
+ * - 読書進捗バーの表示
+ * - 目次のレスポンシブ対応（折りたたみ機能）
+ * - 記事内タグのクリックによるトップページへの遷移
+ */
+
+window.initArticlePage = () => {
   'use strict';
 
   // <body>に 'article-page' クラスがなければ記事ページではないと判断し、処理を中断
+  // Barba.js遷移後はbodyのクラスが更新されていない可能性があるため、
+  // data-barba-namespaceもチェックするとより堅牢だが、
+  // ここでは既存のクラスチェックに加え、コンテナ内の要素チェックも行う。
   const root = document.body;
-  if (!root || !root.classList.contains('article-page')) return;
+  const articleContainer = document.querySelector('.article-detail');
+
+  if ((!root || !root.classList.contains('article-page')) && !articleContainer) return;
 
   const currentUrl = window.location.href;
   const title = document.title.replace(/ \| AI情報ブログ$/, '') || 'AI情報ブログ';
 
-  // --- 1. SNS共有リンクの生成 ---
-  // 共有リンク機能は削除されました（テンプレートから共有ボタンが削除されたため）
-  /*
-  (function setupShareLinks() {
-    const encode = (value) => encodeURIComponent(value);
+  // クリーンアップ用: 以前のイベントリスナーを削除
+  if (window.articlePageCleanup) {
+    window.articlePageCleanup();
+    window.articlePageCleanup = null;
+  }
 
-    // X (Twitter) 共有リンク
-    document.querySelectorAll('[data-share-target="x"]').forEach((link) => {
-      const url = new URL('https://twitter.com/intent/tweet');
-      url.searchParams.set('text', `${title} | AI情報ブログ`);
-      url.searchParams.set('url', currentUrl);
-      link.setAttribute('href', url.toString());
-    });
-
-    // LinkedIn 共有リンク
-    document.querySelectorAll('[data-share-target="linkedin"]').forEach((link) => {
-      const href = `https://www.linkedin.com/sharing/share-offsite/?url=${encode(currentUrl)}`;
-      link.setAttribute('href', href);
-    });
-
-    // リンクコピー機能
-    const copyButton = document.querySelector('[data-copy-link]');
-    if (copyButton) {
-      copyButton.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(currentUrl);
-          const original = copyButton.textContent;
-          copyButton.textContent = 'コピーしました';
-          setTimeout(() => {
-            copyButton.textContent = original;
-          }, 2000);
-        } catch (error) {
-          console.error('リンクのコピーに失敗しました', error);
-          alert('リンクのコピーに失敗しました。');
-        }
-      });
-    }
-
-    // ネイティブ共有機能 (Web Share API)
-    const nativeShare = document.querySelector('[data-share-target="native"]');
-    if (nativeShare) {
-      // Web Share APIが利用可能かチェック
-      if (navigator.share) {
-        nativeShare.style.display = ''; // ボタンを表示
-        nativeShare.addEventListener('click', async () => {
-          try {
-            await navigator.share({ title, url: currentUrl });
-          } catch (error) {
-            // ユーザーが共有をキャンセルした場合などはエラーになるが、コンソールに出力する程度に留める
-            console.warn('共有がキャンセルまたは失敗しました', error);
-          }
-        });
-      } else {
-        nativeShare.style.display = 'none'; // 利用不可ならボタンを隠す
-      }
-    }
-  })();
-  */
-
+  const cleanupTasks = [];
 
   // --- 2. 目次 (Table of Contents) の自動生成 ---
-  // 記事内のh2, h3見出しを走査し、目次リストを動的に生成します。
-  (function setupTableOfContents() {
+  const setupTableOfContents = () => {
     const tocList = document.querySelector('[data-toc-list]');
     const headings = document.querySelectorAll('.post-article h2, .post-article h3, .article-content h2, .article-content h3');
-    
+
     if (!tocList || headings.length === 0) {
-      if(tocList) {
+      if (tocList) {
         tocList.innerHTML = '<li>目次はありません</li>';
       }
       return;
@@ -128,16 +89,16 @@
       anchor.href = `#${slug}`;
       anchor.setAttribute('data-toc-link', 'true');
       anchor.innerHTML = `<span class="toc-index">${indexLabel}</span><span class="toc-text">${text.trim()}</span>`;
-      
+
       item.appendChild(anchor);
       tocList.appendChild(item);
     });
 
     // 目次リンククリック時のスムーズスクロール処理
-    tocList.addEventListener('click', (e) => {
+    const tocClickHandler = (e) => {
       const link = e.target.closest('a[data-toc-link="true"]');
       if (!link) return;
-      
+
       e.preventDefault();
       const targetId = link.getAttribute('href').slice(1);
       const target = document.getElementById(targetId);
@@ -147,13 +108,19 @@
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
-    });
-  })();
+    };
+    tocList.addEventListener('click', tocClickHandler);
+    // cleanupTasks.push(() => tocList.removeEventListener('click', tocClickHandler)); // 要素ごと消えるので不要かもだが念のため
+  };
+  setupTableOfContents();
 
 
   // --- 3. 読書進捗インジケーター ---
-  // ページ上部に、記事の読了までのおおよその進捗を示すバーを表示します。
-  (function initReadingProgress() {
+  const initReadingProgress = () => {
+    // 既存のバーがあれば削除
+    const existingBar = document.querySelector('.reading-progress');
+    if (existingBar) existingBar.remove();
+
     const progressBar = document.createElement('div');
     progressBar.className = 'reading-progress';
     progressBar.innerHTML = '<div class="reading-progress-bar"></div>';
@@ -178,25 +145,34 @@
       } else if (scrollPosition > scrollEnd) {
         progress = 100;
       }
-      
+
       bar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
     };
 
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress, { passive: true });
     updateProgress();
-  })();
+
+    cleanupTasks.push(() => {
+      window.removeEventListener('scroll', updateProgress);
+      window.removeEventListener('resize', updateProgress);
+      if (progressBar.parentNode) progressBar.remove();
+    });
+  };
+  initReadingProgress();
 
 
   // --- 4. 目次のレスポンシブ対応と現在地表示 ---
-  // モバイル表示時に目次を折りたためるようにし、スクロールに連動して現在読んでいるセクションを表示します。
-  (function initResponsiveToc() {
+  const initResponsiveToc = () => {
     const tocCard = document.querySelector('.article-card.article-toc');
     const tocList = tocCard?.querySelector('[data-toc-list]');
     const headings = document.querySelectorAll('.toc-target');
     if (!tocCard || !tocList || headings.length === 0) return;
 
     // --- DOM構造のセットアップ ---
+    // 既にセットアップ済みかチェック
+    if (tocCard.querySelector('.article-card-header')) return;
+
     const header = document.createElement('div');
     header.className = 'article-card-header';
     const label = tocCard.querySelector('.article-card-label');
@@ -217,7 +193,7 @@
     toggle.className = 'toc-toggle';
     toggle.setAttribute('aria-controls', panel.id);
     header.appendChild(toggle);
-    
+
     tocCard.prepend(header);
     tocCard.appendChild(panel);
     tocCard.insertBefore(indicator, panel);
@@ -240,14 +216,20 @@
       tocCard.dataset.mobileCollapsed = String(state.isMobile && !state.expanded);
     };
 
-    toggle.addEventListener('click', () => {
+    const toggleHandler = () => {
       if (!state.isMobile) return;
       state.expanded = !state.expanded;
       applyState();
-    });
+    };
+    toggle.addEventListener('click', toggleHandler);
 
-    mediaQuery.addEventListener('change', applyState);
+    const mediaQueryHandler = () => applyState();
+    mediaQuery.addEventListener('change', mediaQueryHandler);
     applyState(); // 初期状態を適用
+
+    cleanupTasks.push(() => {
+      mediaQuery.removeEventListener('change', mediaQueryHandler);
+    });
 
     // --- スクロール連動ハイライト ---
     const tocItems = Array.from(tocList.querySelectorAll('li[data-section-id]'));
@@ -265,7 +247,7 @@
       }
 
       tocItems.forEach(item => item.classList.remove('active'));
-      
+
       if (activeSection) {
         const activeItem = tocItems.find(item => item.dataset.sectionId === activeSection.id);
         if (activeItem) {
@@ -281,15 +263,20 @@
 
     window.addEventListener('scroll', updateActiveToc, { passive: true });
     updateActiveToc(); // 初期表示
-  })();
+
+    cleanupTasks.push(() => {
+      window.removeEventListener('scroll', updateActiveToc);
+    });
+  };
+  initResponsiveToc();
 
 
   // --- 5. 記事内タグのクリック機能 ---
-  // 記事内のタグをクリックすると、そのタグでフィルタリングされたトップページに遷移します。
-  (function setupTagLinks() {
-    document.addEventListener('click', (e) => {
+  const setupTagLinks = () => {
+    const clickHandler = (e) => {
       const tagElement = e.target.closest('.tag[data-tag-slug]');
-      if (!tagElement || !document.body.classList.contains('article-page')) return;
+      // 記事ページ内でのみ動作
+      if (!tagElement || (!document.body.classList.contains('article-page') && !document.querySelector('.article-detail'))) return;
 
       e.preventDefault();
       e.stopPropagation();
@@ -300,7 +287,10 @@
       // ルートパスからの相対パスを計算してリダイレクト
       const basePath = window.location.pathname.includes('/posts/') ? '../' : './';
       window.location.href = `${basePath}index.html?tag=${encodeURIComponent(slug)}`;
-    });
+    };
+
+    document.addEventListener('click', clickHandler);
+    cleanupTasks.push(() => document.removeEventListener('click', clickHandler));
 
     // タグにクリック可能なカーソルスタイルを適用
     const applyTagStyles = () => {
@@ -308,12 +298,17 @@
         tag.style.cursor = 'pointer';
       });
     };
-    
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', applyTagStyles);
-    } else {
-      applyTagStyles();
-    }
-  })();
+    applyTagStyles();
+  };
+  setupTagLinks();
 
-})();
+  // クリーンアップ関数を登録
+  window.articlePageCleanup = () => {
+    cleanupTasks.forEach(task => task());
+  };
+};
+
+// 初回読み込み時
+document.addEventListener('DOMContentLoaded', () => {
+  window.initArticlePage();
+});

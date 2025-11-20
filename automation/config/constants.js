@@ -61,10 +61,18 @@ const VALIDATION = {
   ORPHAN_POST_IGNORE: ['article-template.html'],
 };
 
+// --- サイト設定 ---
+const SITE_CONFIG = {
+  // サイトのベースURL（sitemap.xml生成に使用）
+  // TODO: 実際の公開URLに変更してください
+  BASE_URL: 'https://yamazaki2357.github.io/AI-Site',
+};
+
 module.exports = {
   COLLECTOR,
   RESEARCHER,
   GENERATOR,
   RATE_LIMITS,
   VALIDATION,
+  SITE_CONFIG,
 };

@@ -40,13 +40,14 @@
     rel="stylesheet">
 
   <title>AI情報ブログ - 最新AI情報を自動収集・分析</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
+<body data-barba="wrapper">
   <!-- ヘッダーはcomponents.jsで動的に挿入されます -->
 
-  <main>
+  <main data-barba="container" data-barba-namespace="home">
     <!-- Google AdSense: ヘッダー広告（728x90 or レスポンシブ） -->
     <!--
     <div class="inner">
@@ -94,6 +95,19 @@
             <button type="button" id="tag-search-clear" aria-label="検索キーワードをクリア">クリア</button>
           </div>
         </div>
+
+        <!-- 記事検索 (Fuse.js) -->
+        <div class="search-container" style="margin-top: 1rem;">
+          <label for="search-input" style="display:block; margin-bottom:0.5rem; font-weight:bold;">記事検索</label>
+          <div style="position:relative;">
+            <input type="search" id="search-input" placeholder="キーワードで記事を検索..."
+              style="width:100%; padding:0.8rem; border-radius:8px; border:1px solid var(--color-border); background:var(--color-bg-card);">
+            <div id="search-results" class="search-results-dropdown"
+              style="display:none; position:absolute; top:100%; left:0; right:0; background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; z-index:1000; max-height:300px; overflow-y:auto; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            </div>
+          </div>
+        </div>
+
         <p id="tag-search-hint" class="tag-search-hint">タグ名を入力すると候補が絞り込まれます。候補のタグをクリックすると記事がフィルタリングされます。</p>
         <div class="tag-search-selected" id="tag-search-selected" hidden>
           <span id="tag-search-selected-label"></span>
@@ -163,7 +177,16 @@
 
   <noscript>JavaScriptを有効にすると記事一覧が表示されます。</noscript>
   <script src="assets/js/components.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="assets/js/search.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/transitions.js" defer></script>
 </body>
 
 </html>

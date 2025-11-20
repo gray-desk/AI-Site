@@ -14,69 +14,55 @@ const {
   USER_AGENT,               // HTTPリクエストのUser-Agentヘッダ
 } = RESEARCHER;
 
-/**
- * HTML文字列から主要なタグ（script, styleなど）を除去して、プレーンテキストに近い状態にします。
- * @param {string} html - 変換するHTML文字列
- * @returns {string} タグが除去されたテキスト
- */
-const stripHtmlTags = (html) => {
-  if (!html) return '';
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, ' ')    // scriptタグとその中身を削除
-    .replace(/<style[\s\S]*?<\/style>/gi, ' ')      // styleタグとその中身を削除
-    .replace(/<noscript[\s\S]*?<\/noscript>/gi, ' ') // noscriptタグとその中身を削除
-    .replace(/<svg[\s\S]*?<\/svg>/gi, ' ')          // svgタグとその中身を削除
-    .replace(/<\/?head[\s\S]*?>/gi, ' ')            // headタグとその中身を削除
-    .replace(/<[^>]+>/g, ' ');                      // 残りのすべてのHTMLタグを削除
-};
-
-/**
- * HTML文字列をプレーンテキストに変換し、空白文字を正規化します。
- * @param {string} html - 変換するHTML文字列
- * @returns {string} 正規化されたプレーンテキスト
- */
-const normalizePlainText = (html) => {
-  // 1. HTMLタグを除去
-  const stripped = stripHtmlTags(html);
-  // 2. HTMLエンティティをデコードし、連続する空白を単一スペースに置換
-  return decodeHtmlEntities(stripped).replace(/\s+/g, ' ').trim();
-};
+const cheerio = require('cheerio');
 
 /**
  * 指定されたURLから記事の本文テキストを非同期で取得します。
- * タイムアウト制御と基本的なエラーハンドリングを行います。
+ * Cheerioを使用してHTMLをパースし、不要な要素を除去して本文を抽出します。
  * @param {string} url - 取得対象の記事URL
  * @returns {Promise<string>} 抽出・正規化された本文テキスト（最大`ARTICLE_TEXT_MAX_LENGTH`文字）。失敗した場合は空文字列を返します。
  */
 const fetchArticleText = async (url) => {
   if (!url) return '';
-  
+
   // AbortControllerを使ってタイムアウト処理を実装
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), ARTICLE_FETCH_TIMEOUT_MS);
-  
+
   try {
     const response = await fetch(url, {
       headers: {
         'User-Agent': USER_AGENT,
         'Accept': 'text/html,application/xhtml+xml',
       },
-      signal: controller.signal, // AbortControllerのシグナルを渡す
+      signal: controller.signal,
     });
-    
+
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
-    
-    const body = await response.text();
-    // 取得したHTMLボディを正規化し、指定された最大長に切り詰める
-    return normalizePlainText(body).slice(0, ARTICLE_TEXT_MAX_LENGTH);
+
+    const html = await response.text();
+
+    // CheerioでHTMLをロード
+    const $ = cheerio.load(html);
+
+    // 不要な要素を削除
+    $('script, style, noscript, svg, head, iframe, nav, footer, header, .ad, .ads, .advertisement').remove();
+
+    // 本文と思われる要素からテキストを抽出
+    // body全体のテキストを取得し、空白を正規化
+    let text = $('body').text();
+
+    // HTMLエンティティのデコードと空白の正規化
+    text = decodeHtmlEntities(text).replace(/\s+/g, ' ').trim();
+
+    return text.slice(0, ARTICLE_TEXT_MAX_LENGTH);
   } catch (error) {
     // タイムアウトやネットワークエラーなど
     console.warn(`[researcher] ${url} の本文取得に失敗しました: ${error.message}`);
     return '';
   } finally {
-    // 処理が終了したら必ずタイムアウトをクリア
     clearTimeout(timeout);
   }
 };
@@ -113,5 +99,4 @@ const isQualityContent = (text) => {
 module.exports = {
   fetchArticleText,
   isQualityContent,
-  normalizePlainText,
 };

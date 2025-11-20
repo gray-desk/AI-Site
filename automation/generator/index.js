@@ -238,16 +238,17 @@ const updateTopicHistory = (history, topicKey, record) => {
 
 /**
  * Generatorステージのメイン処理
+ *
+ * @param {object|null} researchResult - Researcherの結果 { keyword, summaries }
+ *                                       指定されていない場合は candidates.json から読み込む
  */
-const runGenerator = async () => {
+const runGenerator = async (researchResult = null) => {
   logger.info('ステージ開始: 候補の分析を実行します。');
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     throw new Error('OPENAI_API_KEY が設定されていません。GitHub Secrets に登録してください。');
   }
 
-  const candidates = readCandidates();
-  metricsTracker.set('candidates.total', candidates.length);
   // 処理結果を返すためのヘルパー関数
   const buildResult = (payload) => {
     const summary = metricsTracker.summary();
@@ -257,20 +258,77 @@ const runGenerator = async () => {
       metrics: summary,
     };
   };
+
   const posts = readJson(postsJsonPath, []);
   const topicHistory = readJson(topicHistoryPath, []);
 
-  // `status='researched'` の候補を1つ見つける
-  const candidate = candidates.find((item) => item.status === 'researched');
-  if (!candidate) {
-    logger.info('researched状態の候補が存在しないため処理を終了します。');
-    return buildResult({
-      generated: false,
-      reason: 'no-researched-candidates',
-    });
+  let candidate;
+  let candidates = []; // candidates.json の内容（researchResult がない場合のみ使用）
+  const isManualMode = !!researchResult; // researchResult が渡されたかどうか
+
+  // researchResult が渡された場合は、それから候補オブジェクトを生成
+  if (isManualMode) {
+    logger.info('研究結果から候補を生成します。');
+    const { keyword, summaries } = researchResult;
+    const now = new Date().toISOString();
+    const topicKey = slugify(keyword, 'ai-topic');
+
+    // 候補オブジェクトを動的生成
+    candidate = {
+      id: `manual-${Date.now()}`,
+      status: 'researched',
+      searchQuery: {
+        original: keyword,
+        extracted: keyword,
+        method: 'manual',
+      },
+      topicKey,
+      topicKeyMeta: {
+        method: 'manual',
+        raw: keyword,
+        product: null,
+        feature: null,
+        category: null,
+        confidence: 1.0,
+        reasoning: 'Manual keyword input',
+        error: null,
+      },
+      searchSummaries: summaries,
+      video: {
+        title: keyword,
+        url: '',
+        description: '',
+      },
+      source: {
+        name: 'Manual Input',
+        url: '',
+        channelId: '',
+      },
+      researchedAt: now,
+      createdAt: now,
+      updatedAt: now,
+    };
+
+    metricsTracker.set('candidates.total', 1);
+    metricsTracker.increment('candidates.analyzed');
+  } else {
+    // researchResult がない場合は、従来通り candidates.json から読み込む
+    logger.info('candidates.json から候補を読み込みます。');
+    candidates = readCandidates();
+    metricsTracker.set('candidates.total', candidates.length);
+
+    // `status='researched'` の候補を1つ見つける
+    candidate = candidates.find((item) => item.status === 'researched');
+    if (!candidate) {
+      logger.info('researched状態の候補が存在しないため処理を終了します。');
+      return buildResult({
+        generated: false,
+        reason: 'no-researched-candidates',
+      });
+    }
+    metricsTracker.increment('candidates.analyzed');
   }
 
-  metricsTracker.increment('candidates.analyzed');
   logger.info(
     `対象候補: ${candidate.id} / ${candidate.source.name} / ${candidate.video?.title}`,
   );
@@ -291,18 +349,22 @@ const runGenerator = async () => {
   if (duplicate) {
     metricsTracker.increment('candidates.skipped.duplicate');
     const now = new Date().toISOString();
-    // 候補のステータスを 'skipped' に更新
-    const updatedCandidates = candidates.map((item) =>
-      item.id === candidate.id
-        ? {
-            ...item,
-            status: 'skipped',
-            skipReason: 'duplicate-topic',
-            updatedAt: now,
-          }
-        : item,
-    );
-    writeCandidates(updatedCandidates);
+
+    // candidates.json の更新（従来モードのみ）
+    if (!isManualMode) {
+      const updatedCandidates = candidates.map((item) =>
+        item.id === candidate.id
+          ? {
+              ...item,
+              status: 'skipped',
+              skipReason: 'duplicate-topic',
+              updatedAt: now,
+            }
+          : item,
+      );
+      writeCandidates(updatedCandidates);
+    }
+
     return buildResult({
       generated: false,
       reason: 'duplicate-topic',
@@ -337,20 +399,24 @@ const runGenerator = async () => {
     const elapsed = stopDraftTimer();
     metricsTracker.increment('articles.failed');
     logger.error(`⚠️ 記事生成に失敗しました: ${error.message} (${elapsed}ms)`);
-    // 候補のステータスを 'failed' に更新
-    const now = new Date().toISOString();
-    const updatedCandidates = candidates.map((item) =>
-      item.id === candidate.id
-        ? {
-            ...item,
-            status: 'failed',
-            failReason: 'article-generation-error',
-            errorMessage: error.message,
-            updatedAt: now,
-          }
-        : item,
-    );
-    writeCandidates(updatedCandidates);
+
+    // candidates.json の更新（従来モードのみ）
+    if (!isManualMode) {
+      const now = new Date().toISOString();
+      const updatedCandidates = candidates.map((item) =>
+        item.id === candidate.id
+          ? {
+              ...item,
+              status: 'failed',
+              failReason: 'article-generation-error',
+              errorMessage: error.message,
+              updatedAt: now,
+            }
+          : item,
+      );
+      writeCandidates(updatedCandidates);
+    }
+
     return buildResult({
       generated: false,
       reason: 'article-generation-failed',
@@ -393,24 +459,26 @@ const runGenerator = async () => {
   const now = new Date().toISOString();
 
   // --- 候補と履歴の更新 ---
-  // 候補のステータスを 'generated' に更新
-  const updatedCandidates = candidates.map((item) =>
-    item.id === candidate.id
-      ? {
-          ...item,
-          status: 'generated',
-          generatedAt: now,
-          updatedAt: now,
-          topicKey,
-          postDate: today,
-          slug,
-          outputFile: publishRelativePath,
-          image: selectedImage || null,
-          imageKey: selectedImage?.key || null,
-        }
-      : item,
-  );
-  writeCandidates(updatedCandidates);
+  // candidates.json の更新（従来モードのみ）
+  if (!isManualMode) {
+    const updatedCandidates = candidates.map((item) =>
+      item.id === candidate.id
+        ? {
+            ...item,
+            status: 'generated',
+            generatedAt: now,
+            updatedAt: now,
+            topicKey,
+            postDate: today,
+            slug,
+            outputFile: publishRelativePath,
+            image: selectedImage || null,
+            imageKey: selectedImage?.key || null,
+          }
+        : item,
+    );
+    writeCandidates(updatedCandidates);
+  }
 
   // トピック履歴を更新
   const updatedHistory = updateTopicHistory(topicHistory, topicKey, {

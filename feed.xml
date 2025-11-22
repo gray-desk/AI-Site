@@ -5,9 +5,21 @@
   <link>https://yamazaki2357.github.io/AI-Site</link>
   <description>AI・機械学習の最新情報を自動収集・分析。YouTubeチャンネルから注目トピックを抽出し、深掘りした記事を毎日2回自動更新。</description>
   <language>ja</language>
-  <lastBuildDate>Sat, 22 Nov 2025 06:48:25 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 22 Nov 2025 07:09:20 GMT</lastBuildDate>
   <atom:link href="https://yamazaki2357.github.io/AI-Site/feed.xml" rel="self" type="application/rss+xml" />
 
+  <item>
+    <title>Canva AIの革新: 資料作成の効率化とその限界</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-22-canva-ai.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-22-canva-ai.html</guid>
+    <pubDate>Sat, 22 Nov 2025 07:09:20 GMT</pubDate>
+    <description>Canva AIは資料作成を劇的に効率化するツールです。AIの力を借りて、デザイン知識がなくてもプロ級の資料を作成可能にします。本記事では、その技術的背景と実用的なユースケース、そして現時点での制約を詳述します。</description>
+    <category>Canva AI</category>
+    <category>資料作成</category>
+    <category>AI技術</category>
+    <category>業務効率化</category>
+    <category>デザインツール</category>
+  </item>
   <item>
     <title>Gemini 3の技術革新：軽量化と専門性の未来</title>
     <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-22-gemini-3.html</link>

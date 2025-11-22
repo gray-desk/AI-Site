@@ -54,7 +54,6 @@ ${searchSummary}
     // - エンジニア視点での評価・課題
     {
       "heading": "H2見出し。記事の流れに沿った魅力的な見出し。",
-      "overview": "セクションの導入。",
       "subSections": [
         {
           "heading": "H3見出し。",

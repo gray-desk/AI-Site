@@ -47,10 +47,6 @@
               <h1>テンプレート記事（動作確認用）</h1>
               <p class="article-summary">このサンプルを複製し、日付・タイトル・本文を更新して新しい記事を作成できます。メタ情報・目次・参考リンクの見せ方も含めて確認できます。</p>
             </div>
-            <div class="article-hero-cta">
-              <a class="button button-primary" href="../index.html">記事一覧へ戻る</a>
-              <button class="button button-ghost" type="button" data-share-target="native">この記事を共有</button>
-            </div>
           </div>
         </div>
 
@@ -61,47 +57,28 @@
         </ul>
       </section>
 
-      <!-- Google AdSense: 記事上広告 -->
-      <!--
-      <div class="inner">
-        <div class="ad-container ad-article-top">
-          <span class="ad-label">広告</span>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-               data-ad-slot="YYYYYYYYYY"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-      </div>
-      -->
-
       <div class="inner article-grid">
+        <aside class="article-sidebar" aria-label="ページ内ナビゲーション">
+          <section class="article-card article-toc">
+            <p class="article-card-label">目次</p>
+            <ol class="toc-list" data-toc-list aria-live="polite"></ol>
+          </section>
+        </aside>
+
         <div class="article-main-column">
           <article class="post-article article-content">
+            <section class="article-intro-block">
+              <div class="intro-content">
+                <p>本文の前に短いリードを入れ、この記事で何を届けるのかを明示してください。挨拶や不要な枕詞は省き、タイトルと自然につながる導入にすると読みやすくなります。</p>
+                <p>このテンプレートは1カラムで流れる設計です。セクションを増やしても、余白とタイポグラフィだけで区切られるため、ページ全体がひと続きに読めます。</p>
+              </div>
+            </section>
+
             <section class="article-section" id="section-overview">
               <p class="section-eyebrow">Section 01</p>
               <h2>セクション見出し</h2>
               <p>本文は自由に入れ替えてください。段落やリスト、図版などのHTML要素を利用できます。適宜 <code>&lt;figure&gt;</code> や引用を挿入しても、レイアウトが崩れないよう調整済みです。</p>
             </section>
-
-            <!-- Google AdSense: 記事中広告 -->
-            <!--
-            <div class="ad-container ad-article-middle">
-              <span class="ad-label">広告</span>
-              <ins class="adsbygoogle"
-                   style="display:block"
-                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                   data-ad-slot="YYYYYYYYYY"
-                   data-ad-format="rectangle"></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-            </div>
-            -->
 
             <section class="article-section" id="section-points">
               <p class="section-eyebrow">Section 02</p>
@@ -122,60 +99,14 @@
             </section>
           </article>
         </div>
-
-        <aside class="article-sidebar" aria-label="補足情報">
-          <section class="article-card article-toc">
-            <p class="article-card-label">目次</p>
-            <ol class="toc-list" data-toc-list aria-live="polite"></ol>
-          </section>
-
-          <section class="article-card article-note">
-            <p class="article-card-label">テンプレ小ネタ</p>
-            <p class="article-note-text">generator で組んだHTMLは publisher が即座に <code>posts/&lt;slug&gt;.html</code> へ書き込みます。下書き用ディレクトリは使っていません。</p>
-          </section>
-        </aside>
       </div>
 
-      <!-- Google AdSense: 記事下広告 -->
-      <!--
-      <div class="inner">
-        <div class="ad-container ad-article-bottom">
-          <span class="ad-label">広告</span>
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-               data-ad-slot="YYYYYYYYYY"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+      <section class="inner article-conclusion">
+        <h2 class="conclusion-heading">まとめ</h2>
+        <div class="conclusion-content">
+          <p>結論や次のアクションは、本文と同じ幅・同じトーンで締めてください。余白と簡潔な文章で流れを止めずに読み切らせるのが狙いです。</p>
         </div>
-      </div>
-      -->
-
-      <section class="inner article-panels">
-        <article class="article-panel seo-panel">
-          <p class="panel-label">SEO観点</p>
-          <h2>検索上位との差別化ポイント</h2>
-          <ul class="insight-list">
-            <li>導入文では動画やデータソースの信頼性を簡潔に補足する</li>
-            <li>見出しは「課題→解決策→アクション」の3ステップで揃えると回遊が増える</li>
-            <li>最後に「次に読むべき記事」を2件以上紹介して内部リンクを明示</li>
-          </ul>
-        </article>
-
-        <article class="article-panel reference-panel">
-          <p class="panel-label">参考リンク</p>
-          <ul class="reference-list">
-            <li><a href="https://developers.google.com/youtube/v3" target="_blank" rel="noopener noreferrer">YouTube Data API v3</a></li>
-            <li><a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer">OpenAI Platform</a></li>
-            <li><a href="../automation/pipeline/index.js">パイプライン実装を見る</a></li>
-          </ul>
-        </article>
       </section>
-
-      <!-- Google AdSense等の広告枠は必要に応じて挿入 -->
     </article>
   </main>
 

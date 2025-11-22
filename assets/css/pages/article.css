@@ -8,7 +8,7 @@
  * 記事ページ (`body.article-page`) のメインコンテンツのパディング調整
  */
 body.article-page main {
-  padding-top: var(--space-2xl);
+  padding-top: var(--space-xl);
 }
 
 /*
@@ -18,7 +18,7 @@ body.article-page main {
 .article-detail {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
   /* セクション間の余白 */
 }
 
@@ -29,9 +29,9 @@ body.article-page main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 2px;
   /* バーの高さ */
-  background: rgba(255, 190, 210, 0.2);
+  background: rgba(15, 23, 42, 0.04);
   /* バーの背景色 */
   z-index: 1002;
   /* 他の要素より手前に表示 */
@@ -51,21 +51,27 @@ body.article-page main {
   /* 初期状態では非表示 */
   transition: width 150ms ease-out;
   /* 幅の変化を滑らかにアニメーション */
-  box-shadow: 0 0 10px rgba(255, 116, 177, 0.5);
-  /* 影 */
+  box-shadow: none;
 }
 
 /* === 記事ヒーローセクション (.article-hero) === */
 .article-hero {
-  /* 柔らかいグラデーション背景 */
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 240, 245, 0.92) 60%, rgba(255, 248, 228, 0.9) 100%);
-  border: 1px solid rgba(255, 190, 210, 0.6);
-  border-radius: var(--radius-2xl);
-  padding: clamp(1.5rem, 4vw, 3rem);
-  /* レスポンシブな内側余白 */
-  box-shadow: var(--shadow-lg);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem) 0 clamp(1rem, 2vw, 1.5rem);
+  box-shadow: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  width: min(900px, 100% - 2rem);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+  .article-hero {
+    width: min(900px, 100% - 4rem);
+  }
 }
 
 /*
@@ -73,24 +79,19 @@ body.article-page main {
  * 右上に配置される円形のグラデーション。
  */
 .article-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 75% 15%, rgba(255, 183, 197, 0.25), transparent 60%);
-  pointer-events: none;
-  z-index: 0;
+  content: none;
 }
 
 /*
  * 記事のアイブロウテキスト (.article-eyebrow)
  */
 .article-eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
 }
 
 /*
@@ -99,23 +100,28 @@ body.article-page main {
 .article-hero-main {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 /*
  * 記事ヒーローセクション内の見出し (h1)
  */
 .article-hero-main h1 {
-  margin: var(--space-sm) 0;
+  margin: 0;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  line-height: 1.15;
 }
 
 /*
  * 記事の概要テキスト (.article-summary)
  */
 .article-summary {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   color: var(--text-secondary);
-  margin-top: var(--space-md);
-  max-width: 70ch;
+  margin-top: var(--space-sm);
+  max-width: 68ch;
   line-height: 1.7;
 }
 
@@ -124,10 +130,9 @@ body.article-page main {
  * グリッドレイアウトでコンテンツを配置。
  */
 .article-hero-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
   position: relative;
   z-index: 1;
 }
@@ -137,9 +142,9 @@ body.article-page main {
  * 公開日やソース情報などを表示するカードのグリッド。
  */
 .article-meta-grid {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-lg);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
   position: relative;
   z-index: 1;
@@ -149,11 +154,11 @@ body.article-page main {
  * メタ情報カード (.meta-card)
  */
 .meta-card {
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.95), rgba(255, 246, 252, 0.9));
-  border: 1px solid rgba(255, 190, 210, 0.6);
-  border-radius: var(--radius-xl);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: none;
 }
 
 /*
@@ -162,7 +167,7 @@ body.article-page main {
 .meta-label {
   font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--space-xs);
@@ -172,7 +177,7 @@ body.article-page main {
  * メタ情報値 (.meta-value)
  */
 .meta-value {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: var(--space-xs);
@@ -193,8 +198,8 @@ body.article-page main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-xl);
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
   position: relative;
   z-index: 1;
 }
@@ -203,40 +208,38 @@ body.article-page main {
  * 記事タグリストの各アイテム (li)
  */
 .article-tags li {
-  padding: 0.4rem 1rem;
+  padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 190, 210, 0.7);
-  background: rgba(255, 241, 247, 0.8);
-  font-size: 0.875rem;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  font-size: 0.9rem;
   font-weight: 600;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 /*
  * 記事タグのホバー時
  */
 .article-tags li:hover {
-  background: rgba(255, 241, 247, 1);
-  border-color: var(--color-primary);
+  background: transparent;
+  border-color: var(--border-medium);
+  color: var(--color-primary);
   transform: translateY(-1px);
 }
 
 /* === 記事グリッド (.article-grid) === */
 .article-grid {
-  display: grid;
-  gap: var(--space-2xl);
-  align-items: flex-start;
-  /* 上揃え */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  align-items: stretch;
+  width: min(900px, 100% - 2rem);
+  margin: 0 auto;
 }
 
-/*
- * 画面幅が1024px以上の場合の記事グリッドレイアウト
- * メインコンテンツとサイドバーの2カラムレイアウト。
- */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .article-grid {
-    grid-template-columns: minmax(0, 2.6fr) minmax(260px, 1fr);
-    /* メインコンテンツが広く、サイドバーが狭い */
+    width: min(900px, 100% - 4rem);
   }
 }
 
@@ -246,33 +249,38 @@ body.article-page main {
 .article-main-column {
   min-width: 0;
   /* Flex/Gridアイテムの最小幅をリセット */
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 /*
  * 記事コンテンツ本体 (.article-content)
  */
 .article-content {
-  background: var(--surface-primary);
-  border-radius: var(--radius-2xl);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-md);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
 /* === イントロセクション (.article-intro-block) === */
 .article-intro-block {
-  margin-bottom: var(--space-2xl);
-  padding-bottom: var(--space-xl);
-  border-bottom: 2px solid rgba(255, 190, 210, 0.3);
-  /* 下部の区切り線 */
+  margin-bottom: var(--space-xl);
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 /*
  * イントロコンテンツ (.intro-content)
  */
 .intro-content {
-  font-size: 1.1rem;
-  line-height: 1.9;
+  font-size: 1.08rem;
+  line-height: 1.8;
   color: var(--text-secondary);
 }
 
@@ -288,16 +296,20 @@ body.article-page main {
 .article-section {
   scroll-margin-top: 100px;
   /* スティッキーヘッダーの高さ分、スクロール位置を調整 */
+  margin-top: var(--space-lg);
+}
+
+.article-section:first-of-type {
+  margin-top: var(--space-md);
 }
 
 /*
  * 連続する記事セクション間のスタイル
  */
 .article-section+.article-section {
-  margin-top: var(--space-3xl);
-  padding-top: var(--space-2xl);
-  border-top: 1px solid rgba(255, 190, 210, 0.25);
-  /* 上部の区切り線 */
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
 }
 
 /*
@@ -305,38 +317,29 @@ body.article-page main {
  */
 .section-heading {
   position: relative;
-  margin-bottom: var(--space-xl);
-  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: 0;
   color: var(--text-primary);
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
 }
 
 /*
  * セクション見出しの下線装飾 (::after)
  */
 .section-heading::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-secondary));
-  border-radius: var(--radius-full);
+  content: none;
 }
 
 /*
  * セクション概要 (.section-overview)
  */
 .section-overview {
-  margin-bottom: var(--space-xl);
-  padding: var(--space-lg);
-  background: rgba(255, 241, 247, 0.5);
-  border-left: 4px solid var(--color-primary);
-  /* 左側のアクセントボーダー */
-  border-radius: var(--radius-md);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  margin-bottom: var(--space-md);
+  padding: 0;
+  background: none;
+  border-left: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
@@ -346,10 +349,9 @@ body.article-page main {
 
 /* === サブセクション (.article-subsection) === */
 .article-subsection {
-  margin-top: var(--space-xl);
-  padding-left: var(--space-lg);
-  border-left: 2px solid rgba(255, 190, 210, 0.35);
-  /* 左側の区切り線 */
+  margin-top: var(--space-lg);
+  padding-left: 0;
+  border-left: none;
 }
 
 /*
@@ -358,16 +360,16 @@ body.article-page main {
 .subsection-heading {
   margin-bottom: var(--space-md);
   color: var(--text-primary);
-  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-  font-weight: 600;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-weight: 650;
 }
 
 /*
  * サブセクション本文 (.subsection-body)
  */
 .subsection-body {
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1.02rem;
+  line-height: 1.8;
   color: var(--text-secondary);
 }
 
@@ -381,21 +383,26 @@ body.article-page main {
 
 /* === まとめセクション (.article-conclusion) === */
 .article-conclusion {
-  margin-top: var(--space-3xl);
-  padding: clamp(2rem, 4vw, 3rem);
-  background: linear-gradient(145deg, rgba(255, 241, 247, 0.7), rgba(255, 248, 235, 0.6));
-  border: 2px solid rgba(255, 190, 210, 0.5);
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-lg);
+  margin-top: var(--space-2xl);
+  padding: var(--space-2xl) 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--border-medium);
+  border-radius: 0;
+  box-shadow: none;
+  width: min(900px, 100% - 2rem);
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*
  * まとめセクションの見出し (.conclusion-heading)
  */
 .conclusion-heading {
-  margin-bottom: var(--space-lg);
-  text-align: center;
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  margin-bottom: var(--space-md);
+  text-align: left;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
   color: var(--text-primary);
 }
 
@@ -403,11 +410,11 @@ body.article-page main {
  * まとめセクションのコンテンツ (.conclusion-content)
  */
 .conclusion-content {
-  font-size: 1.08rem;
-  line-height: 1.9;
+  font-size: 1.02rem;
+  line-height: 1.85;
   color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 70ch;
+  margin: 0;
 }
 
 .conclusion-content p {
@@ -422,8 +429,8 @@ body.article-page main {
  * セクションのアイブロウテキスト (.section-eyebrow)
  */
 .section-eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: var(--space-xs);
@@ -431,45 +438,46 @@ body.article-page main {
 
 /* === 記事サイドバー (.article-sidebar) === */
 .article-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-  position: sticky;
-  /* スクロールに追従 */
-  top: 80px;
-  /* ヘッダーの下に配置 */
-  align-self: flex-start;
-  /* 親のFlexコンテナ内で上揃え */
-  max-height: calc(100vh - 100px);
-  /* ビューポートの高さに合わせて最大高さを制限 */
-  overflow-y: auto;
-  /* 内容がはみ出す場合にスクロールバーを表示 */
-}
-
-@media (max-width: 1023px) {
-  .article-sidebar {
-    display: none;
-  }
+  display: block;
+  position: static;
+  align-self: stretch;
+  max-height: none;
+  overflow: visible;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  order: -1;
 }
 
 /*
  * サイドバー内のカード (.article-card)
  */
 .article-card {
-  background: var(--surface-secondary);
-  border-radius: var(--radius-xl);
-  padding: var(--space-lg);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.article-card.article-toc {
+  padding: var(--space-sm) 0 var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.article-card.article-note {
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--border-subtle);
 }
 
 /*
  * サイドバーカードのホバー時
  */
 .article-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-medium);
+  box-shadow: none;
+  border-color: transparent;
 }
 
 /*
@@ -494,19 +502,19 @@ body.article-page main {
  * サイドバーカードのラベル (.article-card-label)
  */
 .article-card-label {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 /*
  * 目次パネル (.toc-panel)
  */
 .toc-panel {
-  margin-top: var(--space-md);
+  margin-top: var(--space-xs);
 }
 
 /*
@@ -515,18 +523,6 @@ body.article-page main {
  */
 .toc-toggle {
   display: none;
-  /* デスクトップでは非表示 */
-  align-items: center;
-  gap: 0.35rem;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-full);
-  padding: 0.25rem 0.75rem;
-  background: var(--surface-primary);
-  color: var(--color-primary-dim);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 /*
@@ -548,7 +544,7 @@ body.article-page main {
  * モバイルで目次が閉じている状態のカード (.article-card.article-toc[data-mobile-collapsed="true"])
  */
 .article-card.article-toc[data-mobile-collapsed="true"] {
-  background: rgba(255, 248, 252, 0.95);
+  background: transparent;
 }
 
 /*
@@ -557,31 +553,33 @@ body.article-page main {
 .toc-list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding: 0.25rem 0;
 }
 
 /*
  * 目次リストの各アイテム (li)
  */
 .toc-list li {
-  transition: all var(--transition-fast);
-  padding: 0.35rem var(--space-sm);
-  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+  padding: 0;
+  border-radius: 0;
 }
 
 /*
  * 目次リスト内のリンク (a)
  */
 .toc-list a {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   line-height: 1.5;
   transition: color var(--transition-fast);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.1rem 0;
 }
 
 /*
@@ -596,8 +594,7 @@ body.article-page main {
  * H3見出しに対応する目次アイテム。
  */
 .toc-list li.is-depth {
-  padding-left: calc(var(--space-md) + 0.5rem);
-  /* インデントを深くする */
+  padding-left: 0;
   font-size: 0.9rem;
   color: var(--text-tertiary);
 }
@@ -606,14 +603,14 @@ body.article-page main {
  * 目次番号 (.toc-index)
  */
 .toc-index {
-  min-width: 2.4rem;
+  min-width: 2rem;
   text-align: right;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   /* 数字の幅を揃える */
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /*
@@ -638,7 +635,7 @@ body.article-page main {
  * スクロール時にヘッダーに隠れないように調整。
  */
 .toc-target {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 96px;
   /* スティッキーヘッダーの高さ分、スクロール位置を調整 */
 }
 
@@ -653,29 +650,21 @@ body.article-page main {
 
 /* === 記事パネル (.article-panels) === */
 .article-panels {
-  display: grid;
-  gap: var(--space-xl);
-}
-
-/*
- * 画面幅が960px以上の場合のパネルレイアウト
- * 2カラムにする。
- */
-@media (min-width: 960px) {
-  .article-panels {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
 }
 
 /*
  * 個々の記事パネル (.article-panel)
  */
 .article-panel {
-  background: var(--surface-primary);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-xl);
-  border: 1px solid var(--border-medium);
-  box-shadow: var(--shadow-md);
+  background: transparent;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) 0;
+  border: 1px solid var(--border-subtle);
+  box-shadow: none;
 }
 
 /*
@@ -687,8 +676,8 @@ body.article-page main {
   gap: 0.4rem;
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
 }
@@ -709,10 +698,10 @@ body.article-page main {
  * インサイトリストの各アイテム (li)
  */
 .insight-list li {
-  padding: var(--space-sm) var(--space-md);
-  background: rgba(255, 241, 247, 0.9);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 190, 210, 0.5);
+  padding: 0.25rem 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
 }
 
 /*
@@ -720,7 +709,7 @@ body.article-page main {
  */
 .reference-list li {
   padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgba(255, 190, 210, 0.3);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 /*

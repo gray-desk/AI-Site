@@ -34,7 +34,10 @@ const tagsConfigPath = path.join(root, 'data', 'tags.json');
 // 記事画像リストのパス
 const articleImagesManifestPath = path.join(root, 'assets', 'img', 'articles', 'index.json');
 // 記事HTMLテンプレートのパス
+// 記事HTMLテンプレートのパス
 const articleHtmlTemplatePath = path.join(root, 'automation', 'templates', 'article.html');
+// レイアウトテンプレートのパス
+const layoutHtmlTemplatePath = path.join(root, 'automation', 'templates', 'layout.html');
 
 // --- 定数 ---
 const { DEDUPE_WINDOW_DAYS } = GENERATOR;
@@ -58,6 +61,7 @@ const { selectArticleImage } = createImageSelector({
 // テンプレートレンダリングサービス: 記事データからHTMLを生成する
 const { compileArticleHtml } = createTemplateRenderer({
   templatePath: articleHtmlTemplatePath,
+  layoutPath: layoutHtmlTemplatePath,
 });
 
 /**

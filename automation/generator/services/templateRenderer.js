@@ -190,39 +190,42 @@ const slugifyHeading = (heading, index = 0) => {
 
 /**
  * テンプレートレンダラーのインスタンスを作成するファクトリ関数です。
- * @param {{templatePath: string}} dependencies - 依存関係（テンプレートファイルのパス）
+ * @param {{templatePath: string, layoutPath: string}} dependencies - 依存関係（テンプレートファイルのパス）
  * @returns {{compileArticleHtml: Function}} `compileArticleHtml`メソッドを持つオブジェクト
  */
-const createTemplateRenderer = ({ templatePath }) => {
+const createTemplateRenderer = ({ templatePath, layoutPath }) => {
   // テンプレートファイルをキャッシュするための変数
   let cachedArticleTemplate = null;
-  let articleTemplateLoaded = false;
+  let cachedLayoutTemplate = null;
+  let templatesLoaded = false;
 
   /**
-   * 記事のHTMLテンプレートを読み込み、キャッシュします。
-   * @returns {string|null} テンプレート文字列、または読み込み失敗時はnull
+   * テンプレートファイルを読み込み、キャッシュします。
    */
-  const getArticleTemplate = () => {
-    if (articleTemplateLoaded) return cachedArticleTemplate;
+  const loadTemplates = () => {
+    if (templatesLoaded) return;
     try {
       cachedArticleTemplate = fs.readFileSync(templatePath, 'utf-8');
+      if (layoutPath) {
+        cachedLayoutTemplate = fs.readFileSync(layoutPath, 'utf-8');
+      }
     } catch (error) {
+      console.warn('[generator] テンプレートの読み込みに失敗しました:', error.message);
       cachedArticleTemplate = null;
-      console.warn('[generator] 記事テンプレートの読み込みに失敗しました:', error.message);
+      cachedLayoutTemplate = null;
     } finally {
-      articleTemplateLoaded = true;
+      templatesLoaded = true;
     }
-    return cachedArticleTemplate;
   };
 
   /**
    * テンプレート文字列内のプレースホルダー（`{{TOKEN}}`）を実際の値で置換します。
+   * @param {string} template - テンプレート文字列
    * @param {object} slots - `プレースホルダー名: 置換後の値` のマッピング
-   * @returns {string|null} レンダリングされたHTML文字列、またはテンプレートがない場合はnull
+   * @returns {string} レンダリングされた文字列
    */
-  const renderArticleTemplate = (slots) => {
-    const template = getArticleTemplate();
-    if (!template) return null;
+  const renderTemplate = (template, slots) => {
+    if (!template) return '';
     // 全てのプレースホルダーを対応する値で置換
     return Object.entries(slots).reduce((html, [token, value]) => {
       const safeValue = value ?? '';
@@ -239,10 +242,12 @@ const createTemplateRenderer = ({ templatePath }) => {
    * @returns {string} 完成したHTML文字列
    */
   const compileArticleHtml = (article, meta, options = {}) => {
+    loadTemplates();
+
     // --- 1. 基本設定とデータ準備 ---
     const assetBase = typeof options.assetBase === 'string' ? options.assetBase : '../';
     const normalizedAssetBase = assetBase.endsWith('/') ? assetBase : `${assetBase}/`;
-    
+
     const sections = Array.isArray(article.sections) ? article.sections : [];
     const tags = Array.isArray(article.tags) ? article.tags : [];
 
@@ -384,10 +389,21 @@ ${toHtmlParagraphs(article.conclusion)}
       '{{CONCLUSION_MARKUP}}': conclusionMarkup,
     };
 
-    // テンプレートに値を埋め込む
-    const templatedHtml = renderArticleTemplate(templateSlots);
-    if (templatedHtml) {
-      return templatedHtml;
+    // 記事本文（Body）をレンダリング
+    const bodyContent = renderTemplate(cachedArticleTemplate, templateSlots);
+
+    // レイアウト（Layout）がある場合は、Bodyを埋め込んでレンダリング
+    if (cachedLayoutTemplate) {
+      const layoutSlots = {
+        ...templateSlots, // LayoutでもTitleなどは使う
+        '{{BODY_CONTENT}}': bodyContent || '',
+      };
+      return renderTemplate(cachedLayoutTemplate, layoutSlots);
+    }
+
+    // レイアウトがない場合はBodyのみ返す（後方互換性）
+    if (bodyContent) {
+      return bodyContent;
     }
 
     // --- 4. フォールバック ---
@@ -400,11 +416,6 @@ ${toHtmlParagraphs(article.conclusion)}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${article.title} | AI情報ブログ</title>
   <meta name="description" content="${summaryText}">
-  <meta property="og:title" content="${article.title} | AI情報ブログ">
-  <meta property="og:description" content="${summaryText}">
-  <meta property="og:image" content="${socialImage}">
-  <meta property="article:published_time" content="${publishedTimeIso}">
-  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <main>

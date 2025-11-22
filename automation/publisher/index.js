@@ -14,11 +14,15 @@ const { readJson, writeJson, ensureDir } = require('../lib/io');
 const { VALIDATION } = require('../config/constants');
 const { findOrphanPosts } = require('../lib/postValidation');
 
+const { injectCommonComponents } = require('./ssg');
+const { generateRSS } = require('./rss');
+
 // --- パス設定 ---
 const root = path.resolve(__dirname, '..', '..');
 const postsDir = path.join(root, 'posts');
 const postsJsonPath = path.join(root, 'data', 'posts.json');
 const statusPath = path.join(root, 'automation', 'output', 'pipeline-status.json');
+const feedPath = path.join(root, 'feed.xml');
 
 /**
  * 日付文字列をパースしてタイムスタンプ（ミリ秒）を返します。
@@ -117,6 +121,21 @@ const recordFailureStatus = (error, context = {}) => {
 };
 
 /**
+ * 指定されたHTMLファイルに共通コンポーネント（ヘッダー・フッター）を注入します。
+ * @param {string} filePath - ファイルの絶対パス
+ * @param {string} relativePath - プロジェクトルートからの相対パス
+ */
+const processSSG = (filePath, relativePath) => {
+  if (!fs.existsSync(filePath)) return;
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const injected = injectCommonComponents(content, relativePath);
+  if (content !== injected) {
+    fs.writeFileSync(filePath, injected);
+    console.log(`[publisher] SSG注入完了: ${relativePath}`);
+  }
+};
+
+/**
  * Publisherステージのメイン処理
  * @param {object} pipelineResults - 各ステージの結果
  * @param {object} pipelineResults.collectorResult - Collectorステージの結果
@@ -179,6 +198,32 @@ const runPublisher = async ({ collectorResult, researcherResult, generatorResult
     }
   } else {
     console.log('[publisher] generator出力が無いため、記事作成とposts.json更新をスキップします。');
+  }
+
+  // --- SSG処理 (全ページ適用) ---
+  console.log('[publisher] SSG処理を開始します...');
+  const staticPages = ['index.html', 'about.html', 'contact.html', 'privacy-policy.html'];
+
+  // 静的ページの処理
+  staticPages.forEach(page => {
+    processSSG(path.join(root, page), page);
+  });
+
+  // 記事ページの処理
+  updatedPosts.forEach(post => {
+    if (post.url) {
+      processSSG(path.join(root, post.url), post.url);
+    }
+  });
+
+  // --- RSS生成 ---
+  console.log('[publisher] RSSフィードを生成しています...');
+  try {
+    const rssXml = generateRSS(updatedPosts);
+    fs.writeFileSync(feedPath, rssXml);
+    console.log(`[publisher] feed.xml を書き込みました: ${feedPath}`);
+  } catch (error) {
+    console.warn('[publisher] ⚠️  RSS生成に失敗しました:', error.message);
   }
 
   // --- バリデーション ---

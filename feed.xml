@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI情報ブログ</title>
+  <link>https://yamazaki2357.github.io/AI-Site</link>
+  <description>AI・機械学習の最新情報を自動収集・分析。YouTubeチャンネルから注目トピックを抽出し、深掘りした記事を毎日2回自動更新。</description>
+  <language>ja</language>
+  <lastBuildDate>Sat, 22 Nov 2025 02:10:51 GMT</lastBuildDate>
+  <atom:link href="https://yamazaki2357.github.io/AI-Site/feed.xml" rel="self" type="application/rss+xml" />
+
+  <item>
+    <title>Gemini 3の革新: AIアシスタントの新機能と応用展望</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-20-gemini-3-ai.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-20-gemini-3-ai.html</guid>
+    <pubDate>Thu, 20 Nov 2025 01:54:53 GMT</pubDate>
+    <description>この記事では、Googleの最新AIアシスタントGemini 3の新機能とその技術的背景、実践的な応用例を深掘りします。</description>
+    <category>Gemini 3</category>
+    <category>AIアシスタント</category>
+    <category>Google AI</category>
+    <category>マルチモーダル</category>
+    <category>推論能力</category>
+  </item>
+  <item>
+    <title>Google Anti-Gravityの可能性とIDE業界へのインパクト</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-19-google-anti-gravityide.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-19-google-anti-gravityide.html</guid>
+    <pubDate>Wed, 19 Nov 2025 00:19:45 GMT</pubDate>
+    <description>この記事では、Googleの新しいIDE『Anti-Gravity』が業界に与える影響とその技術的特性を深掘りします。</description>
+    <category>Google Anti-Gravity</category>
+    <category>IDE</category>
+    <category>ソフトウェア開発</category>
+    <category>Cursor</category>
+  </item>
+  <item>
+    <title>AI駆動開発とは？開発者の生産性を劇的に向上させる新しい開発手法</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai-driven-development.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai-driven-development.html</guid>
+    <pubDate>Tue, 18 Nov 2025 23:59:00 GMT</pubDate>
+    <description>GitHub Copilot、ChatGPT、Claude Codeなど、AIツールを活用した「AI駆動開発」の考え方と導入手順、現場での実践ポイントをまとめました。</description>
+    <category>AI駆動開発</category>
+    <category>GitHub Copilot</category>
+    <category>生産性向上</category>
+    <category>コーディング支援</category>
+    <category>開発ツール</category>
+  </item>
+  <item>
+    <title>AI時代に淘汰されない人材になるための5つのステップ</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai5.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai5.html</guid>
+    <pubDate>Tue, 18 Nov 2025 23:58:00 GMT</pubDate>
+    <description>この記事では、AIの進化が労働市場に与える影響と、AI時代において淘汰されないための具体的なステップを解説します。</description>
+    <category>AI失業</category>
+    <category>労働市場</category>
+    <category>キャリア戦略</category>
+    <category>業務自動化</category>
+    <category>AI適応</category>
+  </item>
+  <item>
+    <title>AI導入で成功する企業の条件とその技術的要因</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-18-ai.html</guid>
+    <pubDate>Tue, 18 Nov 2025 12:06:20 GMT</pubDate>
+    <description>この記事を読むと、AI導入に成功する企業の特徴と技術的要因について深く理解できます。</description>
+    <category>AI導入</category>
+    <category>ビジネス効率化</category>
+    <category>技術要因</category>
+    <category>企業成長</category>
+  </item>
+  <item>
+    <title>AI活用を0から学ぶ4つのステップ：初心者向け完全ガイド</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-17-ai04.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-17-ai04.html</guid>
+    <pubDate>Mon, 17 Nov 2025 23:59:00 GMT</pubDate>
+    <description>この記事を読むと、AI初心者がどのようにAIを活用し始めるかを具体的に理解できます。4つのステップでわかりやすく解説します。</description>
+    <category>AI活用</category>
+    <category>初心者ガイド</category>
+    <category>AI学習</category>
+    <category>AIステップ</category>
+  </item>
+  <item>
+    <title>ChatGPTのグループチャット機能がもたらす業務効率化の新潮流</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-17-chatgpt.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-17-chatgpt.html</guid>
+    <pubDate>Mon, 17 Nov 2025 23:58:00 GMT</pubDate>
+    <description>この記事を読むと、ChatGPTの新たなグループチャット機能がどのように業務効率化を促進し、AIの活用を次のレベルに引き上げるかを理解できます。</description>
+    <category>ChatGPT</category>
+    <category>AI</category>
+    <category>業務効率化</category>
+    <category>グループチャット</category>
+    <category>テクノロジー</category>
+  </item>
+  <item>
+    <title>NotebookLMの最新アップデートでAIノート作成がさらに便利に！</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-16-notebooklmai.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-16-notebooklmai.html</guid>
+    <pubDate>Sun, 16 Nov 2025 23:59:00 GMT</pubDate>
+    <description>NotebookLMの新機能により、AIを活用したノート作成がより簡単になりました。この記事では、具体的な機能とその活用方法を詳しく解説します。</description>
+    <category>AIノート作成</category>
+    <category>情報整理</category>
+    <category>生成AI</category>
+  </item>
+  <item>
+    <title>次世代AI「Gemini 3.0」と新モデルの動向を探る</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-16-aigemini-30.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-16-aigemini-30.html</guid>
+    <pubDate>Sun, 16 Nov 2025 23:58:00 GMT</pubDate>
+    <description>この記事では、Googleの次世代AIモデル「Gemini 3.0」と「Sherlock Think Alpha」および「Sherlock Dash Alpha」についての最新情報を解説します。読者は新しいAI技術がどのように活用できるかを理解できます。</description>
+    <category>生成AI</category>
+    <category>AIモデル</category>
+    <category>Google AI</category>
+    <category>AI活用</category>
+  </item>
+  <item>
+    <title>ChatGPTのグループチャット機能で業務効率を劇的に向上させる方法</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-15-chatgpt.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-15-chatgpt.html</guid>
+    <pubDate>Sat, 15 Nov 2025 23:58:00 GMT</pubDate>
+    <description>ChatGPTの新しいグループチャット機能を活用することで、チームのコミュニケーションを効率化し、生産性を向上させる方法を解説します。</description>
+    <category>ChatGPT</category>
+    <category>グループチャット</category>
+    <category>業務効率化</category>
+    <category>AI活用</category>
+  </item>
+  <item>
+    <title>AIツール徹底比較：ChatGPT、Gemini、PixAIの選び方</title>
+    <link>https://yamazaki2357.github.io/AI-Site/posts/2025-11-15-aichatgptgeminipixai.html</link>
+    <guid isPermaLink="true">https://yamazaki2357.github.io/AI-Site/posts/2025-11-15-aichatgptgeminipixai.html</guid>
+    <pubDate>Sat, 15 Nov 2025 23:57:00 GMT</pubDate>
+    <description>AIツールのChatGPT、Gemini、PixAIを徹底比較し、あなたの創作活動に最適な選択肢を見つけるためのガイドです。</description>
+    <category>生成AI</category>
+    <category>AIツール比較</category>
+    <category>PixAI</category>
+    <category>ChatGPT</category>
+  </item>
+</channel>
+</rss>

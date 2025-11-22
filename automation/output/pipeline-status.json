@@ -1,15 +1,13 @@
 {
-  "status": "failure",
+  "status": "skipped",
   "generatedFile": null,
-  "executedAt": "2025-11-20T11:27:28.126Z",
-  "error": {
-    "message": "OPENAI_API_KEY が設定されていません。",
-    "stack": "Error: OPENAI_API_KEY が設定されていません。\n    at runResearcher (/Users/yamazaki/Development/AI情報ブログ/automation/researcher/index.js:157:11)\n    at main (/Users/yamazaki/Development/AI情報ブログ/automation/pipeline/index.js:117:30)\n    at Object.<anonymous> (/Users/yamazaki/Development/AI情報ブログ/automation/pipeline/index.js:174:1)\n    at Module._compile (node:internal/modules/cjs/loader:1529:14)\n    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)\n    at Module.load (node:internal/modules/cjs/loader:1275:32)\n    at Module._load (node:internal/modules/cjs/loader:1096:12)"
-  },
-  "collector": {
-    "skipped": true,
-    "reason": "keyword-based-pipeline"
-  },
+  "executedAt": "2025-11-22T02:10:51.497Z",
+  "collector": null,
   "researcher": null,
-  "generator": null
+  "generator": null,
+  "publisher": {
+    "addedPost": false,
+    "totalPosts": 11,
+    "outputFile": null
+  }
 }
